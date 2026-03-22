@@ -8,7 +8,7 @@ import UrlInput from "./url-input";
 import MarkdownPreview from "./markdown-preview";
 import DownloadButton from "./download-button";
 
-function sanitizeFilename(title: string, fallback: string): string {
+export function sanitizeFilename(title: string, fallback: string): string {
   if (!title) return fallback;
   return title.replace(/[^a-zA-Z0-9\s-]/g, "").replace(/\s+/g, "-").toLowerCase() || fallback;
 }

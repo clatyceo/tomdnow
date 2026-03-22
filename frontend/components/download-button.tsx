@@ -21,9 +21,14 @@ export default function DownloadButton({ markdown, filename }: DownloadButtonPro
   };
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(markdown);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      await navigator.clipboard.writeText(markdown);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Fallback: select text for manual copy
+      setCopied(false);
+    }
   };
 
   return (

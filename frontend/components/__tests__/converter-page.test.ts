@@ -1,11 +1,4 @@
-// Test the sanitizeFilename function extracted in converter-page.tsx
-// Since it's not exported, we re-implement the same logic for testing
-// (or we can export it — let's test the logic directly)
-
-function sanitizeFilename(title: string, fallback: string): string {
-  if (!title) return fallback;
-  return title.replace(/[^a-zA-Z0-9\s-]/g, "").replace(/\s+/g, "-").toLowerCase() || fallback;
-}
+import { sanitizeFilename } from "../converter-page";
 
 describe("sanitizeFilename", () => {
   test("normal title", () => {

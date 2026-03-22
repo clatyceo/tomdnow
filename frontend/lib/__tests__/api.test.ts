@@ -1,8 +1,13 @@
 import { convertFile, convertUrl } from "../api";
 
 // Mock global fetch
+const originalFetch = global.fetch;
 const mockFetch = jest.fn();
 global.fetch = mockFetch;
+
+afterAll(() => {
+  global.fetch = originalFetch;
+});
 
 beforeEach(() => {
   mockFetch.mockReset();

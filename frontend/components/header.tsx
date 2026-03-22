@@ -1,13 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toolsByCategory } from "@/lib/tools";
 
 const categories = toolsByCategory;
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-15 bg-white border-b border-gray-200">
@@ -43,6 +51,7 @@ export default function Header() {
           className="md:hidden p-2 text-gray-600"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {mobileOpen ? (
