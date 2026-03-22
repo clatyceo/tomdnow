@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Sora, Instrument_Serif } from "next/font/google";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 import "./globals.css";
 
 const sora = Sora({
@@ -35,7 +37,9 @@ export default function RootLayout({
       <body
         className={`${sora.variable} ${instrumentSerif.variable} font-sans antialiased bg-[#f5f5fa] text-gray-900`}
       >
-        {children}
+        <Header />
+        <main className="pt-15">{children}</main>
+        <Footer />
       </body>
     </html>
   );
