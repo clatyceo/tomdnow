@@ -1,6 +1,6 @@
 import os
 import tempfile
-import re
+from urllib.parse import urlparse
 from markitdown import MarkItDown
 
 SUPPORTED_FILE_TYPES = {
@@ -44,11 +44,19 @@ def convert_file(content: bytes, filename: str, file_type: str) -> dict:
         os.unlink(tmp_path)
 
 
+ALLOWED_YOUTUBE_HOSTS = {"www.youtube.com", "youtube.com", "youtu.be", "m.youtube.com"}
+
+
 def convert_url(url: str, url_type: str) -> dict:
     if url_type == "youtube":
-        youtube_pattern = r"(youtube\.com/watch\?v=|youtu\.be/|youtube\.com/embed/)"
-        if not re.search(youtube_pattern, url):
-            raise ValueError(f"Invalid YouTube URL: {url}")
+        try:
+            parsed = urlparse(url)
+        except Exception:
+            raise ValueError("Invalid URL")
+        if parsed.scheme not in ("http", "https"):
+            raise ValueError("Only http/https URLs are allowed")
+        if parsed.hostname not in ALLOWED_YOUTUBE_HOSTS:
+            raise ValueError("Only YouTube URLs are allowed")
 
         result = md_converter.convert(url)
         return {

@@ -3,13 +3,16 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from converter import convert_file, convert_url
 import asyncio
+import os
 import time
 
 app = FastAPI(title="AllToMD API")
 
+ALLOWED_ORIGINS = os.environ.get("ALLOWED_ORIGINS", "http://localhost:3000").split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_methods=["POST"],
     allow_headers=["*"],
 )
@@ -73,7 +76,7 @@ async def convert_file_endpoint(
             status = 413 if "too large" in str(e).lower() else 400
             raise HTTPException(status_code=status, detail=str(e))
         except Exception as e:
-            raise HTTPException(status_code=422, detail=f"Conversion failed: {e}")
+            raise HTTPException(status_code=422, detail="Conversion failed")
 
     raise HTTPException(status_code=400, detail="No file provided")
 
@@ -93,7 +96,7 @@ async def convert_url_endpoint(request: Request, body: UrlRequest):
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
-        raise HTTPException(status_code=422, detail=f"Conversion failed: {e}")
+        raise HTTPException(status_code=422, detail="Conversion failed")
 
 
 @app.get("/health")

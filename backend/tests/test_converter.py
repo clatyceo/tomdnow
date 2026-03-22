@@ -8,8 +8,23 @@ def test_convert_file_rejects_unsupported_type():
 
 
 def test_convert_url_rejects_invalid_url():
-    with pytest.raises(ValueError, match="Invalid"):
+    with pytest.raises(ValueError):
         convert_url("not-a-url", "youtube")
+
+
+def test_convert_url_rejects_non_youtube_host():
+    with pytest.raises(ValueError, match="Only YouTube"):
+        convert_url("https://evil.com/watch?v=test", "youtube")
+
+
+def test_convert_url_rejects_file_protocol():
+    with pytest.raises(ValueError, match="Only http"):
+        convert_url("file:///etc/passwd", "youtube")
+
+
+def test_convert_url_rejects_internal_ip():
+    with pytest.raises(ValueError, match="Only YouTube"):
+        convert_url("http://169.254.169.254/latest/meta-data/", "youtube")
 
 
 def test_convert_file_accepts_new_types():

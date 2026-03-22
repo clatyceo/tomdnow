@@ -2,13 +2,16 @@
 
 import { useCallback, useState } from "react";
 
+const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+
 interface FileUploaderProps {
   accept: string;
   onFileSelect: (file: File) => void;
+  onError?: (msg: string) => void;
   isLoading: boolean;
 }
 
-export default function FileUploader({ accept, onFileSelect, isLoading }: FileUploaderProps) {
+export default function FileUploader({ accept, onFileSelect, onError, isLoading }: FileUploaderProps) {
   const [isDragging, setIsDragging] = useState(false);
 
   const handleDrop = useCallback(
@@ -17,6 +20,10 @@ export default function FileUploader({ accept, onFileSelect, isLoading }: FileUp
       setIsDragging(false);
       const file = e.dataTransfer.files[0];
       if (!file) return;
+      if (file.size > MAX_FILE_SIZE) {
+        onError?.("File too large (max 10MB)");
+        return;
+      }
       const ext = "." + file.name.split(".").pop()?.toLowerCase();
       const accepted = accept.split(",").map((a) => a.trim().toLowerCase());
       if (!accepted.some((a) => ext === a || ext.endsWith(a))) return;
@@ -28,7 +35,12 @@ export default function FileUploader({ accept, onFileSelect, isLoading }: FileUp
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const file = e.target.files?.[0];
-      if (file) onFileSelect(file);
+      if (!file) return;
+      if (file.size > MAX_FILE_SIZE) {
+        onError?.("File too large (max 10MB)");
+        return;
+      }
+      onFileSelect(file);
     },
     [onFileSelect]
   );
