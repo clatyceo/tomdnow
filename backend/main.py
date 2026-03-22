@@ -17,10 +17,21 @@ app.add_middleware(
 rate_limit_store: dict[str, list[float]] = {}
 RATE_LIMIT = 20
 RATE_WINDOW = 60
+_cleanup_counter = 0
 
 
 def check_rate_limit(ip: str):
+    global _cleanup_counter
     now = time.time()
+
+    # Periodic cleanup: prune stale IPs every 100 requests
+    _cleanup_counter += 1
+    if _cleanup_counter >= 100:
+        _cleanup_counter = 0
+        stale = [k for k, v in rate_limit_store.items() if all(now - t >= RATE_WINDOW for t in v)]
+        for k in stale:
+            del rate_limit_store[k]
+
     timestamps = rate_limit_store.get(ip, [])
     timestamps = [t for t in timestamps if now - t < RATE_WINDOW]
     if len(timestamps) >= RATE_LIMIT:
@@ -45,6 +56,9 @@ async def convert_file_endpoint(
     if file is not None:
         if not type:
             raise HTTPException(status_code=400, detail="Missing 'type' field")
+        # Early size check via content-length header
+        if file.size and file.size > 10 * 1024 * 1024:
+            raise HTTPException(status_code=413, detail="File too large (max 10MB)")
         content = await file.read()
         try:
             result = convert_file(content, file.filename or "unknown", type)

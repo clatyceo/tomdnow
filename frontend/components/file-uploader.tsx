@@ -16,9 +16,13 @@ export default function FileUploader({ accept, onFileSelect, isLoading }: FileUp
       e.preventDefault();
       setIsDragging(false);
       const file = e.dataTransfer.files[0];
-      if (file) onFileSelect(file);
+      if (!file) return;
+      const ext = "." + file.name.split(".").pop()?.toLowerCase();
+      const accepted = accept.split(",").map((a) => a.trim().toLowerCase());
+      if (!accepted.some((a) => ext === a || ext.endsWith(a))) return;
+      onFileSelect(file);
     },
-    [onFileSelect]
+    [onFileSelect, accept]
   );
 
   const handleChange = useCallback(

@@ -1,6 +1,11 @@
 const API_BASE = "/api/convert";
 
-export async function convertFile(file: File, type: string): Promise<{ markdown: string; metadata: { title: string; type: string; size: number } }> {
+export interface ConvertResult {
+  markdown: string;
+  metadata: { title: string; type: string; size: number };
+}
+
+export async function convertFile(file: File, type: string): Promise<ConvertResult> {
   const formData = new FormData();
   formData.append("file", file);
   formData.append("type", type);
@@ -15,7 +20,7 @@ export async function convertFile(file: File, type: string): Promise<{ markdown:
   return res.json();
 }
 
-export async function convertUrl(url: string, type: string): Promise<{ markdown: string; metadata: { title: string; type: string; size: number } }> {
+export async function convertUrl(url: string, type: string): Promise<ConvertResult> {
   const res = await fetch(API_BASE, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
