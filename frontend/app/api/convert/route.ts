@@ -34,11 +34,13 @@ export async function POST(request: NextRequest) {
     });
   } catch (err) {
     if (err instanceof DOMException && err.name === "AbortError") {
+      console.error("Backend request timed out");
       return NextResponse.json(
         { error: "Backend request timed out", code: "TimeoutError" },
         { status: 504 }
       );
     }
+    console.error("Backend service unavailable:", err);
     return NextResponse.json(
       { error: "Backend service unavailable", code: "BackendUnavailable" },
       { status: 502 }

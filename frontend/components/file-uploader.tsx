@@ -17,6 +17,10 @@ export default function FileUploader({ accept, onFileSelect, onError, isLoading 
     (e: React.DragEvent) => {
       e.preventDefault();
       setIsDragging(false);
+      if (e.dataTransfer.files.length > 1) {
+        onError?.("Please upload one file at a time.");
+        return;
+      }
       const file = e.dataTransfer.files[0];
       if (!file) return;
       if (file.size > MAX_FILE_SIZE) {

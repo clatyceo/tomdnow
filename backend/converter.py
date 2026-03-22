@@ -4,7 +4,7 @@ import tempfile
 from urllib.parse import urlparse
 from markitdown import MarkItDown
 from config import MAX_FILE_SIZE
-from errors import UnsupportedTypeError, FileTooLargeError, InvalidUrlError
+from errors import UnsupportedTypeError, FileTooLargeError, InvalidUrlError, ConversionError
 
 logger = logging.getLogger(__name__)
 
@@ -36,6 +36,8 @@ def convert_file(content: bytes, filename: str, file_type: str) -> dict:
 
     try:
         result = md_converter.convert(tmp_path)
+        if not result.text_content or not result.text_content.strip():
+            raise ConversionError("Conversion produced empty result")
         return {
             "markdown": result.text_content,
             "metadata": {
@@ -59,13 +61,15 @@ def convert_url(url: str, url_type: str) -> dict:
         try:
             parsed = urlparse(url)
         except Exception:
-            raise InvalidUrlError("Invalid URL")
+            raise InvalidUrlError("Invalid URL") from None
         if parsed.scheme not in ("http", "https"):
             raise InvalidUrlError("Only http/https URLs are allowed")
         if parsed.hostname not in ALLOWED_YOUTUBE_HOSTS:
             raise InvalidUrlError("Only YouTube URLs are allowed")
 
         result = md_converter.convert(url)
+        if not result.text_content or not result.text_content.strip():
+            raise ConversionError("Conversion produced empty result")
         return {
             "markdown": result.text_content,
             "metadata": {

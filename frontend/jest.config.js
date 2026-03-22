@@ -6,4 +6,10 @@ module.exports = {
     "^@/(.*)$": "<rootDir>/$1",
   },
   testMatch: ["**/__tests__/**/*.test.ts"],
+  collectCoverageFrom: [
+    "lib/**/*.ts",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "!**/__tests__/**",
+  ],
 };
