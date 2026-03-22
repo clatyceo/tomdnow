@@ -5,10 +5,22 @@ export interface ConvertResult {
   metadata: { title: string; type: string; size: number };
 }
 
+const STATUS_MESSAGES: Record<number, string> = {
+  413: "File is too large (max 10MB)",
+  429: "Too many requests. Please wait a moment and try again.",
+  504: "Conversion timed out. Please try a smaller file.",
+};
+
 async function handleResponse(res: Response): Promise<ConvertResult> {
   if (!res.ok) {
-    const err = await res.json().catch(() => ({ detail: "Conversion failed" }));
-    throw new Error(err.detail || `Error ${res.status}`);
+    // Use status-specific message if available
+    if (STATUS_MESSAGES[res.status]) {
+      throw new Error(STATUS_MESSAGES[res.status]);
+    }
+    // Try to get error from response body
+    const body = await res.json().catch(() => null);
+    const message = body?.error || body?.detail || `Conversion failed (${res.status})`;
+    throw new Error(message);
   }
   return res.json();
 }

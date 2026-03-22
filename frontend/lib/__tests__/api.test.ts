@@ -24,9 +24,40 @@ describe("convertFile", () => {
     expect(body.get("type")).toBe("pdf");
   });
 
-  test("throws on error response", async () => {
+  test("uses status-specific message for 413", async () => {
     mockFetch.mockResolvedValue({
       ok: false,
+      status: 413,
+      json: () => Promise.resolve({ error: "ignored" }),
+    });
+    const file = new File(["hello"], "test.pdf");
+    await expect(convertFile(file, "pdf")).rejects.toThrow("File is too large");
+  });
+
+  test("uses status-specific message for 429", async () => {
+    mockFetch.mockResolvedValue({
+      ok: false,
+      status: 429,
+      json: () => Promise.resolve({}),
+    });
+    const file = new File(["hello"], "test.pdf");
+    await expect(convertFile(file, "pdf")).rejects.toThrow("Too many requests");
+  });
+
+  test("reads error key from new response format", async () => {
+    mockFetch.mockResolvedValue({
+      ok: false,
+      status: 400,
+      json: () => Promise.resolve({ error: "Custom backend error", code: "UnsupportedTypeError" }),
+    });
+    const file = new File(["hello"], "test.pdf");
+    await expect(convertFile(file, "pdf")).rejects.toThrow("Custom backend error");
+  });
+
+  test("reads detail key from legacy response format", async () => {
+    mockFetch.mockResolvedValue({
+      ok: false,
+      status: 400,
       json: () => Promise.resolve({ detail: "File too large" }),
     });
 
@@ -34,14 +65,15 @@ describe("convertFile", () => {
     await expect(convertFile(file, "pdf")).rejects.toThrow("File too large");
   });
 
-  test("throws generic message when error JSON fails", async () => {
+  test("throws fallback message with status code when JSON fails", async () => {
     mockFetch.mockResolvedValue({
       ok: false,
+      status: 500,
       json: () => Promise.reject(new Error("parse error")),
     });
 
     const file = new File(["hello"], "test.pdf");
-    await expect(convertFile(file, "pdf")).rejects.toThrow("Conversion failed");
+    await expect(convertFile(file, "pdf")).rejects.toThrow("Conversion failed (500)");
   });
 });
 
@@ -66,6 +98,7 @@ describe("convertUrl", () => {
   test("throws on error response", async () => {
     mockFetch.mockResolvedValue({
       ok: false,
+      status: 400,
       json: () => Promise.resolve({ detail: "Invalid URL" }),
     });
 

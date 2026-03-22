@@ -25,7 +25,10 @@ export default function FileUploader({ accept, onFileSelect, onError, isLoading 
       }
       const ext = "." + file.name.split(".").pop()?.toLowerCase();
       const accepted = accept.split(",").map((a) => a.trim().toLowerCase());
-      if (!accepted.some((a) => ext === a || ext.endsWith(a))) return;
+      if (!accepted.some((a) => ext === a || ext.endsWith(a))) {
+        onError?.("Unsupported file type. Please upload a supported format.");
+        return;
+      }
       onFileSelect(file);
     },
     [onFileSelect, accept]
