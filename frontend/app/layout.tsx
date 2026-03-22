@@ -19,11 +19,13 @@ export const metadata: Metadata = {
   title: "AllToMD — Convert Any File to Markdown",
   description:
     "Free online tool to convert PDF, Word, YouTube videos and more to clean Markdown files.",
+  metadataBase: new URL("https://tomarkdown.com"),
   openGraph: {
     title: "AllToMD — Convert Any File to Markdown",
     description:
       "Free online tool to convert PDF, Word, YouTube videos and more to clean Markdown files.",
     type: "website",
+    url: "https://tomarkdown.com",
   },
 };
 
