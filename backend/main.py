@@ -2,10 +2,12 @@ import asyncio
 import logging
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from converter import convert_file, convert_url
-from config import ALLOWED_ORIGINS, CONVERSION_TIMEOUT
+from config import ALLOWED_ORIGINS, CONVERSION_TIMEOUT, MAX_FILE_SIZE
 from rate_limiter import RateLimiter
+from errors import ConversionError, ConversionTimeoutError
 
 logger = logging.getLogger(__name__)
 
@@ -21,27 +23,47 @@ app.add_middleware(
 rate_limiter = RateLimiter()
 
 
+# --- Global Error Handlers ---
+
+@app.exception_handler(ConversionError)
+async def conversion_error_handler(request: Request, exc: ConversionError):
+    logger.warning("Conversion error: %s [%s]", exc.message, request.client.host if request.client else "unknown")
+    return JSONResponse(
+        status_code=exc.status_code,
+        content={"error": exc.message, "code": type(exc).__name__},
+    )
+
+
+@app.exception_handler(Exception)
+async def generic_error_handler(request: Request, exc: Exception):
+    logger.exception("Unhandled error")
+    return JSONResponse(
+        status_code=500,
+        content={"error": "Internal server error", "code": "InternalError"},
+    )
+
+
+# --- Models ---
+
 class UrlRequest(BaseModel):
     url: str
     type: str
 
 
+# --- Helpers ---
+
 async def run_conversion(func, *args):
-    """Run a blocking conversion function with timeout and error handling."""
+    """Run a blocking conversion in a thread with timeout."""
     try:
         return await asyncio.wait_for(
             asyncio.to_thread(func, *args),
             timeout=CONVERSION_TIMEOUT,
         )
     except asyncio.TimeoutError:
-        raise HTTPException(status_code=422, detail=f"Conversion timed out ({CONVERSION_TIMEOUT}s limit)")
-    except ValueError as e:
-        status = 413 if "too large" in str(e).lower() else 400
-        raise HTTPException(status_code=status, detail=str(e))
-    except Exception:
-        logger.exception("Conversion failed")
-        raise HTTPException(status_code=422, detail="Conversion failed")
+        raise ConversionTimeoutError(CONVERSION_TIMEOUT)
 
+
+# --- Endpoints ---
 
 @app.post("/convert")
 async def convert_file_endpoint(
@@ -51,20 +73,24 @@ async def convert_file_endpoint(
 ):
     rate_limiter.check(request.client.host if request.client else "unknown")
 
-    if file is not None:
-        if not type:
-            raise HTTPException(status_code=400, detail="Missing 'type' field")
-        if file.size and file.size > 10 * 1024 * 1024:
-            raise HTTPException(status_code=413, detail="File too large (max 10MB)")
-        content = await file.read()
-        return await run_conversion(convert_file, content, file.filename or "unknown", type)
+    if file is None:
+        raise HTTPException(status_code=400, detail="No file provided")
 
-    raise HTTPException(status_code=400, detail="No file provided")
+    if not type:
+        raise HTTPException(status_code=400, detail="Missing 'type' field")
+
+    if file.size and file.size > MAX_FILE_SIZE:
+        raise HTTPException(status_code=413, detail=f"File too large (max {MAX_FILE_SIZE // 1024 // 1024}MB)")
+
+    logger.info("Converting file: type=%s size=%s ip=%s", type, file.size, request.client.host if request.client else "unknown")
+    content = await file.read()
+    return await run_conversion(convert_file, content, file.filename or "unknown", type)
 
 
 @app.post("/convert/url")
 async def convert_url_endpoint(request: Request, body: UrlRequest):
     rate_limiter.check(request.client.host if request.client else "unknown")
+    logger.info("Converting URL: type=%s ip=%s", body.type, request.client.host if request.client else "unknown")
     return await run_conversion(convert_url, body.url, body.type)
 
 

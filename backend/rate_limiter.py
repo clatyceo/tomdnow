@@ -1,6 +1,9 @@
+import logging
 import time
 from fastapi import HTTPException
 from config import RATE_LIMIT, RATE_WINDOW
+
+logger = logging.getLogger(__name__)
 
 
 class RateLimiter:
@@ -22,6 +25,7 @@ class RateLimiter:
         timestamps = self._store.get(ip, [])
         timestamps = [t for t in timestamps if now - t < self.window]
         if len(timestamps) >= self.limit:
+            logger.warning("Rate limit exceeded for IP: %s", ip)
             raise HTTPException(status_code=429, detail="Rate limit exceeded")
         timestamps.append(now)
         self._store[ip] = timestamps

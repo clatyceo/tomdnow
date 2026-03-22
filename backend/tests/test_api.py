@@ -19,7 +19,7 @@ def test_convert_no_file():
 def test_convert_url_invalid():
     response = client.post("/convert/url", json={"url": "not-a-url", "type": "youtube"})
     assert response.status_code == 400
-    assert "detail" in response.json()
+    assert "error" in response.json()
 
 
 def test_convert_file_missing_type():
