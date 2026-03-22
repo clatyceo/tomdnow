@@ -2,39 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { getToolsByCategory } from "@/lib/tools";
 
-const categories = [
-  {
-    name: "Documents",
-    tools: [
-      { name: "PDF to Markdown", href: "/pdf-to-markdown" },
-      { name: "DOCX to Markdown", href: "/docx-to-markdown" },
-      { name: "PPTX to Markdown", href: "/pptx-to-markdown" },
-      { name: "XLSX to Markdown", href: "/xlsx-to-markdown" },
-      { name: "XLS to Markdown", href: "/xls-to-markdown" },
-      { name: "MSG to Markdown", href: "/msg-to-markdown" },
-    ],
-  },
-  {
-    name: "Data",
-    tools: [
-      { name: "CSV to Markdown", href: "/csv-to-markdown" },
-      { name: "JSON to Markdown", href: "/json-to-markdown" },
-      { name: "XML to Markdown", href: "/xml-to-markdown" },
-      { name: "Jupyter to Markdown", href: "/ipynb-to-markdown" },
-      { name: "ZIP to Markdown", href: "/zip-to-markdown" },
-    ],
-  },
-  {
-    name: "Media",
-    tools: [
-      { name: "YouTube to Markdown", href: "/youtube-to-markdown" },
-      { name: "HTML to Markdown", href: "/html-to-markdown" },
-      { name: "EPUB to Markdown", href: "/epub-to-markdown" },
-      { name: "Image to Markdown", href: "/image-to-markdown" },
-    ],
-  },
-];
+const categories = getToolsByCategory();
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -46,7 +16,6 @@ export default function Header() {
           ToMarkdown
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1">
           {categories.map((cat) => (
             <div key={cat.name} className="relative group">
@@ -57,11 +26,11 @@ export default function Header() {
                 <div className="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-48">
                   {cat.tools.map((tool) => (
                     <Link
-                      key={tool.href}
-                      href={tool.href}
+                      key={tool.slug}
+                      href={`/${tool.slug}`}
                       className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors"
                     >
-                      {tool.name}
+                      {tool.h1.replace("Convert ", "")}
                     </Link>
                   ))}
                 </div>
@@ -70,7 +39,6 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Mobile hamburger */}
         <button
           className="md:hidden p-2 text-gray-600"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -86,7 +54,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-white border-b border-gray-200 max-h-[80vh] overflow-y-auto">
           {categories.map((cat) => (
@@ -94,12 +61,12 @@ export default function Header() {
               <p className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase">{cat.name}</p>
               {cat.tools.map((tool) => (
                 <Link
-                  key={tool.href}
-                  href={tool.href}
+                  key={tool.slug}
+                  href={`/${tool.slug}`}
                   className="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-50"
                   onClick={() => setMobileOpen(false)}
                 >
-                  {tool.name}
+                  {tool.h1.replace("Convert ", "")}
                 </Link>
               ))}
             </div>

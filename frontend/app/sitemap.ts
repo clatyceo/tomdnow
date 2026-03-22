@@ -1,30 +1,13 @@
 import type { MetadataRoute } from "next";
+import { tools } from "@/lib/tools";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://tomarkdown.com";
 
-  const toolSlugs = [
-    "pdf-to-markdown",
-    "docx-to-markdown",
-    "pptx-to-markdown",
-    "xlsx-to-markdown",
-    "xls-to-markdown",
-    "msg-to-markdown",
-    "youtube-to-markdown",
-    "html-to-markdown",
-    "epub-to-markdown",
-    "image-to-markdown",
-    "csv-to-markdown",
-    "json-to-markdown",
-    "xml-to-markdown",
-    "ipynb-to-markdown",
-    "zip-to-markdown",
-  ];
-
   return [
     { url: base, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
-    ...toolSlugs.map((slug) => ({
-      url: `${base}/${slug}`,
+    ...Object.values(tools).map((tool) => ({
+      url: `${base}/${tool.slug}`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.9,

@@ -8,6 +8,8 @@ export interface ToolConfig {
   accept?: string;
   placeholder?: string;
   category: "documents" | "data" | "media";
+  icon: string;
+  color: string;
   seo: {
     description: string;
     keywords: string[];
@@ -15,6 +17,25 @@ export interface ToolConfig {
   howTo: { step: string; desc: string }[];
   whyConvert: string[];
   faq: { q: string; a: string }[];
+}
+
+export type CategoryName = "documents" | "data" | "media";
+
+export const categoryLabels: Record<CategoryName, string> = {
+  documents: "Documents",
+  data: "Data",
+  media: "Media",
+};
+
+export function getToolsByCategory() {
+  const grouped: Record<CategoryName, ToolConfig[]> = { documents: [], data: [], media: [] };
+  for (const tool of Object.values(tools)) {
+    grouped[tool.category].push(tool);
+  }
+  return (["documents", "data", "media"] as const).map((cat) => ({
+    name: categoryLabels[cat],
+    tools: grouped[cat],
+  }));
 }
 
 export const tools: Record<string, ToolConfig> = {
@@ -27,6 +48,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "file",
     accept: ".pdf",
     category: "documents",
+    icon: "PDF",
+    color: "#dc2626",
     seo: {
       description: "Free online PDF to Markdown converter. Upload your PDF and get clean Markdown instantly.",
       keywords: ["pdf to markdown", "convert pdf to md", "pdf markdown converter"],
@@ -58,6 +81,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "file",
     accept: ".docx",
     category: "documents",
+    icon: "DOC",
+    color: "#2563eb",
     seo: {
       description: "Free online Word to Markdown converter. Upload DOCX files and get clean Markdown instantly.",
       keywords: ["docx to markdown", "word to markdown", "convert word to md"],
@@ -89,6 +114,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "url",
     placeholder: "https://www.youtube.com/watch?v=...",
     category: "media",
+    icon: "YT",
+    color: "#dc2626",
     seo: {
       description: "Free online YouTube to Markdown converter. Paste a URL and get the video transcript as Markdown.",
       keywords: ["youtube to markdown", "youtube transcript to markdown", "youtube transcript downloader"],
@@ -120,6 +147,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "file",
     accept: ".pptx",
     category: "documents",
+    icon: "PPT",
+    color: "#ea580c",
     seo: {
       description: "Free online PowerPoint to Markdown converter. Upload PPTX and get Markdown instantly.",
       keywords: ["pptx to markdown", "powerpoint to markdown", "convert pptx to md"],
@@ -151,6 +180,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "file",
     accept: ".xlsx",
     category: "documents",
+    icon: "XLS",
+    color: "#16a34a",
     seo: {
       description: "Free online Excel to Markdown converter. Upload XLSX and get Markdown tables instantly.",
       keywords: ["xlsx to markdown", "excel to markdown", "convert excel to md"],
@@ -182,6 +213,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "file",
     accept: ".xls",
     category: "documents",
+    icon: "XLS",
+    color: "#15803d",
     seo: {
       description: "Free online XLS to Markdown converter. Upload legacy Excel files and get Markdown tables.",
       keywords: ["xls to markdown", "excel to markdown", "convert xls to md"],
@@ -212,6 +245,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "file",
     accept: ".msg",
     category: "documents",
+    icon: "MSG",
+    color: "#0284c7",
     seo: {
       description: "Free online Outlook MSG to Markdown converter. Upload email files and get Markdown instantly.",
       keywords: ["msg to markdown", "outlook to markdown", "convert email to md"],
@@ -242,6 +277,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "file",
     accept: ".html,.htm",
     category: "media",
+    icon: "HTML",
+    color: "#e34f26",
     seo: {
       description: "Free online HTML to Markdown converter. Upload HTML files and get clean Markdown instantly.",
       keywords: ["html to markdown", "convert html to md", "html markdown converter"],
@@ -273,6 +310,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "file",
     accept: ".epub",
     category: "media",
+    icon: "EPUB",
+    color: "#7c3aed",
     seo: {
       description: "Free online EPUB to Markdown converter. Upload eBooks and get Markdown instantly.",
       keywords: ["epub to markdown", "ebook to markdown", "convert epub to md"],
@@ -304,6 +343,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "file",
     accept: ".jpg,.jpeg,.png,.gif,.webp",
     category: "media",
+    icon: "IMG",
+    color: "#0ea5e9",
     seo: {
       description: "Free online Image to Markdown converter. Extract EXIF metadata from photos as Markdown.",
       keywords: ["image to markdown", "exif to markdown", "photo metadata to md"],
@@ -335,6 +376,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "file",
     accept: ".csv",
     category: "data",
+    icon: "CSV",
+    color: "#7c3aed",
     seo: {
       description: "Free online CSV to Markdown table converter. Upload CSV and get formatted Markdown tables.",
       keywords: ["csv to markdown", "csv to md table", "convert csv to markdown table"],
@@ -366,6 +409,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "file",
     accept: ".json",
     category: "data",
+    icon: "JSON",
+    color: "#ca8a04",
     seo: {
       description: "Free online JSON to Markdown converter. Upload JSON files and get formatted Markdown.",
       keywords: ["json to markdown", "convert json to md", "json markdown converter"],
@@ -396,6 +441,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "file",
     accept: ".xml",
     category: "data",
+    icon: "XML",
+    color: "#0891b2",
     seo: {
       description: "Free online XML to Markdown converter. Upload XML files and get formatted Markdown.",
       keywords: ["xml to markdown", "convert xml to md", "xml markdown converter"],
@@ -426,6 +473,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "file",
     accept: ".ipynb",
     category: "data",
+    icon: "NB",
+    color: "#e85e0d",
     seo: {
       description: "Free online Jupyter Notebook to Markdown converter. Upload .ipynb and get Markdown instantly.",
       keywords: ["ipynb to markdown", "jupyter to markdown", "convert notebook to md"],
@@ -457,6 +506,8 @@ export const tools: Record<string, ToolConfig> = {
     inputMode: "file",
     accept: ".zip",
     category: "data",
+    icon: "ZIP",
+    color: "#6b7280",
     seo: {
       description: "Free online ZIP to Markdown converter. Upload ZIP archives and get contents as Markdown.",
       keywords: ["zip to markdown", "extract zip to md", "archive to markdown"],
