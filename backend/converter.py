@@ -2,6 +2,7 @@ import os
 import tempfile
 from urllib.parse import urlparse
 from markitdown import MarkItDown
+from config import MAX_FILE_SIZE
 
 SUPPORTED_FILE_TYPES = {
     "pdf", "docx", "pptx", "xlsx", "xls",
@@ -13,7 +14,6 @@ SUPPORTED_FILE_TYPES = {
     "zip",
     "jpg", "jpeg", "png", "gif", "webp",
 }
-MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB
 
 md_converter = MarkItDown()
 

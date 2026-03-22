@@ -1,14 +1,15 @@
+import asyncio
+import logging
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from converter import convert_file, convert_url
-import asyncio
-import os
-import time
+from config import ALLOWED_ORIGINS, CONVERSION_TIMEOUT
+from rate_limiter import RateLimiter
+
+logger = logging.getLogger(__name__)
 
 app = FastAPI(title="AllToMD API")
-
-ALLOWED_ORIGINS = os.environ.get("ALLOWED_ORIGINS", "http://localhost:3000").split(",")
 
 app.add_middleware(
     CORSMiddleware,
@@ -17,36 +18,29 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Simple in-memory rate limiter
-rate_limit_store: dict[str, list[float]] = {}
-RATE_LIMIT = 20
-RATE_WINDOW = 60
-_cleanup_counter = 0
-
-
-def check_rate_limit(ip: str):
-    global _cleanup_counter
-    now = time.time()
-
-    # Periodic cleanup: prune stale IPs every 100 requests
-    _cleanup_counter += 1
-    if _cleanup_counter >= 100:
-        _cleanup_counter = 0
-        stale = [k for k, v in rate_limit_store.items() if all(now - t >= RATE_WINDOW for t in v)]
-        for k in stale:
-            del rate_limit_store[k]
-
-    timestamps = rate_limit_store.get(ip, [])
-    timestamps = [t for t in timestamps if now - t < RATE_WINDOW]
-    if len(timestamps) >= RATE_LIMIT:
-        raise HTTPException(status_code=429, detail="Rate limit exceeded")
-    timestamps.append(now)
-    rate_limit_store[ip] = timestamps
+rate_limiter = RateLimiter()
 
 
 class UrlRequest(BaseModel):
     url: str
     type: str
+
+
+async def run_conversion(func, *args):
+    """Run a blocking conversion function with timeout and error handling."""
+    try:
+        return await asyncio.wait_for(
+            asyncio.to_thread(func, *args),
+            timeout=CONVERSION_TIMEOUT,
+        )
+    except asyncio.TimeoutError:
+        raise HTTPException(status_code=422, detail=f"Conversion timed out ({CONVERSION_TIMEOUT}s limit)")
+    except ValueError as e:
+        status = 413 if "too large" in str(e).lower() else 400
+        raise HTTPException(status_code=status, detail=str(e))
+    except Exception:
+        logger.exception("Conversion failed")
+        raise HTTPException(status_code=422, detail="Conversion failed")
 
 
 @app.post("/convert")
@@ -55,48 +49,23 @@ async def convert_file_endpoint(
     file: UploadFile | None = File(None),
     type: str | None = Form(None),
 ):
-    check_rate_limit(request.client.host if request.client else "unknown")
+    rate_limiter.check(request.client.host if request.client else "unknown")
 
     if file is not None:
         if not type:
             raise HTTPException(status_code=400, detail="Missing 'type' field")
-        # Early size check via content-length header
         if file.size and file.size > 10 * 1024 * 1024:
             raise HTTPException(status_code=413, detail="File too large (max 10MB)")
         content = await file.read()
-        try:
-            result = await asyncio.wait_for(
-                asyncio.to_thread(convert_file, content, file.filename or "unknown", type),
-                timeout=30,
-            )
-            return result
-        except asyncio.TimeoutError:
-            raise HTTPException(status_code=422, detail="Conversion timed out (30s limit)")
-        except ValueError as e:
-            status = 413 if "too large" in str(e).lower() else 400
-            raise HTTPException(status_code=status, detail=str(e))
-        except Exception as e:
-            raise HTTPException(status_code=422, detail="Conversion failed")
+        return await run_conversion(convert_file, content, file.filename or "unknown", type)
 
     raise HTTPException(status_code=400, detail="No file provided")
 
 
 @app.post("/convert/url")
 async def convert_url_endpoint(request: Request, body: UrlRequest):
-    check_rate_limit(request.client.host if request.client else "unknown")
-
-    try:
-        result = await asyncio.wait_for(
-            asyncio.to_thread(convert_url, body.url, body.type),
-            timeout=30,
-        )
-        return result
-    except asyncio.TimeoutError:
-        raise HTTPException(status_code=422, detail="Conversion timed out (30s limit)")
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    except Exception as e:
-        raise HTTPException(status_code=422, detail="Conversion failed")
+    rate_limiter.check(request.client.host if request.client else "unknown")
+    return await run_conversion(convert_url, body.url, body.type)
 
 
 @app.get("/health")

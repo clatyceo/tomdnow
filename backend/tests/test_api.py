@@ -13,8 +13,10 @@ def test_health():
 def test_convert_no_file():
     response = client.post("/convert")
     assert response.status_code == 400
+    assert response.json()["detail"] == "No file provided"
 
 
 def test_convert_url_invalid():
     response = client.post("/convert/url", json={"url": "not-a-url", "type": "youtube"})
     assert response.status_code == 400
+    assert "detail" in response.json()
