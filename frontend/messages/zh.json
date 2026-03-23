@@ -43,6 +43,16 @@
     "jsonLdName": "ToMarkdown",
     "jsonLdDescription": "免费在线工具，将任意文件转换为 Markdown"
   },
+  "trust": {
+    "noStorage": "不存储文件",
+    "noStorageDesc": "仅在内存中处理文件",
+    "encrypted": "TLS 加密",
+    "encryptedDesc": "端到端加密传输",
+    "instantDelete": "即时删除",
+    "instantDeleteDesc": "转换后立即删除数据",
+    "noSignup": "无需注册",
+    "noSignupDesc": "100% 免费，无需账户"
+  },
   "seo": {
     "howToTitle": "如何{action}",
     "whyTitle": "为什么要{action}？",

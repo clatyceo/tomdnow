@@ -43,6 +43,16 @@
     "jsonLdName": "ToMarkdown",
     "jsonLdDescription": "Free online tool to convert any file to Markdown"
   },
+  "trust": {
+    "noStorage": "No File Storage",
+    "noStorageDesc": "Files processed in memory only",
+    "encrypted": "TLS Encrypted",
+    "encryptedDesc": "End-to-end encryption",
+    "instantDelete": "Instant Deletion",
+    "instantDeleteDesc": "Data deleted after conversion",
+    "noSignup": "No Sign-up",
+    "noSignupDesc": "100% free, no account needed"
+  },
   "seo": {
     "howToTitle": "How to {action}",
     "whyTitle": "Why {action}?",

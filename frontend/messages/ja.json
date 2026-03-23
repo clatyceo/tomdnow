@@ -43,6 +43,16 @@
     "jsonLdName": "ToMarkdown",
     "jsonLdDescription": "あらゆるファイルを マークダウン に無料変換できるオンラインツール"
   },
+  "trust": {
+    "noStorage": "ファイル保存なし",
+    "noStorageDesc": "メモリ内でのみファイルを処理",
+    "encrypted": "TLS暗号化",
+    "encryptedDesc": "エンドツーエンド暗号化",
+    "instantDelete": "即時削除",
+    "instantDeleteDesc": "変換後すぐにデータを削除",
+    "noSignup": "登録不要",
+    "noSignupDesc": "完全無料、アカウント不要"
+  },
   "seo": {
     "howToTitle": "{action}方法",
     "whyTitle": "なぜ{action}？",
