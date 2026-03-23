@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "AllToMD — 将任意文件转换为 Markdown",
+    "title": "tomdnow — 将任意文件转换为 Markdown",
     "description": "免费在线工具，将 PDF、Word、YouTube 视频等转换为简洁的 Markdown 文件。"
   },
   "common": {
-    "siteName": "ToMarkdown",
+    "siteName": "tomdnow",
     "convert": "转换",
     "converting": "转换中...",
     "download": "下载 .md",
@@ -16,7 +16,7 @@
     "oneFileOnly": "每次只能上传一个文件。",
     "dragDrop": "将文件拖放到此处",
     "orBrowse": "或点击选择文件",
-    "copyright": "© {year} AllToMD. 保留所有权利。",
+    "copyright": "© {year} tomdnow. 保留所有权利。",
     "toggleMenu": "切换菜单",
     "fileInputLabel": "选择要转换的文件",
     "urlInputLabel": "输入要转换的URL",
@@ -40,7 +40,7 @@
     "feature2Desc": "秒级转换，无需漫长等待。",
     "feature3Title": "即时下载",
     "feature3Desc": "立即下载或复制 Markdown 内容。",
-    "jsonLdName": "ToMarkdown",
+    "jsonLdName": "tomdnow",
     "jsonLdDescription": "免费在线工具，将任意文件转换为 Markdown"
   },
   "trust": {
@@ -60,7 +60,7 @@
   },
   "tools": {
     "pdf": {
-      "title": "PDF转Markdown — ToMarkdown",
+      "title": "PDF转Markdown — tomdnow",
       "h1": "PDF转换为Markdown",
       "displayName": "PDF转Markdown",
       "subtitle": "将 PDF 文档转换为简洁、易读的 Markdown 文件。",
@@ -86,7 +86,7 @@
       "faq4A": "不会。您的文件在内存中处理，转换完成后立即删除。"
     },
     "docx": {
-      "title": "DOCX转Markdown — ToMarkdown",
+      "title": "DOCX转Markdown — tomdnow",
       "h1": "Word转换为Markdown",
       "displayName": "Word转Markdown",
       "subtitle": "将 Microsoft Word 文档即时转换为 Markdown 格式。",
@@ -112,7 +112,7 @@
       "faq4A": "不会。您的文件在内存中处理，转换完成后立即删除。"
     },
     "youtube": {
-      "title": "YouTube转Markdown — ToMarkdown",
+      "title": "YouTube转Markdown — tomdnow",
       "h1": "YouTube视频转换为Markdown",
       "displayName": "YouTube转Markdown",
       "subtitle": "将 YouTube 视频字幕提取为简洁的 Markdown 文件。",
@@ -138,7 +138,7 @@
       "faq4A": "目前我们提取视频默认的字幕语言。"
     },
     "pptx": {
-      "title": "PPTX转Markdown — ToMarkdown",
+      "title": "PPTX转Markdown — tomdnow",
       "h1": "PowerPoint转换为Markdown",
       "displayName": "PowerPoint转Markdown",
       "subtitle": "将 PowerPoint 演示文稿转换为简洁的 Markdown 文件。",
@@ -164,7 +164,7 @@
       "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
     },
     "xlsx": {
-      "title": "XLSX转Markdown — ToMarkdown",
+      "title": "XLSX转Markdown — tomdnow",
       "h1": "Excel转换为Markdown",
       "displayName": "Excel转Markdown",
       "subtitle": "将 Excel 电子表格转换为 Markdown 表格。",
@@ -190,7 +190,7 @@
       "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
     },
     "xls": {
-      "title": "XLS转Markdown — ToMarkdown",
+      "title": "XLS转Markdown — tomdnow",
       "h1": "XLS转换为Markdown",
       "displayName": "XLS转Markdown",
       "subtitle": "将旧版 Excel 文件转换为 Markdown 表格。",
@@ -214,7 +214,7 @@
       "faq3A": "不会。文件在内存中处理，处理完毕后立即删除。"
     },
     "msg": {
-      "title": "MSG转Markdown — ToMarkdown",
+      "title": "MSG转Markdown — tomdnow",
       "h1": "Outlook 邮件转换为Markdown",
       "displayName": "Outlook邮件转Markdown",
       "subtitle": "将 Outlook MSG 邮件文件转换为易读的 Markdown。",
@@ -238,7 +238,7 @@
       "faq3A": "不会。文件在内存中处理，处理完毕后立即删除。"
     },
     "html": {
-      "title": "HTML转Markdown — ToMarkdown",
+      "title": "HTML转Markdown — tomdnow",
       "h1": "HTML转换为Markdown",
       "displayName": "HTML转Markdown",
       "subtitle": "将 HTML 网页转换为简洁的 Markdown。",
@@ -264,7 +264,7 @@
       "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
     },
     "epub": {
-      "title": "EPUB转Markdown — ToMarkdown",
+      "title": "EPUB转Markdown — tomdnow",
       "h1": "EPUB转换为Markdown",
       "displayName": "EPUB转Markdown",
       "subtitle": "将电子书转换为简洁、易读的 Markdown 文件。",
@@ -290,7 +290,7 @@
       "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
     },
     "image": {
-      "title": "图片转Markdown — ToMarkdown",
+      "title": "图片转Markdown — tomdnow",
       "h1": "图片转换为Markdown",
       "displayName": "图片转Markdown",
       "subtitle": "将图片的 EXIF 元数据提取为 Markdown。",
@@ -316,7 +316,7 @@
       "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
     },
     "csv": {
-      "title": "CSV转Markdown — ToMarkdown",
+      "title": "CSV转Markdown — tomdnow",
       "h1": "CSV转换为Markdown",
       "displayName": "CSV转Markdown",
       "subtitle": "将 CSV 数据转换为格式化的 Markdown 表格。",
@@ -342,7 +342,7 @@
       "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
     },
     "json": {
-      "title": "JSON转Markdown — ToMarkdown",
+      "title": "JSON转Markdown — tomdnow",
       "h1": "JSON转换为Markdown",
       "displayName": "JSON转Markdown",
       "subtitle": "将 JSON 数据转换为格式化的 Markdown。",
@@ -366,7 +366,7 @@
       "faq3A": "不会。文件在内存中处理，处理完毕后立即删除。"
     },
     "xml": {
-      "title": "XML转Markdown — ToMarkdown",
+      "title": "XML转Markdown — tomdnow",
       "h1": "XML转换为Markdown",
       "displayName": "XML转Markdown",
       "subtitle": "将 XML 数据转换为易读的 Markdown 格式。",
@@ -390,7 +390,7 @@
       "faq3A": "不会。文件在内存中处理，处理完毕后立即删除。"
     },
     "ipynb": {
-      "title": "Jupyter转Markdown — ToMarkdown",
+      "title": "Jupyter转Markdown — tomdnow",
       "h1": "Jupyter Notebook转换为Markdown",
       "displayName": "Jupyter转Markdown",
       "subtitle": "将 Jupyter Notebook 转换为简洁的 Markdown 文件。",
@@ -416,7 +416,7 @@
       "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
     },
     "zip": {
-      "title": "ZIP转Markdown — ToMarkdown",
+      "title": "ZIP转Markdown — tomdnow",
       "h1": "ZIP转换为Markdown",
       "displayName": "ZIP转Markdown",
       "subtitle": "提取 ZIP 压缩包内容并转换为 Markdown。",
@@ -443,19 +443,19 @@
     }
   },
   "about": {
-    "title": "关于 AllToMD",
-    "metaTitle": "关于 — AllToMD",
-    "metaDescription": "了解 AllToMD，一款免费的文件转 Markdown 在线工具。",
-    "p1": "AllToMD 是一款免费的在线工具，可将各种文件格式转换为简洁、易读的 Markdown。",
-    "p2": "无论您需要转换 PDF 报告、Word 文档还是 YouTube 视频字幕，AllToMD 都能轻松完成 — 无需注册。",
-    "p3": "基于微软开源的 MarkItDown 引擎，AllToMD 提供精准的转换结果，完整保留您的文档结构。"
+    "title": "关于 tomdnow",
+    "metaTitle": "关于 — tomdnow",
+    "metaDescription": "了解 tomdnow，一款免费的文件转 Markdown 在线工具。",
+    "p1": "tomdnow 是一款免费的在线工具，可将各种文件格式转换为简洁、易读的 Markdown。",
+    "p2": "无论您需要转换 PDF 报告、Word 文档还是 YouTube 视频字幕，tomdnow 都能轻松完成 — 无需注册。",
+    "p3": "基于微软开源的 MarkItDown 引擎，tomdnow 提供精准的转换结果，完整保留您的文档结构。"
   },
   "privacy": {
     "title": "隐私政策",
-    "metaTitle": "隐私政策 — AllToMD",
+    "metaTitle": "隐私政策 — tomdnow",
     "lastUpdated": "最后更新：2026 年 3 月",
     "dataCollectionTitle": "数据收集",
-    "dataCollectionText": "AllToMD 不收集个人数据。我们不要求注册或登录。",
+    "dataCollectionText": "tomdnow 不收集个人数据。我们不要求注册或登录。",
     "fileProcessingTitle": "文件处理",
     "fileProcessingText": "上传的文件在内存中处理，处理完成后立即删除。我们不会存储您的文件。",
     "analyticsTitle": "数据分析",
@@ -465,19 +465,19 @@
   },
   "terms": {
     "title": "使用条款",
-    "metaTitle": "使用条款 — AllToMD",
+    "metaTitle": "使用条款 — tomdnow",
     "lastUpdated": "最后更新：2026 年 3 月",
     "serviceTitle": "服务说明",
-    "serviceText": "AllToMD 提供免费的文件转 Markdown 服务。本服务按「现状」提供，不作任何担保。",
+    "serviceText": "tomdnow 提供免费的文件转 Markdown 服务。本服务按「现状」提供，不作任何担保。",
     "usageTitle": "使用规范",
-    "usageText": "您可以将 AllToMD 用于个人和商业用途。请勿在未经授权的情况下上传违法或受版权保护的内容。",
+    "usageText": "您可以将 tomdnow 用于个人和商业用途。请勿在未经授权的情况下上传违法或受版权保护的内容。",
     "limitationsTitle": "使用限制",
     "limitationsText": "我们保留限制使用以防止滥用的权利。每次转换的文件大小限制为 10MB。"
   },
   "security": {
-    "title": "安全 — AllToMD",
+    "title": "安全 — tomdnow",
     "h1": "您的文件，您的隐私",
-    "subtitle": "AllToMD 从设计之初就确保您的文件不会被存储、不会被共享、不会面临任何风险。",
+    "subtitle": "tomdnow 从设计之初就确保您的文件不会被存储、不会被共享、不会面临任何风险。",
     "memoryProcessingTitle": "内存处理",
     "memoryProcessingDesc": "您的文件完全在内存中处理，服务器磁盘上不会写入任何数据。",
     "instantDeletionTitle": "即时删除",
@@ -489,8 +489,8 @@
     "openSourceTitle": "开源",
     "openSourceDesc": "我们的转换引擎是开源的，您可以查看代码并亲自验证安全性。",
     "comparisonTitle": "对比一下",
-    "comparisonDesc": "看看 AllToMD 在隐私和安全方面与其他文件转换服务有何不同。",
-    "comparisonUs": "ToMarkdown",
+    "comparisonDesc": "看看 tomdnow 在隐私和安全方面与其他文件转换服务有何不同。",
+    "comparisonUs": "tomdnow",
     "comparisonOthers": "其他服务",
     "comparisonStorage": "文件存储",
     "comparisonStorageUs": "无（仅内存处理）",

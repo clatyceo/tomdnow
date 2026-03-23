@@ -69,7 +69,7 @@ export default async function LocaleLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "AllToMD",
+              name: "tomdnow",
               url: SITE_URL,
               description:
                 "Free online tool to convert any file to Markdown",
@@ -82,7 +82,7 @@ export default async function LocaleLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "AllToMD",
+              name: "tomdnow",
               url: SITE_URL,
             }),
           }}

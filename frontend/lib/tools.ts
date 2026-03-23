@@ -34,7 +34,7 @@ export const tools: Record<string, ToolConfig> = {
   pdf: {
     key: "pdf",
     slug: "pdf-to-markdown",
-    title: "PDF to Markdown — ToMarkdown",
+    title: "PDF to Markdown — tomdnow",
     h1: "Convert PDF to Markdown",
     displayName: "PDF to Markdown",
     subtitle: "Transform your PDF documents into clean, readable Markdown files.",
@@ -69,7 +69,7 @@ export const tools: Record<string, ToolConfig> = {
   docx: {
     key: "docx",
     slug: "docx-to-markdown",
-    title: "DOCX to Markdown — ToMarkdown",
+    title: "DOCX to Markdown — tomdnow",
     h1: "Convert Word to Markdown",
     displayName: "Word to Markdown",
     subtitle: "Convert Microsoft Word documents to Markdown format instantly.",
@@ -104,7 +104,7 @@ export const tools: Record<string, ToolConfig> = {
   youtube: {
     key: "youtube",
     slug: "youtube-to-markdown",
-    title: "YouTube to Markdown — ToMarkdown",
+    title: "YouTube to Markdown — tomdnow",
     h1: "Convert YouTube to Markdown",
     displayName: "YouTube to Markdown",
     subtitle: "Extract YouTube video transcripts as clean Markdown files.",
@@ -139,7 +139,7 @@ export const tools: Record<string, ToolConfig> = {
   pptx: {
     key: "pptx",
     slug: "pptx-to-markdown",
-    title: "PPTX to Markdown — ToMarkdown",
+    title: "PPTX to Markdown — tomdnow",
     h1: "Convert PowerPoint to Markdown",
     displayName: "PowerPoint to Markdown",
     subtitle: "Transform PowerPoint presentations into clean Markdown files.",
@@ -174,7 +174,7 @@ export const tools: Record<string, ToolConfig> = {
   xlsx: {
     key: "xlsx",
     slug: "xlsx-to-markdown",
-    title: "XLSX to Markdown — ToMarkdown",
+    title: "XLSX to Markdown — tomdnow",
     h1: "Convert Excel to Markdown",
     displayName: "Excel to Markdown",
     subtitle: "Convert Excel spreadsheets into Markdown tables.",
@@ -209,7 +209,7 @@ export const tools: Record<string, ToolConfig> = {
   xls: {
     key: "xls",
     slug: "xls-to-markdown",
-    title: "XLS to Markdown — ToMarkdown",
+    title: "XLS to Markdown — tomdnow",
     h1: "Convert XLS to Markdown",
     displayName: "XLS to Markdown",
     subtitle: "Convert legacy Excel files into Markdown tables.",
@@ -243,7 +243,7 @@ export const tools: Record<string, ToolConfig> = {
   msg: {
     key: "msg",
     slug: "msg-to-markdown",
-    title: "MSG to Markdown — ToMarkdown",
+    title: "MSG to Markdown — tomdnow",
     h1: "Convert Outlook Email to Markdown",
     displayName: "Outlook Email to Markdown",
     subtitle: "Convert Outlook MSG email files into readable Markdown.",
@@ -277,7 +277,7 @@ export const tools: Record<string, ToolConfig> = {
   html: {
     key: "html",
     slug: "html-to-markdown",
-    title: "HTML to Markdown — ToMarkdown",
+    title: "HTML to Markdown — tomdnow",
     h1: "Convert HTML to Markdown",
     displayName: "HTML to Markdown",
     subtitle: "Convert HTML web pages into clean Markdown.",
@@ -312,7 +312,7 @@ export const tools: Record<string, ToolConfig> = {
   epub: {
     key: "epub",
     slug: "epub-to-markdown",
-    title: "EPUB to Markdown — ToMarkdown",
+    title: "EPUB to Markdown — tomdnow",
     h1: "Convert EPUB to Markdown",
     displayName: "EPUB to Markdown",
     subtitle: "Convert eBooks into clean, readable Markdown files.",
@@ -347,7 +347,7 @@ export const tools: Record<string, ToolConfig> = {
   image: {
     key: "image",
     slug: "image-to-markdown",
-    title: "Image to Markdown — ToMarkdown",
+    title: "Image to Markdown — tomdnow",
     h1: "Convert Image to Markdown",
     displayName: "Image to Markdown",
     subtitle: "Extract EXIF metadata from images as Markdown.",
@@ -382,7 +382,7 @@ export const tools: Record<string, ToolConfig> = {
   csv: {
     key: "csv",
     slug: "csv-to-markdown",
-    title: "CSV to Markdown — ToMarkdown",
+    title: "CSV to Markdown — tomdnow",
     h1: "Convert CSV to Markdown",
     displayName: "CSV to Markdown",
     subtitle: "Convert CSV data into formatted Markdown tables.",
@@ -417,7 +417,7 @@ export const tools: Record<string, ToolConfig> = {
   json: {
     key: "json",
     slug: "json-to-markdown",
-    title: "JSON to Markdown — ToMarkdown",
+    title: "JSON to Markdown — tomdnow",
     h1: "Convert JSON to Markdown",
     displayName: "JSON to Markdown",
     subtitle: "Convert JSON data into formatted Markdown.",
@@ -451,7 +451,7 @@ export const tools: Record<string, ToolConfig> = {
   xml: {
     key: "xml",
     slug: "xml-to-markdown",
-    title: "XML to Markdown — ToMarkdown",
+    title: "XML to Markdown — tomdnow",
     h1: "Convert XML to Markdown",
     displayName: "XML to Markdown",
     subtitle: "Convert XML data into readable Markdown format.",
@@ -485,7 +485,7 @@ export const tools: Record<string, ToolConfig> = {
   ipynb: {
     key: "ipynb",
     slug: "ipynb-to-markdown",
-    title: "Jupyter to Markdown — ToMarkdown",
+    title: "Jupyter to Markdown — tomdnow",
     h1: "Convert Jupyter Notebook to Markdown",
     displayName: "Jupyter to Markdown",
     subtitle: "Convert Jupyter notebooks into clean Markdown files.",
@@ -520,7 +520,7 @@ export const tools: Record<string, ToolConfig> = {
   zip: {
     key: "zip",
     slug: "zip-to-markdown",
-    title: "ZIP to Markdown — ToMarkdown",
+    title: "ZIP to Markdown — tomdnow",
     h1: "Convert ZIP to Markdown",
     displayName: "ZIP to Markdown",
     subtitle: "Extract and convert ZIP archive contents to Markdown.",

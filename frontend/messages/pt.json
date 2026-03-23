@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "AllToMD — Converta Qualquer Arquivo para Markdown",
+    "title": "tomdnow — Converta Qualquer Arquivo para Markdown",
     "description": "Ferramenta online gratuita para converter PDF, Word, vídeos do YouTube e mais em arquivos Markdown limpos."
   },
   "common": {
-    "siteName": "ToMarkdown",
+    "siteName": "tomdnow",
     "convert": "Converter",
     "converting": "Convertendo...",
     "download": "Baixar .md",
@@ -16,7 +16,7 @@
     "oneFileOnly": "Envie apenas um arquivo por vez.",
     "dragDrop": "Arraste e solte seu arquivo aqui",
     "orBrowse": "ou clique para selecionar",
-    "copyright": "© {year} AllToMD. Todos os direitos reservados.",
+    "copyright": "© {year} tomdnow. Todos os direitos reservados.",
     "toggleMenu": "Abrir menu",
     "fileInputLabel": "Selecionar arquivo para converter",
     "urlInputLabel": "Insira a URL para converter",
@@ -40,7 +40,7 @@
     "feature2Desc": "Converta arquivos em segundos, não minutos.",
     "feature3Title": "Download Instantâneo",
     "feature3Desc": "Baixe ou copie seu Markdown na hora.",
-    "jsonLdName": "ToMarkdown",
+    "jsonLdName": "tomdnow",
     "jsonLdDescription": "Ferramenta online gratuita para converter qualquer arquivo para Markdown"
   },
   "trust": {
@@ -60,7 +60,7 @@
   },
   "tools": {
     "pdf": {
-      "title": "PDF para Markdown — ToMarkdown",
+      "title": "PDF para Markdown — tomdnow",
       "h1": "Converter PDF para Markdown",
       "displayName": "PDF para Markdown",
       "subtitle": "Transforme seus documentos PDF em arquivos Markdown limpos e legíveis.",
@@ -86,7 +86,7 @@
       "faq4A": "Não. Seu arquivo é processado em memória e excluído imediatamente após a conversão."
     },
     "docx": {
-      "title": "DOCX para Markdown — ToMarkdown",
+      "title": "DOCX para Markdown — tomdnow",
       "h1": "Converter Word para Markdown",
       "displayName": "Word para Markdown",
       "subtitle": "Converta documentos do Microsoft Word para o formato Markdown instantaneamente.",
@@ -112,7 +112,7 @@
       "faq4A": "Não. Seu arquivo é processado em memória e excluído imediatamente após a conversão."
     },
     "youtube": {
-      "title": "YouTube para Markdown — ToMarkdown",
+      "title": "YouTube para Markdown — tomdnow",
       "h1": "Converter YouTube para Markdown",
       "displayName": "YouTube para Markdown",
       "subtitle": "Extraia transcrições de vídeos do YouTube como arquivos Markdown limpos.",
@@ -138,7 +138,7 @@
       "faq4A": "Atualmente extraímos o idioma padrão da transcrição disponível para o vídeo."
     },
     "pptx": {
-      "title": "PPTX para Markdown — ToMarkdown",
+      "title": "PPTX para Markdown — tomdnow",
       "h1": "Converter PowerPoint para Markdown",
       "displayName": "PowerPoint para Markdown",
       "subtitle": "Transforme apresentações PowerPoint em arquivos Markdown limpos.",
@@ -164,7 +164,7 @@
       "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
     },
     "xlsx": {
-      "title": "XLSX para Markdown — ToMarkdown",
+      "title": "XLSX para Markdown — tomdnow",
       "h1": "Converter Excel para Markdown",
       "displayName": "Excel para Markdown",
       "subtitle": "Converta planilhas Excel em tabelas Markdown.",
@@ -190,7 +190,7 @@
       "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
     },
     "xls": {
-      "title": "XLS para Markdown — ToMarkdown",
+      "title": "XLS para Markdown — tomdnow",
       "h1": "Converter XLS para Markdown",
       "displayName": "XLS para Markdown",
       "subtitle": "Converta arquivos Excel legados em tabelas Markdown.",
@@ -214,7 +214,7 @@
       "faq3A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
     },
     "msg": {
-      "title": "MSG para Markdown — ToMarkdown",
+      "title": "MSG para Markdown — tomdnow",
       "h1": "Converter E-mail do Outlook para Markdown",
       "displayName": "E-mail do Outlook para Markdown",
       "subtitle": "Converta arquivos de e-mail MSG do Outlook em Markdown legível.",
@@ -238,7 +238,7 @@
       "faq3A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
     },
     "html": {
-      "title": "HTML para Markdown — ToMarkdown",
+      "title": "HTML para Markdown — tomdnow",
       "h1": "Converter HTML para Markdown",
       "displayName": "HTML para Markdown",
       "subtitle": "Converta páginas web HTML em Markdown limpo.",
@@ -264,7 +264,7 @@
       "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
     },
     "epub": {
-      "title": "EPUB para Markdown — ToMarkdown",
+      "title": "EPUB para Markdown — tomdnow",
       "h1": "Converter EPUB para Markdown",
       "displayName": "EPUB para Markdown",
       "subtitle": "Converta eBooks em arquivos Markdown limpos e legíveis.",
@@ -290,7 +290,7 @@
       "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
     },
     "image": {
-      "title": "Imagem para Markdown — ToMarkdown",
+      "title": "Imagem para Markdown — tomdnow",
       "h1": "Converter Imagem para Markdown",
       "displayName": "Imagem para Markdown",
       "subtitle": "Extraia metadados EXIF de imagens como Markdown.",
@@ -316,7 +316,7 @@
       "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
     },
     "csv": {
-      "title": "CSV para Markdown — ToMarkdown",
+      "title": "CSV para Markdown — tomdnow",
       "h1": "Converter CSV para Markdown",
       "displayName": "CSV para Markdown",
       "subtitle": "Converta dados CSV em tabelas Markdown formatadas.",
@@ -342,7 +342,7 @@
       "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
     },
     "json": {
-      "title": "JSON para Markdown — ToMarkdown",
+      "title": "JSON para Markdown — tomdnow",
       "h1": "Converter JSON para Markdown",
       "displayName": "JSON para Markdown",
       "subtitle": "Converta dados JSON em Markdown formatado.",
@@ -366,7 +366,7 @@
       "faq3A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
     },
     "xml": {
-      "title": "XML para Markdown — ToMarkdown",
+      "title": "XML para Markdown — tomdnow",
       "h1": "Converter XML para Markdown",
       "displayName": "XML para Markdown",
       "subtitle": "Converta dados XML em formato Markdown legível.",
@@ -390,7 +390,7 @@
       "faq3A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
     },
     "ipynb": {
-      "title": "Jupyter para Markdown — ToMarkdown",
+      "title": "Jupyter para Markdown — tomdnow",
       "h1": "Converter Jupyter Notebook para Markdown",
       "displayName": "Jupyter para Markdown",
       "subtitle": "Converta notebooks Jupyter em arquivos Markdown limpos.",
@@ -416,7 +416,7 @@
       "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
     },
     "zip": {
-      "title": "ZIP para Markdown — ToMarkdown",
+      "title": "ZIP para Markdown — tomdnow",
       "h1": "Converter ZIP para Markdown",
       "displayName": "ZIP para Markdown",
       "subtitle": "Extraia e converta o conteúdo de arquivos ZIP para Markdown.",
@@ -443,19 +443,19 @@
     }
   },
   "about": {
-    "title": "Sobre o AllToMD",
-    "metaTitle": "Sobre — AllToMD",
-    "metaDescription": "Saiba mais sobre o AllToMD, uma ferramenta gratuita para converter qualquer arquivo para Markdown.",
-    "p1": "O AllToMD é uma ferramenta online gratuita que converte diversos formatos de arquivo em Markdown limpo e legível.",
-    "p2": "Seja para converter um relatório em PDF, um documento Word ou uma transcrição de vídeo do YouTube, o AllToMD torna tudo simples — sem necessidade de cadastro.",
-    "p3": "Desenvolvido com o motor de código aberto MarkItDown da Microsoft, o AllToMD oferece conversões precisas que preservam a estrutura do seu documento."
+    "title": "Sobre o tomdnow",
+    "metaTitle": "Sobre — tomdnow",
+    "metaDescription": "Saiba mais sobre o tomdnow, uma ferramenta gratuita para converter qualquer arquivo para Markdown.",
+    "p1": "O tomdnow é uma ferramenta online gratuita que converte diversos formatos de arquivo em Markdown limpo e legível.",
+    "p2": "Seja para converter um relatório em PDF, um documento Word ou uma transcrição de vídeo do YouTube, o tomdnow torna tudo simples — sem necessidade de cadastro.",
+    "p3": "Desenvolvido com o motor de código aberto MarkItDown da Microsoft, o tomdnow oferece conversões precisas que preservam a estrutura do seu documento."
   },
   "privacy": {
     "title": "Política de Privacidade",
-    "metaTitle": "Política de Privacidade — AllToMD",
+    "metaTitle": "Política de Privacidade — tomdnow",
     "lastUpdated": "Última atualização: março de 2026",
     "dataCollectionTitle": "Coleta de Dados",
-    "dataCollectionText": "O AllToMD não coleta dados pessoais. Não exigimos cadastro ou login.",
+    "dataCollectionText": "O tomdnow não coleta dados pessoais. Não exigimos cadastro ou login.",
     "fileProcessingTitle": "Processamento de Arquivos",
     "fileProcessingText": "Os arquivos enviados são processados em memória e excluídos imediatamente. Não armazenamos seus arquivos.",
     "analyticsTitle": "Análises",
@@ -465,19 +465,19 @@
   },
   "terms": {
     "title": "Termos de Serviço",
-    "metaTitle": "Termos de Serviço — AllToMD",
+    "metaTitle": "Termos de Serviço — tomdnow",
     "lastUpdated": "Última atualização: março de 2026",
     "serviceTitle": "Serviço",
-    "serviceText": "O AllToMD oferece conversão gratuita de arquivos para Markdown. O serviço é fornecido \"como está\", sem garantia.",
+    "serviceText": "O tomdnow oferece conversão gratuita de arquivos para Markdown. O serviço é fornecido \"como está\", sem garantia.",
     "usageTitle": "Uso",
-    "usageText": "Você pode utilizar o AllToMD para fins pessoais e comerciais. Não envie conteúdo ilegal ou protegido por direitos autorais sem autorização.",
+    "usageText": "Você pode utilizar o tomdnow para fins pessoais e comerciais. Não envie conteúdo ilegal ou protegido por direitos autorais sem autorização.",
     "limitationsTitle": "Limitações",
     "limitationsText": "Reservamo-nos o direito de limitar o uso para prevenir abusos. O tamanho do arquivo é limitado a 10MB por conversão."
   },
   "security": {
-    "title": "Segurança — AllToMD",
+    "title": "Segurança — tomdnow",
     "h1": "Seus arquivos, sua privacidade",
-    "subtitle": "O AllToMD foi projetado desde o início para garantir que seus arquivos nunca sejam armazenados, compartilhados ou expostos a riscos.",
+    "subtitle": "O tomdnow foi projetado desde o início para garantir que seus arquivos nunca sejam armazenados, compartilhados ou expostos a riscos.",
     "memoryProcessingTitle": "Processamento em memória",
     "memoryProcessingDesc": "Seus arquivos são processados inteiramente em memória. Nada é gravado no disco dos nossos servidores.",
     "instantDeletionTitle": "Exclusão instantânea",
@@ -489,8 +489,8 @@
     "openSourceTitle": "Código aberto",
     "openSourceDesc": "Nosso motor de conversão é código aberto. Você pode inspecionar o código e verificar nossas medidas de segurança.",
     "comparisonTitle": "Como nos comparamos",
-    "comparisonDesc": "Veja como o AllToMD se compara com outros serviços de conversão de arquivos em privacidade e segurança.",
-    "comparisonUs": "ToMarkdown",
+    "comparisonDesc": "Veja como o tomdnow se compara com outros serviços de conversão de arquivos em privacidade e segurança.",
+    "comparisonUs": "tomdnow",
     "comparisonOthers": "Outros serviços",
     "comparisonStorage": "Armazenamento de arquivos",
     "comparisonStorageUs": "Nenhum (apenas em memória)",

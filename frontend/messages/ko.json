@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "AllToMD — 모든 파일을 마크다운으로 변환",
+    "title": "tomdnow — 모든 파일을 마크다운으로 변환",
     "description": "PDF, Word, YouTube 영상 등 다양한 파일을 깔끔한 마크다운으로 변환하는 무료 온라인 도구입니다."
   },
   "common": {
-    "siteName": "ToMarkdown",
+    "siteName": "tomdnow",
     "convert": "변환",
     "converting": "변환 중...",
     "download": ".md 다운로드",
@@ -16,7 +16,7 @@
     "oneFileOnly": "파일은 한 번에 하나만 업로드할 수 있습니다.",
     "dragDrop": "파일을 여기에 끌어다 놓으세요",
     "orBrowse": "또는 클릭하여 파일 선택",
-    "copyright": "© {year} AllToMD. All rights reserved.",
+    "copyright": "© {year} tomdnow. All rights reserved.",
     "toggleMenu": "메뉴 열기/닫기",
     "fileInputLabel": "변환할 파일 선택",
     "urlInputLabel": "변환할 URL 입력",
@@ -40,7 +40,7 @@
     "feature2Desc": "몇 초 만에 파일을 변환합니다.",
     "feature3Title": "바로 다운로드",
     "feature3Desc": "변환 즉시 마크다운을 다운로드하거나 복사하세요.",
-    "jsonLdName": "ToMarkdown",
+    "jsonLdName": "tomdnow",
     "jsonLdDescription": "모든 파일을 마크다운으로 변환하는 무료 온라인 도구"
   },
   "trust": {
@@ -60,7 +60,7 @@
   },
   "tools": {
     "pdf": {
-      "title": "PDF 마크다운 변환 — ToMarkdown",
+      "title": "PDF 마크다운 변환 — tomdnow",
       "h1": "PDF를 마크다운으로 변환",
       "displayName": "PDF 마크다운 변환",
       "subtitle": "PDF 문서를 깔끔하고 읽기 쉬운 마크다운 파일로 변환하세요.",
@@ -86,7 +86,7 @@
       "faq4A": "아니요. 파일은 메모리에서 처리되며 변환 후 즉시 삭제됩니다."
     },
     "docx": {
-      "title": "Word 마크다운 변환 — ToMarkdown",
+      "title": "Word 마크다운 변환 — tomdnow",
       "h1": "Word를 마크다운으로 변환",
       "displayName": "Word 마크다운 변환",
       "subtitle": "Microsoft Word 문서를 마크다운 형식으로 즉시 변환하세요.",
@@ -112,7 +112,7 @@
       "faq4A": "아니요. 파일은 메모리에서 처리되며 변환 후 즉시 삭제됩니다."
     },
     "youtube": {
-      "title": "YouTube 마크다운 변환 — ToMarkdown",
+      "title": "YouTube 마크다운 변환 — tomdnow",
       "h1": "YouTube를 마크다운으로 변환",
       "displayName": "YouTube 마크다운 변환",
       "subtitle": "YouTube 영상 자막을 깔끔한 마크다운 파일로 추출하세요.",
@@ -138,7 +138,7 @@
       "faq4A": "현재는 영상에서 제공하는 기본 자막 언어를 추출합니다."
     },
     "pptx": {
-      "title": "PowerPoint 마크다운 변환 — ToMarkdown",
+      "title": "PowerPoint 마크다운 변환 — tomdnow",
       "h1": "PowerPoint를 마크다운으로 변환",
       "displayName": "PowerPoint 마크다운 변환",
       "subtitle": "PowerPoint 프레젠테이션을 깔끔한 마크다운 파일로 변환하세요.",
@@ -164,7 +164,7 @@
       "faq4A": "아니요. 파일은 메모리에서 처리되며 즉시 삭제됩니다."
     },
     "xlsx": {
-      "title": "Excel 마크다운 변환 — ToMarkdown",
+      "title": "Excel 마크다운 변환 — tomdnow",
       "h1": "Excel을 마크다운으로 변환",
       "displayName": "Excel 마크다운 변환",
       "subtitle": "Excel 스프레드시트를 마크다운 표로 변환하세요.",
@@ -190,7 +190,7 @@
       "faq4A": "아니요. 파일은 메모리에서 처리되며 즉시 삭제됩니다."
     },
     "xls": {
-      "title": "XLS 마크다운 변환 — ToMarkdown",
+      "title": "XLS 마크다운 변환 — tomdnow",
       "h1": "XLS를 마크다운으로 변환",
       "displayName": "XLS 마크다운 변환",
       "subtitle": "이전 버전 Excel 파일을 마크다운 표로 변환하세요.",
@@ -214,7 +214,7 @@
       "faq3A": "아니요. 파일은 메모리에서 처리되며 즉시 삭제됩니다."
     },
     "msg": {
-      "title": "MSG 마크다운 변환 — ToMarkdown",
+      "title": "MSG 마크다운 변환 — tomdnow",
       "h1": "Outlook 이메일을 마크다운으로 변환",
       "displayName": "Outlook 이메일 마크다운 변환",
       "subtitle": "Outlook MSG 이메일 파일을 읽기 쉬운 마크다운으로 변환하세요.",
@@ -238,7 +238,7 @@
       "faq3A": "아니요. 파일은 메모리에서 처리되며 즉시 삭제됩니다."
     },
     "html": {
-      "title": "HTML 마크다운 변환 — ToMarkdown",
+      "title": "HTML 마크다운 변환 — tomdnow",
       "h1": "HTML을 마크다운으로 변환",
       "displayName": "HTML 마크다운 변환",
       "subtitle": "HTML 웹 페이지를 깔끔한 마크다운으로 변환하세요.",
@@ -264,7 +264,7 @@
       "faq4A": "아니요. 파일은 메모리에서 처리되며 즉시 삭제됩니다."
     },
     "epub": {
-      "title": "EPUB 마크다운 변환 — ToMarkdown",
+      "title": "EPUB 마크다운 변환 — tomdnow",
       "h1": "EPUB을 마크다운으로 변환",
       "displayName": "EPUB 마크다운 변환",
       "subtitle": "전자책을 깔끔하고 읽기 쉬운 마크다운 파일로 변환하세요.",
@@ -290,7 +290,7 @@
       "faq4A": "아니요. 파일은 메모리에서 처리되며 즉시 삭제됩니다."
     },
     "image": {
-      "title": "이미지 마크다운 변환 — ToMarkdown",
+      "title": "이미지 마크다운 변환 — tomdnow",
       "h1": "이미지를 마크다운으로 변환",
       "displayName": "이미지 마크다운 변환",
       "subtitle": "이미지에서 EXIF 메타데이터를 마크다운으로 추출하세요.",
@@ -316,7 +316,7 @@
       "faq4A": "아니요. 파일은 메모리에서 처리되며 즉시 삭제됩니다."
     },
     "csv": {
-      "title": "CSV 마크다운 변환 — ToMarkdown",
+      "title": "CSV 마크다운 변환 — tomdnow",
       "h1": "CSV를 마크다운으로 변환",
       "displayName": "CSV 마크다운 변환",
       "subtitle": "CSV 데이터를 정돈된 마크다운 표로 변환하세요.",
@@ -342,7 +342,7 @@
       "faq4A": "아니요. 파일은 메모리에서 처리되며 즉시 삭제됩니다."
     },
     "json": {
-      "title": "JSON 마크다운 변환 — ToMarkdown",
+      "title": "JSON 마크다운 변환 — tomdnow",
       "h1": "JSON을 마크다운으로 변환",
       "displayName": "JSON 마크다운 변환",
       "subtitle": "JSON 데이터를 정돈된 마크다운으로 변환하세요.",
@@ -366,7 +366,7 @@
       "faq3A": "아니요. 파일은 메모리에서 처리되며 즉시 삭제됩니다."
     },
     "xml": {
-      "title": "XML 마크다운 변환 — ToMarkdown",
+      "title": "XML 마크다운 변환 — tomdnow",
       "h1": "XML을 마크다운으로 변환",
       "displayName": "XML 마크다운 변환",
       "subtitle": "XML 데이터를 읽기 쉬운 마크다운 형식으로 변환하세요.",
@@ -390,7 +390,7 @@
       "faq3A": "아니요. 파일은 메모리에서 처리되며 즉시 삭제됩니다."
     },
     "ipynb": {
-      "title": "Jupyter 마크다운 변환 — ToMarkdown",
+      "title": "Jupyter 마크다운 변환 — tomdnow",
       "h1": "Jupyter Notebook을 마크다운으로 변환",
       "displayName": "Jupyter 마크다운 변환",
       "subtitle": "Jupyter 노트북을 깔끔한 마크다운 파일로 변환하세요.",
@@ -416,7 +416,7 @@
       "faq4A": "아니요. 파일은 메모리에서 처리되며 즉시 삭제됩니다."
     },
     "zip": {
-      "title": "ZIP 마크다운 변환 — ToMarkdown",
+      "title": "ZIP 마크다운 변환 — tomdnow",
       "h1": "ZIP을 마크다운으로 변환",
       "displayName": "ZIP 마크다운 변환",
       "subtitle": "ZIP 압축 파일의 내용을 추출하여 마크다운으로 변환하세요.",
@@ -443,19 +443,19 @@
     }
   },
   "about": {
-    "title": "AllToMD 소개",
-    "metaTitle": "소개 — AllToMD",
-    "metaDescription": "AllToMD는 다양한 파일을 마크다운으로 변환하는 무료 도구입니다.",
-    "p1": "AllToMD는 다양한 파일 형식을 깔끔하고 읽기 쉬운 마크다운으로 변환하는 무료 온라인 도구입니다.",
-    "p2": "PDF 보고서, Word 문서, YouTube 영상 자막 등 무엇이든 AllToMD를 사용하면 간편하게 변환할 수 있습니다. 회원가입이 필요 없습니다.",
+    "title": "tomdnow 소개",
+    "metaTitle": "소개 — tomdnow",
+    "metaDescription": "tomdnow는 다양한 파일을 마크다운으로 변환하는 무료 도구입니다.",
+    "p1": "tomdnow는 다양한 파일 형식을 깔끔하고 읽기 쉬운 마크다운으로 변환하는 무료 온라인 도구입니다.",
+    "p2": "PDF 보고서, Word 문서, YouTube 영상 자막 등 무엇이든 tomdnow를 사용하면 간편하게 변환할 수 있습니다. 회원가입이 필요 없습니다.",
     "p3": "Microsoft의 오픈소스 MarkItDown 엔진을 기반으로, 문서 구조를 유지하면서 정확한 변환을 제공합니다."
   },
   "privacy": {
     "title": "개인정보처리방침",
-    "metaTitle": "개인정보처리방침 — AllToMD",
+    "metaTitle": "개인정보처리방침 — tomdnow",
     "lastUpdated": "최종 수정일: 2026년 3월",
     "dataCollectionTitle": "개인정보 수집",
-    "dataCollectionText": "AllToMD는 개인정보를 수집하지 않습니다. 회원가입이나 로그인이 필요하지 않습니다.",
+    "dataCollectionText": "tomdnow는 개인정보를 수집하지 않습니다. 회원가입이나 로그인이 필요하지 않습니다.",
     "fileProcessingTitle": "파일 처리",
     "fileProcessingText": "업로드된 파일은 메모리에서 처리되며 즉시 삭제됩니다. 파일을 저장하지 않습니다.",
     "analyticsTitle": "분석 도구",
@@ -465,19 +465,19 @@
   },
   "terms": {
     "title": "이용약관",
-    "metaTitle": "이용약관 — AllToMD",
+    "metaTitle": "이용약관 — tomdnow",
     "lastUpdated": "최종 수정일: 2026년 3월",
     "serviceTitle": "서비스",
-    "serviceText": "AllToMD는 무료 파일-마크다운 변환 서비스를 제공합니다. 본 서비스는 어떠한 보증 없이 \"있는 그대로\" 제공됩니다.",
+    "serviceText": "tomdnow는 무료 파일-마크다운 변환 서비스를 제공합니다. 본 서비스는 어떠한 보증 없이 \"있는 그대로\" 제공됩니다.",
     "usageTitle": "이용",
-    "usageText": "AllToMD는 개인 및 상업적 목적으로 사용할 수 있습니다. 불법적이거나 허가 없이 저작권이 있는 콘텐츠를 업로드하지 마십시오.",
+    "usageText": "tomdnow는 개인 및 상업적 목적으로 사용할 수 있습니다. 불법적이거나 허가 없이 저작권이 있는 콘텐츠를 업로드하지 마십시오.",
     "limitationsTitle": "제한 사항",
     "limitationsText": "남용을 방지하기 위해 사용량을 제한할 수 있습니다. 1회 변환당 파일 크기는 10MB로 제한됩니다."
   },
   "security": {
-    "title": "보안 — AllToMD",
+    "title": "보안 — tomdnow",
     "h1": "당신의 파일, 당신의 개인정보",
-    "subtitle": "AllToMD는 파일이 저장되거나 공유되거나 위험에 노출되지 않도록 처음부터 설계되었습니다.",
+    "subtitle": "tomdnow는 파일이 저장되거나 공유되거나 위험에 노출되지 않도록 처음부터 설계되었습니다.",
     "memoryProcessingTitle": "메모리 내 처리",
     "memoryProcessingDesc": "파일은 전적으로 메모리에서 처리됩니다. 서버 디스크에 기록되는 것은 없습니다.",
     "instantDeletionTitle": "즉시 삭제",
@@ -489,8 +489,8 @@
     "openSourceTitle": "오픈 소스",
     "openSourceDesc": "변환 엔진은 오픈 소스입니다. 코드를 직접 확인하고 보안을 검증할 수 있습니다.",
     "comparisonTitle": "비교해 보세요",
-    "comparisonDesc": "개인정보 보호와 보안 측면에서 AllToMD가 다른 파일 변환 서비스와 어떻게 다른지 확인하세요.",
-    "comparisonUs": "ToMarkdown",
+    "comparisonDesc": "개인정보 보호와 보안 측면에서 tomdnow가 다른 파일 변환 서비스와 어떻게 다른지 확인하세요.",
+    "comparisonUs": "tomdnow",
     "comparisonOthers": "기타 서비스",
     "comparisonStorage": "파일 저장",
     "comparisonStorageUs": "없음 (메모리에서만 처리)",

@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "AllToMD — あらゆるファイルを マークダウン に変換",
+    "title": "tomdnow — あらゆるファイルを マークダウン に変換",
     "description": "PDF、Word、YouTube動画などを マークダウン ファイルに無料変換できるオンラインツール。"
   },
   "common": {
-    "siteName": "ToMarkdown",
+    "siteName": "tomdnow",
     "convert": "変換",
     "converting": "変換中...",
     "download": ".md をダウンロード",
@@ -16,7 +16,7 @@
     "oneFileOnly": "ファイルは1つずつアップロードしてください。",
     "dragDrop": "ファイルをここにドラッグ＆ドロップ",
     "orBrowse": "またはクリックして選択",
-    "copyright": "© {year} AllToMD. All rights reserved.",
+    "copyright": "© {year} tomdnow. All rights reserved.",
     "toggleMenu": "メニュー切替",
     "fileInputLabel": "変換するファイルを選択",
     "urlInputLabel": "変換するURLを入力",
@@ -40,7 +40,7 @@
     "feature2Desc": "数秒でファイルを変換。",
     "feature3Title": "すぐにダウンロード",
     "feature3Desc": "マークダウン をすぐにダウンロード・コピー。",
-    "jsonLdName": "ToMarkdown",
+    "jsonLdName": "tomdnow",
     "jsonLdDescription": "あらゆるファイルを マークダウン に無料変換できるオンラインツール"
   },
   "trust": {
@@ -60,7 +60,7 @@
   },
   "tools": {
     "pdf": {
-      "title": "PDF マークダウン 変換 — ToMarkdown",
+      "title": "PDF マークダウン 変換 — tomdnow",
       "h1": "PDF を マークダウン に変換",
       "displayName": "PDF マークダウン 変換",
       "subtitle": "PDFドキュメントを読みやすい マークダウン ファイルに変換します。",
@@ -86,7 +86,7 @@
       "faq4A": "いいえ。ファイルはメモリ上で処理され、変換後すぐに削除されます。"
     },
     "docx": {
-      "title": "DOCX マークダウン 変換 — ToMarkdown",
+      "title": "DOCX マークダウン 変換 — tomdnow",
       "h1": "Word を マークダウン に変換",
       "displayName": "Word マークダウン 変換",
       "subtitle": "Microsoft Wordドキュメントを マークダウン 形式に即時変換。",
@@ -112,7 +112,7 @@
       "faq4A": "いいえ。ファイルはメモリ上で処理され、変換後すぐに削除されます。"
     },
     "youtube": {
-      "title": "YouTube マークダウン 変換 — ToMarkdown",
+      "title": "YouTube マークダウン 変換 — tomdnow",
       "h1": "YouTube を マークダウン に変換",
       "displayName": "YouTube マークダウン 変換",
       "subtitle": "YouTube動画の文字起こしを マークダウン ファイルとして取得。",
@@ -138,7 +138,7 @@
       "faq4A": "現在は動画で利用可能なデフォルトの字幕言語を取得します。"
     },
     "pptx": {
-      "title": "PPTX マークダウン 変換 — ToMarkdown",
+      "title": "PPTX マークダウン 変換 — tomdnow",
       "h1": "PowerPoint を マークダウン に変換",
       "displayName": "PowerPoint マークダウン 変換",
       "subtitle": "PowerPointプレゼンテーションを マークダウン ファイルに変換。",
@@ -164,7 +164,7 @@
       "faq4A": "いいえ。ファイルはメモリ上で処理され、すぐに削除されます。"
     },
     "xlsx": {
-      "title": "XLSX マークダウン 変換 — ToMarkdown",
+      "title": "XLSX マークダウン 変換 — tomdnow",
       "h1": "Excel を マークダウン に変換",
       "displayName": "Excel マークダウン 変換",
       "subtitle": "Excelスプレッドシートを マークダウン テーブルに変換。",
@@ -190,7 +190,7 @@
       "faq4A": "いいえ。ファイルはメモリ上で処理され、すぐに削除されます。"
     },
     "xls": {
-      "title": "XLS マークダウン 変換 — ToMarkdown",
+      "title": "XLS マークダウン 変換 — tomdnow",
       "h1": "XLS を マークダウン に変換",
       "displayName": "XLS マークダウン 変換",
       "subtitle": "旧形式のExcelファイルを マークダウン テーブルに変換。",
@@ -214,7 +214,7 @@
       "faq3A": "いいえ。ファイルはメモリ上で処理され、すぐに削除されます。"
     },
     "msg": {
-      "title": "MSG マークダウン 変換 — ToMarkdown",
+      "title": "MSG マークダウン 変換 — tomdnow",
       "h1": "Outlookメールを マークダウン に変換",
       "displayName": "Outlookメール マークダウン 変換",
       "subtitle": "OutlookのMSGメールファイルを読みやすい マークダウン に変換。",
@@ -238,7 +238,7 @@
       "faq3A": "いいえ。ファイルはメモリ上で処理され、すぐに削除されます。"
     },
     "html": {
-      "title": "HTML マークダウン 変換 — ToMarkdown",
+      "title": "HTML マークダウン 変換 — tomdnow",
       "h1": "HTML を マークダウン に変換",
       "displayName": "HTML マークダウン 変換",
       "subtitle": "HTMLウェブページを マークダウン に変換。",
@@ -264,7 +264,7 @@
       "faq4A": "いいえ。ファイルはメモリ上で処理され、すぐに削除されます。"
     },
     "epub": {
-      "title": "EPUB マークダウン 変換 — ToMarkdown",
+      "title": "EPUB マークダウン 変換 — tomdnow",
       "h1": "EPUB を マークダウン に変換",
       "displayName": "EPUB マークダウン 変換",
       "subtitle": "電子書籍を読みやすい マークダウン ファイルに変換。",
@@ -290,7 +290,7 @@
       "faq4A": "いいえ。ファイルはメモリ上で処理され、すぐに削除されます。"
     },
     "image": {
-      "title": "画像 マークダウン 変換 — ToMarkdown",
+      "title": "画像 マークダウン 変換 — tomdnow",
       "h1": "画像を マークダウン に変換",
       "displayName": "画像 マークダウン 変換",
       "subtitle": "画像からEXIFメタデータを マークダウン として抽出。",
@@ -316,7 +316,7 @@
       "faq4A": "いいえ。ファイルはメモリ上で処理され、すぐに削除されます。"
     },
     "csv": {
-      "title": "CSV マークダウン 変換 — ToMarkdown",
+      "title": "CSV マークダウン 変換 — tomdnow",
       "h1": "CSV を マークダウン に変換",
       "displayName": "CSV マークダウン 変換",
       "subtitle": "CSVデータを マークダウン テーブルに変換。",
@@ -342,7 +342,7 @@
       "faq4A": "いいえ。ファイルはメモリ上で処理され、すぐに削除されます。"
     },
     "json": {
-      "title": "JSON マークダウン 変換 — ToMarkdown",
+      "title": "JSON マークダウン 変換 — tomdnow",
       "h1": "JSON を マークダウン に変換",
       "displayName": "JSON マークダウン 変換",
       "subtitle": "JSONデータを マークダウン 形式に変換。",
@@ -366,7 +366,7 @@
       "faq3A": "いいえ。ファイルはメモリ上で処理され、すぐに削除されます。"
     },
     "xml": {
-      "title": "XML マークダウン 変換 — ToMarkdown",
+      "title": "XML マークダウン 変換 — tomdnow",
       "h1": "XML を マークダウン に変換",
       "displayName": "XML マークダウン 変換",
       "subtitle": "XMLデータを読みやすい マークダウン 形式に変換。",
@@ -390,7 +390,7 @@
       "faq3A": "いいえ。ファイルはメモリ上で処理され、すぐに削除されます。"
     },
     "ipynb": {
-      "title": "Jupyter マークダウン 変換 — ToMarkdown",
+      "title": "Jupyter マークダウン 変換 — tomdnow",
       "h1": "Jupyter Notebook を マークダウン に変換",
       "displayName": "Jupyter マークダウン 変換",
       "subtitle": "Jupyterノートブックを マークダウン ファイルに変換。",
@@ -416,7 +416,7 @@
       "faq4A": "いいえ。ファイルはメモリ上で処理され、すぐに削除されます。"
     },
     "zip": {
-      "title": "ZIP マークダウン 変換 — ToMarkdown",
+      "title": "ZIP マークダウン 変換 — tomdnow",
       "h1": "ZIP を マークダウン に変換",
       "displayName": "ZIP マークダウン 変換",
       "subtitle": "ZIPアーカイブの中身を マークダウン に変換。",
@@ -443,19 +443,19 @@
     }
   },
   "about": {
-    "title": "AllToMD について",
-    "metaTitle": "このサイトについて — AllToMD",
-    "metaDescription": "AllToMD は、あらゆるファイルを マークダウン に無料変換できるオンラインツールです。",
-    "p1": "AllToMD は、さまざまなファイル形式を読みやすい マークダウン に無料で変換できるオンラインツールです。",
-    "p2": "PDFレポート、Wordドキュメント、YouTube動画の文字起こしなど、AllToMD なら簡単に変換できます。登録は不要です。",
+    "title": "tomdnow について",
+    "metaTitle": "このサイトについて — tomdnow",
+    "metaDescription": "tomdnow は、あらゆるファイルを マークダウン に無料変換できるオンラインツールです。",
+    "p1": "tomdnow は、さまざまなファイル形式を読みやすい マークダウン に無料で変換できるオンラインツールです。",
+    "p2": "PDFレポート、Wordドキュメント、YouTube動画の文字起こしなど、tomdnow なら簡単に変換できます。登録は不要です。",
     "p3": "Microsoftのオープンソースエンジン MarkItDown を基盤とし、ドキュメントの構造を保持した正確な変換を実現しています。"
   },
   "privacy": {
     "title": "プライバシーポリシー",
-    "metaTitle": "プライバシーポリシー — AllToMD",
+    "metaTitle": "プライバシーポリシー — tomdnow",
     "lastUpdated": "最終更新日: 2026年3月",
     "dataCollectionTitle": "個人情報の収集について",
-    "dataCollectionText": "AllToMD は個人情報を収集いたしません。会員登録やログインも不要です。",
+    "dataCollectionText": "tomdnow は個人情報を収集いたしません。会員登録やログインも不要です。",
     "fileProcessingTitle": "ファイルの処理について",
     "fileProcessingText": "アップロードされたファイルはメモリ上で処理され、変換後すぐに削除されます。ファイルの保存は一切行いません。",
     "analyticsTitle": "アクセス解析について",
@@ -465,19 +465,19 @@
   },
   "terms": {
     "title": "利用規約",
-    "metaTitle": "利用規約 — AllToMD",
+    "metaTitle": "利用規約 — tomdnow",
     "lastUpdated": "最終更新日: 2026年3月",
     "serviceTitle": "サービスについて",
-    "serviceText": "AllToMD は、ファイルを マークダウン に変換する無料サービスを提供しております。本サービスは「現状有姿」で提供され、保証はいたしかねます。",
+    "serviceText": "tomdnow は、ファイルを マークダウン に変換する無料サービスを提供しております。本サービスは「現状有姿」で提供され、保証はいたしかねます。",
     "usageTitle": "利用について",
-    "usageText": "AllToMD は個人利用および商用利用が可能です。違法なコンテンツや、許可のない著作権保護コンテンツのアップロードはご遠慮ください。",
+    "usageText": "tomdnow は個人利用および商用利用が可能です。違法なコンテンツや、許可のない著作権保護コンテンツのアップロードはご遠慮ください。",
     "limitationsTitle": "制限事項",
     "limitationsText": "不正利用防止のため、利用を制限する場合がございます。ファイルサイズは1回の変換につき最大10MBです。"
   },
   "security": {
-    "title": "セキュリティ — AllToMD",
+    "title": "セキュリティ — tomdnow",
     "h1": "あなたのファイル、あなたのプライバシー",
-    "subtitle": "AllToMD はファイルが保存・共有・漏洩されることのないよう、ゼロから設計されています。",
+    "subtitle": "tomdnow はファイルが保存・共有・漏洩されることのないよう、ゼロから設計されています。",
     "memoryProcessingTitle": "メモリ内処理",
     "memoryProcessingDesc": "ファイルは完全にメモリ上で処理されます。サーバーのディスクには一切書き込まれません。",
     "instantDeletionTitle": "即時削除",
@@ -489,8 +489,8 @@
     "openSourceTitle": "オープンソース",
     "openSourceDesc": "変換エンジンはオープンソースです。コードを確認し、セキュリティを直接検証できます。",
     "comparisonTitle": "他サービスとの比較",
-    "comparisonDesc": "プライバシーとセキュリティの観点で、AllToMD が他のファイル変換サービスとどう異なるかご確認ください。",
-    "comparisonUs": "ToMarkdown",
+    "comparisonDesc": "プライバシーとセキュリティの観点で、tomdnow が他のファイル変換サービスとどう異なるかご確認ください。",
+    "comparisonUs": "tomdnow",
     "comparisonOthers": "他のサービス",
     "comparisonStorage": "ファイル保存",
     "comparisonStorageUs": "なし（メモリのみ）",
