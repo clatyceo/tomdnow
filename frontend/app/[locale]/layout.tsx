@@ -7,6 +7,8 @@ import { routing } from "@/i18n/navigation";
 import { SITE_URL } from "@/lib/config";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { Analytics } from "@/components/analytics";
+import { CookieConsent } from "@/components/cookie-consent";
 import "./globals.css";
 
 const sora = Sora({
@@ -91,7 +93,9 @@ export default async function LocaleLayout({
           <Header />
           <main className="pt-15">{children}</main>
           <Footer />
+          <CookieConsent />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

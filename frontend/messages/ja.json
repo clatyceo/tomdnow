@@ -510,5 +510,10 @@
     "comparisonAccount": "アカウント要否",
     "comparisonAccountUs": "不要",
     "comparisonAccountOthers": "多くの場合必要"
+  },
+  "cookies": {
+    "message": "サイトのトラフィック分析と利便性向上のためにCookieを使用しています。",
+    "accept": "同意する",
+    "decline": "拒否する"
   }
 }

@@ -510,5 +510,10 @@
     "comparisonAccount": "是否需要账户",
     "comparisonAccountUs": "否",
     "comparisonAccountOthers": "通常需要"
+  },
+  "cookies": {
+    "message": "我们使用Cookie来分析网站流量并改善您的体验。",
+    "accept": "接受",
+    "decline": "拒绝"
   }
 }

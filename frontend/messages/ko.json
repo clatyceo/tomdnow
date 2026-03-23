@@ -510,5 +510,10 @@
     "comparisonAccount": "계정 필요 여부",
     "comparisonAccountUs": "아니오",
     "comparisonAccountOthers": "대부분 필요"
+  },
+  "cookies": {
+    "message": "사이트 트래픽 분석과 사용자 경험 개선을 위해 쿠키를 사용합니다.",
+    "accept": "수락",
+    "decline": "거부"
   }
 }

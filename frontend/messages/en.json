@@ -510,5 +510,10 @@
     "comparisonAccount": "Account Required",
     "comparisonAccountUs": "No",
     "comparisonAccountOthers": "Often yes"
+  },
+  "cookies": {
+    "message": "We use cookies to analyze site traffic and improve your experience.",
+    "accept": "Accept",
+    "decline": "Decline"
   }
 }

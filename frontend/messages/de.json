@@ -510,5 +510,10 @@
     "comparisonAccount": "Konto erforderlich",
     "comparisonAccountUs": "Nein",
     "comparisonAccountOthers": "Oft ja"
+  },
+  "cookies": {
+    "message": "Wir verwenden Cookies, um den Website-Verkehr zu analysieren und Ihr Erlebnis zu verbessern.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen"
   }
 }
