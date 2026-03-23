@@ -130,6 +130,23 @@ async def convert_url_endpoint(request: Request, body: UrlRequest):
     return await run_conversion(convert_url, body.url, body.type)
 
 
+@app.post("/convert/ocr")
+async def convert_ocr_endpoint(
+    request: Request,
+    file: UploadFile = File(...),
+    lang: str = Form("eng"),
+):
+    ip = request.client.host if request.client else "unknown"
+    rate_limiter.check(ip)
+
+    content = await file.read()
+    if len(content) > MAX_FILE_SIZE:
+        raise HTTPException(status_code=413, detail=f"File too large (max {MAX_FILE_SIZE // 1024 // 1024}MB)")
+
+    from ocr import ocr_image_to_markdown
+    return await run_conversion(ocr_image_to_markdown, content, lang)
+
+
 @app.get("/health")
 async def health():
     return {"status": "ok"}

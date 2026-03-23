@@ -48,6 +48,18 @@ export interface BatchResult {
   total: number;
 }
 
+export async function convertOcr(file: File, lang: string = "eng"): Promise<ConvertResult> {
+  const formData = new FormData();
+  formData.append("file", file);
+  formData.append("lang", lang);
+
+  const res = await fetch(`${API_BASE}/ocr`, {
+    method: "POST",
+    body: formData,
+  });
+  return handleResponse(res);
+}
+
 export async function convertBatch(files: File[]): Promise<BatchResult> {
   const formData = new FormData();
   files.forEach((file) => formData.append("files", file));

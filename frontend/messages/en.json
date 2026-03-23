@@ -326,7 +326,7 @@
       "faq1Q": "Is this tool free?",
       "faq1A": "Yes, completely free with no sign-up required.",
       "faq2Q": "Does it do OCR?",
-      "faq2A": "Currently we extract EXIF metadata only. OCR support is planned for the future.",
+      "faq2A": "This tool extracts EXIF metadata. For OCR text extraction, use our dedicated Image OCR to Markdown tool.",
       "faq3Q": "What metadata is extracted?",
       "faq3A": "Camera model, date, GPS coordinates, resolution, and other EXIF fields when available.",
       "faq4Q": "Is my file stored?",
@@ -484,6 +484,32 @@
       "faq4Q": "Is my file stored?",
       "faq4A": "No. Files are processed in memory and deleted immediately."
     },
+    "ocr": {
+      "title": "Image OCR to Markdown — tomdnow",
+      "h1": "Extract Text from Images (OCR)",
+      "displayName": "Image OCR to Markdown",
+      "subtitle": "Use AI-powered OCR to extract text from images and convert to Markdown.",
+      "seoDescription": "Free online OCR tool. Extract text from images and scanned documents, output as clean Markdown.",
+      "seoKeywords": "ocr to markdown, image text extraction, ocr converter, image to text",
+      "howTo1Step": "Upload your image",
+      "howTo1Desc": "Drag and drop or click to select a JPG, PNG, or other image file.",
+      "howTo2Step": "Select language",
+      "howTo2Desc": "Choose the language of the text in your image for better accuracy.",
+      "howTo3Step": "Download",
+      "howTo3Desc": "Preview the extracted text and download your .md file.",
+      "why1": "Extract text from scanned documents and photos",
+      "why2": "Digitize printed text into editable Markdown",
+      "why3": "Feed image text into AI tools for analysis",
+      "why4": "Archive scanned documents as searchable text",
+      "faq1Q": "Is this tool free?",
+      "faq1A": "Yes, completely free with no sign-up required.",
+      "faq2Q": "What languages are supported?",
+      "faq2A": "English, Korean, Japanese, Chinese, German, French, Spanish, and Portuguese.",
+      "faq3Q": "How is this different from Image to Markdown?",
+      "faq3A": "Image to Markdown extracts EXIF metadata. OCR extracts the actual text content from the image.",
+      "faq4Q": "Is my file stored?",
+      "faq4A": "No. Files are processed in memory and deleted immediately."
+    },
     "hwpx": {
       "title": "HWPX to Markdown — tomdnow",
       "h1": "Convert HWPX to Markdown",
@@ -570,6 +596,10 @@
     "comparisonAccount": "Account Required",
     "comparisonAccountUs": "No",
     "comparisonAccountOthers": "Often yes"
+  },
+  "ocr": {
+    "selectLanguage": "Select document language",
+    "languageHint": "Choose the language of the text in your image for better accuracy"
   },
   "cookies": {
     "message": "We use cookies to analyze site traffic and improve your experience.",

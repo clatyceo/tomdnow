@@ -484,6 +484,32 @@
       "faq4Q": "¿Se almacena mi archivo?",
       "faq4A": "No. Los archivos se procesan en memoria y se eliminan inmediatamente."
     },
+    "ocr": {
+      "title": "OCR de Imagen a Markdown — tomdnow",
+      "h1": "Extraer texto de imágenes (OCR)",
+      "displayName": "OCR de Imagen a Markdown",
+      "subtitle": "Use OCR impulsado por IA para extraer texto de imágenes y convertirlo a Markdown.",
+      "seoDescription": "Herramienta OCR gratuita en línea. Extraiga texto de imágenes y documentos escaneados como Markdown.",
+      "seoKeywords": "ocr a markdown, extracción texto imagen, convertidor ocr, imagen a texto",
+      "howTo1Step": "Suba su imagen",
+      "howTo1Desc": "Arrastre y suelte o haga clic para seleccionar un archivo JPG, PNG u otro.",
+      "howTo2Step": "Seleccione el idioma",
+      "howTo2Desc": "Elija el idioma del texto en su imagen para mayor precisión.",
+      "howTo3Step": "Descargar",
+      "howTo3Desc": "Previsualice el texto extraído y descargue su archivo .md.",
+      "why1": "Extraer texto de documentos escaneados y fotos",
+      "why2": "Digitalizar texto impreso en Markdown editable",
+      "why3": "Alimentar herramientas de IA con texto de imagen para análisis",
+      "why4": "Archivar documentos escaneados como texto buscable",
+      "faq1Q": "¿Esta herramienta es gratuita?",
+      "faq1A": "Sí, completamente gratuita sin necesidad de registro.",
+      "faq2Q": "¿Qué idiomas se admiten?",
+      "faq2A": "Inglés, coreano, japonés, chino, alemán, francés, español y portugués.",
+      "faq3Q": "¿Cuál es la diferencia con Imagen a Markdown?",
+      "faq3A": "Imagen a Markdown extrae metadatos EXIF. OCR extrae el contenido textual real de la imagen.",
+      "faq4Q": "¿Se almacena mi archivo?",
+      "faq4A": "No. Los archivos se procesan en memoria y se eliminan inmediatamente."
+    },
     "hwpx": {
       "title": "HWPX a Markdown — tomdnow",
       "h1": "Convertir HWPX a Markdown",
@@ -570,6 +596,10 @@
     "comparisonAccount": "Cuenta necesaria",
     "comparisonAccountUs": "No",
     "comparisonAccountOthers": "A menudo sí"
+  },
+  "ocr": {
+    "selectLanguage": "Seleccionar idioma del documento",
+    "languageHint": "Elija el idioma del texto en su imagen para mayor precisión"
   },
   "cookies": {
     "message": "Usamos cookies para analizar el tráfico del sitio y mejorar su experiencia.",

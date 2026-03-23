@@ -484,6 +484,32 @@
       "faq4Q": "我的文件会被存储吗？",
       "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
     },
+    "ocr": {
+      "title": "图片OCR转Markdown — tomdnow",
+      "h1": "从图片中提取文字（OCR）",
+      "displayName": "图片OCR转Markdown",
+      "subtitle": "使用AI驱动的OCR从图片中提取文字并转换为Markdown。",
+      "seoDescription": "免费在线OCR工具。从图片和扫描文档中提取文字，输出为Markdown格式。",
+      "seoKeywords": "ocr转markdown, 图片文字提取, ocr转换器, 图片转文字",
+      "howTo1Step": "上传图片",
+      "howTo1Desc": "拖放或点击选择JPG、PNG等图片文件。",
+      "howTo2Step": "选择语言",
+      "howTo2Desc": "选择图片中文字的语言以获得更准确的识别。",
+      "howTo3Step": "下载",
+      "howTo3Desc": "预览提取的文字并下载.md文件。",
+      "why1": "从扫描文档和照片中提取文字",
+      "why2": "将印刷文字数字化为可编辑的Markdown",
+      "why3": "将图片文字输入AI工具进行分析",
+      "why4": "将扫描文档存档为可搜索文本",
+      "faq1Q": "这个工具免费吗？",
+      "faq1A": "是的，完全免费，无需注册。",
+      "faq2Q": "支持哪些语言？",
+      "faq2A": "支持英语、韩语、日语、中文、德语、法语、西班牙语和葡萄牙语。",
+      "faq3Q": "与图片转Markdown有什么区别？",
+      "faq3A": "图片转Markdown提取EXIF元数据。OCR提取图片中的实际文字内容。",
+      "faq4Q": "文件会被存储吗？",
+      "faq4A": "不会。文件在内存中处理后立即删除。"
+    },
     "hwpx": {
       "title": "HWPX转Markdown — tomdnow",
       "h1": "HWPX转换为Markdown",
@@ -570,6 +596,10 @@
     "comparisonAccount": "是否需要账户",
     "comparisonAccountUs": "否",
     "comparisonAccountOthers": "通常需要"
+  },
+  "ocr": {
+    "selectLanguage": "选择文档语言",
+    "languageHint": "选择图片中文字的语言以获得更准确的识别"
   },
   "cookies": {
     "message": "我们使用Cookie来分析网站流量并改善您的体验。",

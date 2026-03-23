@@ -484,6 +484,32 @@
       "faq4Q": "Mon fichier est-il stocké ?",
       "faq4A": "Non. Les fichiers sont traités en mémoire et supprimés immédiatement."
     },
+    "ocr": {
+      "title": "OCR Image en Markdown — tomdnow",
+      "h1": "Extraire le texte des images (OCR)",
+      "displayName": "OCR Image en Markdown",
+      "subtitle": "Utilisez l'OCR alimenté par l'IA pour extraire le texte des images et le convertir en Markdown.",
+      "seoDescription": "Outil OCR gratuit en ligne. Extrayez le texte des images et documents numérisés en Markdown.",
+      "seoKeywords": "ocr en markdown, extraction texte image, convertisseur ocr, image en texte",
+      "howTo1Step": "Téléchargez votre image",
+      "howTo1Desc": "Glissez-déposez ou cliquez pour sélectionner un fichier JPG, PNG ou autre.",
+      "howTo2Step": "Sélectionnez la langue",
+      "howTo2Desc": "Choisissez la langue du texte de votre image pour une meilleure précision.",
+      "howTo3Step": "Télécharger",
+      "howTo3Desc": "Prévisualisez le texte extrait et téléchargez votre fichier .md.",
+      "why1": "Extraire le texte de documents numérisés et de photos",
+      "why2": "Numériser du texte imprimé en Markdown éditable",
+      "why3": "Alimenter les outils IA avec du texte d'image pour analyse",
+      "why4": "Archiver des documents numérisés en texte recherchable",
+      "faq1Q": "Cet outil est-il gratuit ?",
+      "faq1A": "Oui, entièrement gratuit sans inscription requise.",
+      "faq2Q": "Quelles langues sont supportées ?",
+      "faq2A": "Anglais, coréen, japonais, chinois, allemand, français, espagnol et portugais.",
+      "faq3Q": "Quelle est la différence avec Image en Markdown ?",
+      "faq3A": "Image en Markdown extrait les métadonnées EXIF. L'OCR extrait le contenu textuel réel de l'image.",
+      "faq4Q": "Mon fichier est-il stocké ?",
+      "faq4A": "Non. Les fichiers sont traités en mémoire et supprimés immédiatement."
+    },
     "hwpx": {
       "title": "HWPX en Markdown — tomdnow",
       "h1": "Convertir HWPX en Markdown",
@@ -571,8 +597,12 @@
     "comparisonAccountUs": "Non",
     "comparisonAccountOthers": "Souvent oui"
   },
+  "ocr": {
+    "selectLanguage": "Sélectionnez la langue du document",
+    "languageHint": "Choisissez la langue du texte de votre image pour une meilleure précision"
+  },
   "cookies": {
-    "message": "Nous utilisons des cookies pour analyser le trafic du site et am\u00e9liorer votre exp\u00e9rience.",
+    "message": "Nous utilisons des cookies pour analyser le trafic du site et améliorer votre expérience.",
     "accept": "Accepter",
     "decline": "Refuser"
   },

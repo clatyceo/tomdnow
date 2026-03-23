@@ -484,6 +484,32 @@
       "faq4Q": "Wird meine Datei gespeichert?",
       "faq4A": "Nein. Dateien werden im Arbeitsspeicher verarbeitet und sofort gelöscht."
     },
+    "ocr": {
+      "title": "Bild-OCR zu Markdown — tomdnow",
+      "h1": "Text aus Bildern extrahieren (OCR)",
+      "displayName": "Bild-OCR zu Markdown",
+      "subtitle": "Verwenden Sie KI-gestützte OCR, um Text aus Bildern zu extrahieren und in Markdown umzuwandeln.",
+      "seoDescription": "Kostenloses Online-OCR-Tool. Extrahieren Sie Text aus Bildern und gescannten Dokumenten als Markdown.",
+      "seoKeywords": "ocr zu markdown, bild text extraktion, ocr konverter, bild zu text",
+      "howTo1Step": "Bild hochladen",
+      "howTo1Desc": "Ziehen Sie eine JPG-, PNG- oder andere Bilddatei per Drag & Drop oder klicken Sie zur Auswahl.",
+      "howTo2Step": "Sprache auswählen",
+      "howTo2Desc": "Wählen Sie die Sprache des Textes im Bild für bessere Genauigkeit.",
+      "howTo3Step": "Herunterladen",
+      "howTo3Desc": "Vorschau des extrahierten Textes ansehen und .md-Datei herunterladen.",
+      "why1": "Text aus gescannten Dokumenten und Fotos extrahieren",
+      "why2": "Gedruckten Text in bearbeitbares Markdown digitalisieren",
+      "why3": "Bildtext in KI-Tools zur Analyse einspeisen",
+      "why4": "Gescannte Dokumente als durchsuchbaren Text archivieren",
+      "faq1Q": "Ist dieses Tool kostenlos?",
+      "faq1A": "Ja, komplett kostenlos ohne Registrierung.",
+      "faq2Q": "Welche Sprachen werden unterstützt?",
+      "faq2A": "Englisch, Koreanisch, Japanisch, Chinesisch, Deutsch, Französisch, Spanisch und Portugiesisch.",
+      "faq3Q": "Was ist der Unterschied zu Bild zu Markdown?",
+      "faq3A": "Bild zu Markdown extrahiert EXIF-Metadaten. OCR extrahiert den tatsächlichen Textinhalt aus dem Bild.",
+      "faq4Q": "Wird meine Datei gespeichert?",
+      "faq4A": "Nein. Dateien werden im Arbeitsspeicher verarbeitet und sofort gelöscht."
+    },
     "hwpx": {
       "title": "HWPX zu Markdown — tomdnow",
       "h1": "HWPX in Markdown umwandeln",
@@ -570,6 +596,10 @@
     "comparisonAccount": "Konto erforderlich",
     "comparisonAccountUs": "Nein",
     "comparisonAccountOthers": "Oft ja"
+  },
+  "ocr": {
+    "selectLanguage": "Dokumentsprache auswählen",
+    "languageHint": "Wählen Sie die Sprache des Textes im Bild für bessere Genauigkeit"
   },
   "cookies": {
     "message": "Wir verwenden Cookies, um den Website-Verkehr zu analysieren und Ihr Erlebnis zu verbessern.",

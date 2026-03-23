@@ -484,6 +484,32 @@
       "faq4Q": "Meu arquivo é armazenado?",
       "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
     },
+    "ocr": {
+      "title": "OCR de Imagem para Markdown — tomdnow",
+      "h1": "Extrair texto de imagens (OCR)",
+      "displayName": "OCR de Imagem para Markdown",
+      "subtitle": "Use OCR com IA para extrair texto de imagens e converter para Markdown.",
+      "seoDescription": "Ferramenta OCR gratuita online. Extraia texto de imagens e documentos digitalizados como Markdown.",
+      "seoKeywords": "ocr para markdown, extração texto imagem, conversor ocr, imagem para texto",
+      "howTo1Step": "Envie sua imagem",
+      "howTo1Desc": "Arraste e solte ou clique para selecionar um arquivo JPG, PNG ou outro.",
+      "howTo2Step": "Selecione o idioma",
+      "howTo2Desc": "Escolha o idioma do texto na sua imagem para melhor precisão.",
+      "howTo3Step": "Baixar",
+      "howTo3Desc": "Visualize o texto extraído e baixe seu arquivo .md.",
+      "why1": "Extrair texto de documentos digitalizados e fotos",
+      "why2": "Digitalizar texto impresso em Markdown editável",
+      "why3": "Alimentar ferramentas de IA com texto de imagem para análise",
+      "why4": "Arquivar documentos digitalizados como texto pesquisável",
+      "faq1Q": "Esta ferramenta é gratuita?",
+      "faq1A": "Sim, completamente gratuita sem necessidade de cadastro.",
+      "faq2Q": "Quais idiomas são suportados?",
+      "faq2A": "Inglês, coreano, japonês, chinês, alemão, francês, espanhol e português.",
+      "faq3Q": "Qual a diferença para Imagem para Markdown?",
+      "faq3A": "Imagem para Markdown extrai metadados EXIF. OCR extrai o conteúdo textual real da imagem.",
+      "faq4Q": "Meu arquivo é armazenado?",
+      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+    },
     "hwpx": {
       "title": "HWPX para Markdown — tomdnow",
       "h1": "Converter HWPX para Markdown",
@@ -570,6 +596,10 @@
     "comparisonAccount": "Conta necessária",
     "comparisonAccountUs": "Não",
     "comparisonAccountOthers": "Geralmente sim"
+  },
+  "ocr": {
+    "selectLanguage": "Selecionar idioma do documento",
+    "languageHint": "Escolha o idioma do texto na sua imagem para melhor precisão"
   },
   "cookies": {
     "message": "Usamos cookies para analisar o tráfego do site e melhorar sua experiência.",

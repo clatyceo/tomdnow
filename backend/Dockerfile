@@ -2,7 +2,10 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y libxml2-dev libxslt1-dev && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y \
+    libxml2-dev libxslt1-dev \
+    tesseract-ocr tesseract-ocr-kor tesseract-ocr-jpn tesseract-ocr-chi-sim tesseract-ocr-deu tesseract-ocr-fra tesseract-ocr-spa tesseract-ocr-por \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
