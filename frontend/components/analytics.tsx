@@ -4,6 +4,7 @@ import Script from "next/script";
 import { useEffect, useState } from "react";
 
 const CONSENT_KEY = "cookie-consent";
+const GA_ID_PATTERN = /^G-[A-Z0-9]+$/;
 
 export function Analytics() {
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
@@ -36,7 +37,7 @@ export function Analytics() {
     };
   }, []);
 
-  if (!gaId || !hasConsent) return null;
+  if (!gaId || !GA_ID_PATTERN.test(gaId) || !hasConsent) return null;
 
   return (
     <>
