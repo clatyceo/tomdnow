@@ -28,8 +28,7 @@
     "terms": "AGB"
   },
   "home": {
-    "title": "Jede Datei in {highlight} umwandeln",
-    "highlight": "Markdown",
+    "title": "Jede Datei in <highlight>Markdown</highlight> umwandeln",
     "subtitle": "PDF, Word, Excel, PowerPoint, YouTube und mehr — kostenlos in saubere Markdown-Dateien konvertiert.",
     "feature1Title": "100 % kostenlos",
     "feature1Desc": "Keine Anmeldung, keine Limits, keine versteckten Kosten.",

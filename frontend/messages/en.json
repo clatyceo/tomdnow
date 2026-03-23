@@ -28,8 +28,7 @@
     "terms": "Terms"
   },
   "home": {
-    "title": "Convert Any File to {highlight}",
-    "highlight": "Markdown",
+    "title": "Convert Any File to <highlight>Markdown</highlight>",
     "subtitle": "PDF, Word, Excel, PowerPoint, YouTube and more — converted to clean Markdown files for free.",
     "feature1Title": "100% Free",
     "feature1Desc": "No sign-up, no limits, no hidden fees.",

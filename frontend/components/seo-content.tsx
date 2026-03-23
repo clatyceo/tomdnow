@@ -1,10 +1,13 @@
+import { getTranslations } from "next-intl/server";
 import { ToolConfig } from "@/lib/tools";
 
-export default function SeoContent({ tool }: { tool: ToolConfig }) {
+export default async function SeoContent({ tool }: { tool: ToolConfig }) {
+  const t = await getTranslations("seo");
+
   return (
     <div className="max-w-3xl mx-auto px-4 pb-20 space-y-12">
       <section>
-        <h2 className="text-2xl font-bold text-gray-900">How to {tool.h1}</h2>
+        <h2 className="text-2xl font-bold text-gray-900">{t("howToTitle", { action: tool.h1 })}</h2>
         <ol className="mt-4 space-y-3">
           {tool.howTo.map((step, i) => (
             <li key={i} className="flex gap-3">
@@ -19,7 +22,7 @@ export default function SeoContent({ tool }: { tool: ToolConfig }) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-gray-900">Why {tool.h1}?</h2>
+        <h2 className="text-2xl font-bold text-gray-900">{t("whyTitle", { action: tool.h1 })}</h2>
         <ul className="mt-4 space-y-2">
           {tool.whyConvert.map((reason, i) => (
             <li key={i} className="flex gap-2 text-gray-600">
@@ -30,7 +33,7 @@ export default function SeoContent({ tool }: { tool: ToolConfig }) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-gray-900">FAQ</h2>
+        <h2 className="text-2xl font-bold text-gray-900">{t("faqTitle")}</h2>
         <div className="mt-4 space-y-4">
           {tool.faq.map((item, i) => (
             <div key={i}>

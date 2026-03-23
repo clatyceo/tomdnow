@@ -28,8 +28,7 @@
     "terms": "使用条款"
   },
   "home": {
-    "title": "将任意文件转换为 {highlight}",
-    "highlight": "Markdown",
+    "title": "将任意文件转换为 <highlight>Markdown</highlight>",
     "subtitle": "PDF、Word、Excel、PowerPoint、YouTube 等，免费转换为简洁的 Markdown 文件。",
     "feature1Title": "完全免费",
     "feature1Desc": "无需注册，不限次数，没有隐藏费用。",

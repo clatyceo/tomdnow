@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { ToolConfig } from "@/lib/tools";
 import { convertFile, convertUrl } from "@/lib/api";
 import FileUploader from "./file-uploader";
@@ -14,6 +15,7 @@ export function sanitizeFilename(title: string, fallback: string): string {
 }
 
 export default function ConverterPage({ tool }: { tool: ToolConfig }) {
+  const t = useTranslations("common");
   const [markdown, setMarkdown] = useState("");
   const [title, setTitle] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -28,7 +30,7 @@ export default function ConverterPage({ tool }: { tool: ToolConfig }) {
       setMarkdown(result.markdown);
       setTitle(result.metadata.title);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Conversion failed");
+      setError(e instanceof Error ? e.message : t("conversionFailed"));
     } finally {
       setIsLoading(false);
     }

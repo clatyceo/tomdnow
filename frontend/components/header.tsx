@@ -1,12 +1,19 @@
 "use client";
 
-import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { toolsByCategory } from "@/lib/tools";
 
-const categories = toolsByCategory;
+const categoryKeys: Record<string, string> = {
+  Documents: "documents",
+  Data: "data",
+  Media: "media",
+};
 
 export default function Header() {
+  const t = useTranslations("nav");
+  const tCommon = useTranslations("common");
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
@@ -25,10 +32,10 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
-          {categories.map((cat) => (
+          {toolsByCategory.map((cat) => (
             <div key={cat.name} className="relative group">
               <button className="px-3 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                {cat.name}
+                {t(categoryKeys[cat.name] || cat.name.toLowerCase())}
               </button>
               <div className="absolute top-full left-0 pt-1 hidden group-hover:block">
                 <div className="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-48">
@@ -50,7 +57,7 @@ export default function Header() {
         <button
           className="md:hidden p-2 text-gray-600"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
+          aria-label={tCommon("toggleMenu")}
           aria-expanded={mobileOpen}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,9 +72,11 @@ export default function Header() {
 
       {mobileOpen && (
         <div className="md:hidden bg-white border-b border-gray-200 max-h-[80vh] overflow-y-auto">
-          {categories.map((cat) => (
+          {toolsByCategory.map((cat) => (
             <div key={cat.name} className="border-t border-gray-100">
-              <p className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase">{cat.name}</p>
+              <p className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase">
+                {t(categoryKeys[cat.name] || cat.name.toLowerCase())}
+              </p>
               {cat.tools.map((tool) => (
                 <Link
                   key={tool.slug}

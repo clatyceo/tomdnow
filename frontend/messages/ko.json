@@ -28,8 +28,7 @@
     "terms": "이용약관"
   },
   "home": {
-    "title": "모든 파일을 {highlight}으로 변환",
-    "highlight": "Markdown",
+    "title": "모든 파일을 <highlight>Markdown</highlight>으로 변환",
     "subtitle": "PDF, Word, Excel, PowerPoint, YouTube 등 다양한 파일을 깔끔한 Markdown으로 무료 변환하세요.",
     "feature1Title": "100% 무료",
     "feature1Desc": "회원가입 없이, 제한 없이, 숨겨진 비용 없이.",

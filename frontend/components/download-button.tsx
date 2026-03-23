@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 interface DownloadButtonProps {
   markdown: string;
@@ -8,6 +9,7 @@ interface DownloadButtonProps {
 }
 
 export default function DownloadButton({ markdown, filename }: DownloadButtonProps) {
+  const t = useTranslations("common");
   const [copied, setCopied] = useState(false);
 
   const handleDownload = () => {
@@ -37,13 +39,13 @@ export default function DownloadButton({ markdown, filename }: DownloadButtonPro
         onClick={handleDownload}
         className="px-5 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-xl hover:bg-blue-700 transition-colors"
       >
-        Download .md
+        {t("download")}
       </button>
       <button
         onClick={handleCopy}
         className="px-5 py-2.5 bg-gray-200 text-gray-700 text-sm font-medium rounded-xl hover:bg-gray-300 transition-colors"
       >
-        {copied ? "Copied!" : "Copy"}
+        {copied ? t("copied") : t("copy")}
       </button>
     </div>
   );

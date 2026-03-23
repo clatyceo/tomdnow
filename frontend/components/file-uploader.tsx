@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
+import { useTranslations } from "next-intl";
 import { MAX_FILE_SIZE } from "@/lib/config";
 
 interface FileUploaderProps {
@@ -11,6 +12,7 @@ interface FileUploaderProps {
 }
 
 export default function FileUploader({ accept, onFileSelect, onError, isLoading }: FileUploaderProps) {
+  const t = useTranslations("common");
   const [isDragging, setIsDragging] = useState(false);
 
   const handleDrop = useCallback(
@@ -18,24 +20,24 @@ export default function FileUploader({ accept, onFileSelect, onError, isLoading 
       e.preventDefault();
       setIsDragging(false);
       if (e.dataTransfer.files.length > 1) {
-        onError?.("Please upload one file at a time.");
+        onError?.(t("oneFileOnly"));
         return;
       }
       const file = e.dataTransfer.files[0];
       if (!file) return;
       if (file.size > MAX_FILE_SIZE) {
-        onError?.("File too large (max 10MB)");
+        onError?.(t("fileTooLarge"));
         return;
       }
       const ext = "." + file.name.split(".").pop()?.toLowerCase();
       const accepted = accept.split(",").map((a) => a.trim().toLowerCase());
       if (!accepted.some((a) => ext === a || ext.endsWith(a))) {
-        onError?.("Unsupported file type. Please upload a supported format.");
+        onError?.(t("unsupportedType"));
         return;
       }
       onFileSelect(file);
     },
-    [onFileSelect, accept]
+    [onFileSelect, onError, accept, t]
   );
 
   const handleChange = useCallback(
@@ -43,12 +45,12 @@ export default function FileUploader({ accept, onFileSelect, onError, isLoading 
       const file = e.target.files?.[0];
       if (!file) return;
       if (file.size > MAX_FILE_SIZE) {
-        onError?.("File too large (max 10MB)");
+        onError?.(t("fileTooLarge"));
         return;
       }
       onFileSelect(file);
     },
-    [onFileSelect]
+    [onFileSelect, onError, t]
   );
 
   return (
@@ -74,9 +76,9 @@ export default function FileUploader({ accept, onFileSelect, onError, isLoading 
       ) : (
         <>
           <p className="text-gray-600 font-medium">
-            Drag & drop your file here
+            {t("dragDrop")}
           </p>
-          <p className="mt-1 text-sm text-gray-400">or click to browse</p>
+          <p className="mt-1 text-sm text-gray-400">{t("orBrowse")}</p>
         </>
       )}
     </div>
