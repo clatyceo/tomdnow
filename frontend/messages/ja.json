@@ -20,7 +20,14 @@
     "toggleMenu": "メニュー切替",
     "fileInputLabel": "変換するファイルを選択",
     "urlInputLabel": "変換するURLを入力",
-    "uploadArea": "ファイルアップロードエリア"
+    "uploadArea": "ファイルアップロードエリア",
+    "batchMode": "一括変換",
+    "batchModeDesc": "複数ファイルを一度に変換（最大5件）",
+    "batchResults": "結果",
+    "batchErrors": "エラー",
+    "downloadAll": "すべてダウンロード",
+    "batchMaxFiles": "一括変換は最大{max}ファイルまでです",
+    "orBrowseMultiple": "またはクリックしてファイルを選択"
   },
   "nav": {
     "documents": "ドキュメント",

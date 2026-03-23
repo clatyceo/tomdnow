@@ -87,6 +87,39 @@ async def convert_file_endpoint(
     return await run_conversion(convert_file, content, file.filename or "unknown", type)
 
 
+@app.post("/convert/batch")
+async def convert_batch_endpoint(
+    request: Request,
+    files: list[UploadFile] = File(...),
+):
+    ip = request.client.host if request.client else "unknown"
+    rate_limiter.check(ip)
+
+    if len(files) > 5:
+        raise ConversionError("Maximum 5 files per batch", 400)
+
+    results = []
+    errors = []
+
+    for file in files:
+        try:
+            content = await file.read()
+            if not file.filename:
+                errors.append({"filename": "unknown", "error": "No filename"})
+                continue
+            file_type = file.filename.rsplit(".", 1)[-1].lower()
+            result = await run_conversion(convert_file, content, file.filename, file_type)
+            result["filename"] = file.filename
+            results.append(result)
+        except Exception as e:
+            errors.append({
+                "filename": file.filename or "unknown",
+                "error": str(e),
+            })
+
+    return {"results": results, "errors": errors, "total": len(files)}
+
+
 @app.post("/convert/url")
 async def convert_url_endpoint(request: Request, body: UrlRequest):
     rate_limiter.check(request.client.host if request.client else "unknown")

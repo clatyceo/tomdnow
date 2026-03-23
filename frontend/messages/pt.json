@@ -20,7 +20,14 @@
     "toggleMenu": "Abrir menu",
     "fileInputLabel": "Selecionar arquivo para converter",
     "urlInputLabel": "Insira a URL para converter",
-    "uploadArea": "Área de upload de arquivo"
+    "uploadArea": "Área de upload de arquivo",
+    "batchMode": "Modo em lote",
+    "batchModeDesc": "Converta vários arquivos de uma vez (máx. 5)",
+    "batchResults": "Resultados",
+    "batchErrors": "Erros",
+    "downloadAll": "Baixar tudo",
+    "batchMaxFiles": "Máximo de {max} arquivos por lote",
+    "orBrowseMultiple": "ou clique para selecionar arquivos"
   },
   "nav": {
     "documents": "Documentos",

@@ -41,3 +41,30 @@ export async function convertUrl(url: string, type: string): Promise<ConvertResu
   });
   return handleResponse(res);
 }
+
+export interface BatchResult {
+  results: (ConvertResult & { filename: string })[];
+  errors: { filename: string; error: string }[];
+  total: number;
+}
+
+export async function convertBatch(files: File[]): Promise<BatchResult> {
+  const formData = new FormData();
+  files.forEach((file) => formData.append("files", file));
+
+  const res = await fetch(`${API_BASE}/batch`, {
+    method: "POST",
+    body: formData,
+  });
+
+  if (!res.ok) {
+    if (STATUS_MESSAGES[res.status]) {
+      throw new Error(STATUS_MESSAGES[res.status]);
+    }
+    const body = await res.json().catch(() => null);
+    const message = body?.error || body?.detail || `Batch conversion failed (${res.status})`;
+    throw new Error(message);
+  }
+
+  return res.json();
+}

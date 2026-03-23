@@ -7,50 +7,118 @@ import { MAX_FILE_SIZE } from "@/lib/config";
 interface FileUploaderProps {
   accept: string;
   onFileSelect: (file: File) => void;
+  onFilesSelect?: (files: File[]) => void;
   onError?: (msg: string) => void;
   isLoading: boolean;
+  multiple?: boolean;
+  maxFiles?: number;
 }
 
-export default function FileUploader({ accept, onFileSelect, onError, isLoading }: FileUploaderProps) {
+export default function FileUploader({
+  accept,
+  onFileSelect,
+  onFilesSelect,
+  onError,
+  isLoading,
+  multiple = false,
+  maxFiles = 5,
+}: FileUploaderProps) {
   const t = useTranslations("common");
   const [isDragging, setIsDragging] = useState(false);
+
+  const isAcceptedFile = useCallback(
+    (file: File) => {
+      const ext = "." + file.name.split(".").pop()?.toLowerCase();
+      const accepted = accept.split(",").map((a) => a.trim().toLowerCase());
+      return accepted.some((a) => ext === a || ext.endsWith(a));
+    },
+    [accept]
+  );
 
   const handleDrop = useCallback(
     (e: React.DragEvent) => {
       e.preventDefault();
       setIsDragging(false);
-      if (e.dataTransfer.files.length > 1) {
-        onError?.(t("oneFileOnly"));
+
+      const droppedFiles = Array.from(e.dataTransfer.files);
+
+      if (!multiple) {
+        if (droppedFiles.length > 1) {
+          onError?.(t("oneFileOnly"));
+          return;
+        }
+        const file = droppedFiles[0];
+        if (!file) return;
+        if (file.size > MAX_FILE_SIZE) {
+          onError?.(t("fileTooLarge"));
+          return;
+        }
+        if (!isAcceptedFile(file)) {
+          onError?.(t("unsupportedType"));
+          return;
+        }
+        onFileSelect(file);
         return;
       }
-      const file = e.dataTransfer.files[0];
-      if (!file) return;
-      if (file.size > MAX_FILE_SIZE) {
-        onError?.(t("fileTooLarge"));
+
+      // Multiple mode
+      if (droppedFiles.length > maxFiles) {
+        onError?.(t("batchMaxFiles", { max: maxFiles }));
         return;
       }
-      const ext = "." + file.name.split(".").pop()?.toLowerCase();
-      const accepted = accept.split(",").map((a) => a.trim().toLowerCase());
-      if (!accepted.some((a) => ext === a || ext.endsWith(a))) {
-        onError?.(t("unsupportedType"));
-        return;
+
+      const validFiles: File[] = [];
+      for (const file of droppedFiles) {
+        if (file.size > MAX_FILE_SIZE) {
+          onError?.(t("fileTooLarge"));
+          return;
+        }
+        if (!isAcceptedFile(file)) {
+          onError?.(t("unsupportedType"));
+          return;
+        }
+        validFiles.push(file);
       }
-      onFileSelect(file);
+
+      if (validFiles.length > 0) {
+        onFilesSelect?.(validFiles);
+      }
     },
-    [onFileSelect, onError, accept, t]
+    [onFileSelect, onFilesSelect, onError, accept, t, multiple, maxFiles, isAcceptedFile]
   );
 
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      const file = e.target.files?.[0];
-      if (!file) return;
-      if (file.size > MAX_FILE_SIZE) {
-        onError?.(t("fileTooLarge"));
+      const selectedFiles = Array.from(e.target.files || []);
+      if (selectedFiles.length === 0) return;
+
+      if (!multiple) {
+        const file = selectedFiles[0];
+        if (!file) return;
+        if (file.size > MAX_FILE_SIZE) {
+          onError?.(t("fileTooLarge"));
+          return;
+        }
+        onFileSelect(file);
         return;
       }
-      onFileSelect(file);
+
+      // Multiple mode
+      if (selectedFiles.length > maxFiles) {
+        onError?.(t("batchMaxFiles", { max: maxFiles }));
+        return;
+      }
+
+      for (const file of selectedFiles) {
+        if (file.size > MAX_FILE_SIZE) {
+          onError?.(t("fileTooLarge"));
+          return;
+        }
+      }
+
+      onFilesSelect?.(selectedFiles);
     },
-    [onFileSelect, onError, t]
+    [onFileSelect, onFilesSelect, onError, t, multiple, maxFiles]
   );
 
   return (
@@ -73,6 +141,7 @@ export default function FileUploader({ accept, onFileSelect, onError, isLoading 
         aria-label={t("fileInputLabel")}
         className="absolute inset-0 opacity-0 cursor-pointer"
         disabled={isLoading}
+        multiple={multiple}
       />
       {isLoading ? (
         <div className="w-8 h-8 border-3 border-gray-300 border-t-blue-500 rounded-full animate-spin" />
@@ -81,7 +150,9 @@ export default function FileUploader({ accept, onFileSelect, onError, isLoading 
           <p className="text-gray-600 font-medium">
             {t("dragDrop")}
           </p>
-          <p className="mt-1 text-sm text-gray-400">{t("orBrowse")}</p>
+          <p className="mt-1 text-sm text-gray-400">
+            {multiple ? t("orBrowseMultiple") : t("orBrowse")}
+          </p>
         </>
       )}
     </div>

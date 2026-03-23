@@ -20,7 +20,14 @@
     "toggleMenu": "메뉴 열기/닫기",
     "fileInputLabel": "변환할 파일 선택",
     "urlInputLabel": "변환할 URL 입력",
-    "uploadArea": "파일 업로드 영역"
+    "uploadArea": "파일 업로드 영역",
+    "batchMode": "일괄 변환",
+    "batchModeDesc": "여러 파일을 한 번에 변환 (최대 5개)",
+    "batchResults": "결과",
+    "batchErrors": "오류",
+    "downloadAll": "모두 다운로드",
+    "batchMaxFiles": "일괄 변환은 최대 {max}개 파일까지 가능합니다",
+    "orBrowseMultiple": "또는 클릭하여 파일 선택"
   },
   "nav": {
     "documents": "문서",

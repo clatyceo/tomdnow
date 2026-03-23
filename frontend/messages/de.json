@@ -20,7 +20,14 @@
     "toggleMenu": "Menü umschalten",
     "fileInputLabel": "Datei zum Konvertieren auswählen",
     "urlInputLabel": "URL zum Konvertieren eingeben",
-    "uploadArea": "Datei-Upload-Bereich"
+    "uploadArea": "Datei-Upload-Bereich",
+    "batchMode": "Stapelverarbeitung",
+    "batchModeDesc": "Mehrere Dateien auf einmal konvertieren (max. 5)",
+    "batchResults": "Ergebnisse",
+    "batchErrors": "Fehler",
+    "downloadAll": "Alle herunterladen",
+    "batchMaxFiles": "Maximal {max} Dateien pro Stapel",
+    "orBrowseMultiple": "oder klicken um Dateien auszuwählen"
   },
   "nav": {
     "documents": "Dokumente",
