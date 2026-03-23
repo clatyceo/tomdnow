@@ -39,7 +39,8 @@ export function getBlogPost(
   locale: string,
   slug: string
 ): BlogPost | null {
-  const filePath = path.join(CONTENT_DIR, locale, `${slug}.mdx`);
+  const safeSlug = slug.replace(/[^a-zA-Z0-9_-]/g, "");
+  const filePath = path.join(CONTENT_DIR, locale, `${safeSlug}.mdx`);
   if (!fs.existsSync(filePath)) return null;
   const raw = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(raw);
@@ -55,10 +56,14 @@ export function getBlogPost(
 }
 
 export function getAllBlogSlugs(): string[] {
-  const enDir = path.join(CONTENT_DIR, "en");
-  if (!fs.existsSync(enDir)) return [];
-  return fs
-    .readdirSync(enDir)
-    .filter((f) => f.endsWith(".mdx"))
-    .map((f) => f.replace(/\.mdx$/, ""));
+  if (!fs.existsSync(CONTENT_DIR)) return [];
+  const allSlugs = new Set<string>();
+  for (const locale of fs.readdirSync(CONTENT_DIR)) {
+    const dir = path.join(CONTENT_DIR, locale);
+    if (!fs.statSync(dir).isDirectory()) continue;
+    for (const f of fs.readdirSync(dir)) {
+      if (f.endsWith(".mdx")) allSlugs.add(f.replace(/\.mdx$/, ""));
+    }
+  }
+  return Array.from(allSlugs);
 }

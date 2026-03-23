@@ -3,11 +3,19 @@ import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Link } from "@/i18n/navigation";
-import { getBlogPost } from "@/lib/blog";
+import { getBlogPost, getAllBlogSlugs } from "@/lib/blog";
+import { locales } from "@/i18n/config";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };
+
+export function generateStaticParams() {
+  const slugs = getAllBlogSlugs();
+  return locales.flatMap((locale) =>
+    slugs.map((slug) => ({ locale, slug }))
+  );
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;

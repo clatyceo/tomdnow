@@ -35,9 +35,9 @@
   "blog": {
     "title": "Blog — tomdnow",
     "h1": "Blog",
-    "subtitle": "Consejos y guias para trabajar con Markdown",
-    "readMore": "Leer mas",
-    "noPostsYet": "Aun no hay publicaciones. Vuelve pronto!",
+    "subtitle": "Consejos y guías para trabajar con Markdown",
+    "readMore": "Leer más",
+    "noPostsYet": "Aún no hay publicaciones. Vuelve pronto!",
     "backToBlog": "Volver al Blog"
   },
   "home": {
