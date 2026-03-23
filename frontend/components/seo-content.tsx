@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { ToolConfig } from "@/lib/tools";
+import { SITE_URL } from "@/lib/config";
 
 export default async function SeoContent({ tool }: { tool: ToolConfig }) {
   const t = await getTranslations("seo");
@@ -82,6 +83,25 @@ export default async function SeoContent({ tool }: { tool: ToolConfig }) {
                 name: f.q,
                 acceptedAnswer: { "@type": "Answer", text: f.a },
               })),
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: h1,
+              url: `${SITE_URL}/${tool.slug}`,
+              applicationCategory: "UtilityApplication",
+              operatingSystem: "Any",
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
+              },
+              featureList: [
+                `Convert ${tool.type.toUpperCase()} to Markdown`,
+                "Free online converter",
+                "No sign-up required",
+                "Instant file processing",
+              ],
             },
           ]),
         }}

@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import ToolCard from "@/components/tool-card";
-import { toolsByCategory } from "@/lib/tools";
+import { toolsByCategory, tools } from "@/lib/tools";
 
 const categoryKeys: Record<string, string> = {
   Documents: "documents",
@@ -122,9 +122,12 @@ export default function Home() {
             "@type": "WebApplication",
             name: t("jsonLdName"),
             description: t("jsonLdDescription"),
-            applicationCategory: "UtilitiesApplication",
+            applicationCategory: "UtilityApplication",
             operatingSystem: "Any",
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+            featureList: Object.values(tools).map(
+              (tool) => `${tool.displayName}`
+            ),
           }),
         }}
       />
