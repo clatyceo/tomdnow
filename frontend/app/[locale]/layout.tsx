@@ -78,7 +78,7 @@ export async function generateMetadata({
       ),
     },
     verification: {
-      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "cAFel1q5yzf4Knl40SDWzJpyi2HdqSHFwPSGT41vHSk",
       other: {
         "naver-site-verification":
           process.env.NEXT_PUBLIC_NAVER_SITE_VERIFICATION || "af8e8f101e535050dc50619a9b6216dec0a8d5e6",
