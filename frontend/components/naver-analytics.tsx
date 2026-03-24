@@ -36,19 +36,16 @@ export function NaverAnalytics() {
   if (!naverId || !hasConsent) return null;
 
   return (
-    <Script
-      src="https://wcs.nlines.naver.net/wcslog.js"
-      strategy="afterInteractive"
-      onLoad={() => {
-        if (typeof window !== "undefined") {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          const w = window as Record<string, any>;
-          if (w.wcs) {
-            if (w.wcs.inflow) w.wcs.inflow();
-            w.wcs.cntr();
-          }
-        }
-      }}
-    />
+    <>
+      <Script
+        src="https://wcs.pstatic.net/wcslog.js"
+        strategy="afterInteractive"
+      />
+      <Script id="naver-wcs" strategy="afterInteractive">
+        {`if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "${naverId}";
+if(window.wcs) { wcs_do(); }`}
+      </Script>
+    </>
   );
 }
