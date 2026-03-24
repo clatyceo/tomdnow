@@ -72,6 +72,13 @@ export async function generateMetadata({
       description: t("description"),
       images: [`${SITE_URL}/og-image.svg`],
     },
+    robots: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
     alternates: {
       languages: Object.fromEntries(
         routing.locales.map((l) => [l, `${SITE_URL}/${l}`])
