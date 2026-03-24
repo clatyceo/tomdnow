@@ -90,7 +90,7 @@ export default async function BlogPostPage({ params }: Props) {
             author: {
               "@type": "Person",
               name: post.author,
-              url: `${SITE_URL}/en/about`,
+              url: `${SITE_URL}/${locale}/about`,
             },
             publisher: {
               "@type": "Organization",

@@ -634,18 +634,21 @@
     "storyTitle": "Nuestra Historia",
     "storyP1": "tomdnow fue creado por Park Gamsa (박감사), un desarrollador de Corea del Sur, para resolver un problema simple pero persistente: convertir archivos a Markdown no debería requerir registro, suscripciones ni confiar tus datos a terceros.",
     "storyP2": "Lo que comenzó como una herramienta personal para convertir documentos gubernamentales coreanos (HWP/HWPX) en Markdown para procesamiento con IA, creció rápidamente hasta convertirse en un conversor completo con soporte para más de 20 formatos.",
+    "storyP3": "Hoy, tomdnow procesa miles de conversiones diarias en 8 idiomas, sirviendo a desarrolladores, investigadores, estudiantes y trabajadores del conocimiento que necesitan sus documentos en Markdown para herramientas como Obsidian, Notion, GitHub y sistemas de IA como ChatGPT y Claude.",
     "techTitle": "Cómo Funciona",
     "techP1": "tomdnow está impulsado por el motor de código abierto MarkItDown de Microsoft, lo que significa que sus conversiones se benefician de un análisis de nivel empresarial sin el precio empresarial.",
     "techP2": "Cada archivo se procesa completamente en memoria. Nada se escribe en disco, nada se almacena en una base de datos y nada persiste después de cerrar la pestaña del navegador.",
+    "techP3": "La herramienta soporta más de 20 formatos incluyendo documentos de oficina (PDF, DOCX, XLSX, PPTX), documentos coreanos (HWP, HWPX), formatos de datos (CSV, JSON, XML), ebooks (EPUB), archivos de email (MSG), OCR de imágenes, transcripciones de YouTube y archivos ZIP con cualquier formato soportado.",
     "privacyTitle": "Privacidad por Diseño",
     "privacyP1": "Creemos que la privacidad no es una función, sino un fundamento. tomdnow se construyó desde el primer día con una arquitectura de almacenamiento cero.",
     "privacyP2": "Todas las transferencias están cifradas con TLS 1.3, y el backend de conversión se ejecuta en contenedores aislados que se reciclan regularmente.",
+    "privacyP3": "Elegimos deliberadamente no implementar cuentas de usuario, cookies de análisis ni registro de archivos subidos. Los únicos datos que recopilamos son métricas de uso anónimas a través de análisis que respetan la privacidad. Sus documentos son siempre suyos.",
     "missionTitle": "Nuestra Misión",
     "missionP1": "Markdown es el lenguaje universal de la documentación, la toma de notas y la IA. Queremos que sea fácil convertir cualquier documento a Markdown, seas desarrollador, investigador, estudiante u oficinista.",
     "missionP2": "tomdnow siempre tendrá un plan gratuito. Creemos que la conversión esencial de documentos debe ser accesible para todos.",
     "founderTitle": "Sobre el Fundador",
     "founderName": "Park Gamsa (박감사)",
-    "founderBio": "Desarrollador de software en Corea del Sur, especializado en aplicaciones web y herramientas de procesamiento de documentos. Creó tomdnow para cerrar la brecha entre los formatos de documentos propietarios y el ecosistema abierto de Markdown."
+    "founderBio": "Desarrollador de software en Corea del Sur con experiencia en aplicaciones web, procesamiento de documentos y herramientas para desarrolladores. Park Gamsa creó tomdnow tras enfrentarse repetidamente a la frustración de convertir documentos gubernamentales coreanos (formato HWP) para su uso en herramientas modernas. Lo que comenzó como un proyecto de fin de semana evolucionó en una misión para hacer la conversión de documentos gratuita, privada y accesible para todos."
   },
   "privacy": {
     "title": "Política de privacidad",

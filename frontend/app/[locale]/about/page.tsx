@@ -38,6 +38,7 @@ export default async function About({
           <h2 className="text-xl font-semibold text-gray-900">{t("storyTitle")}</h2>
           <p className="mt-3 text-gray-600 leading-relaxed">{t("storyP1")}</p>
           <p className="mt-3 text-gray-600 leading-relaxed">{t("storyP2")}</p>
+          <p className="mt-3 text-gray-600 leading-relaxed">{t("storyP3")}</p>
         </section>
 
         {/* How It Works */}
@@ -45,6 +46,7 @@ export default async function About({
           <h2 className="text-xl font-semibold text-gray-900">{t("techTitle")}</h2>
           <p className="mt-3 text-gray-600 leading-relaxed">{t("techP1")}</p>
           <p className="mt-3 text-gray-600 leading-relaxed">{t("techP2")}</p>
+          <p className="mt-3 text-gray-600 leading-relaxed">{t("techP3")}</p>
         </section>
 
         {/* Privacy by Design */}
@@ -52,6 +54,7 @@ export default async function About({
           <h2 className="text-xl font-semibold text-gray-900">{t("privacyTitle")}</h2>
           <p className="mt-3 text-gray-600 leading-relaxed">{t("privacyP1")}</p>
           <p className="mt-3 text-gray-600 leading-relaxed">{t("privacyP2")}</p>
+          <p className="mt-3 text-gray-600 leading-relaxed">{t("privacyP3")}</p>
         </section>
 
         {/* Our Mission */}

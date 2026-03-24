@@ -634,18 +634,21 @@
     "storyTitle": "我们的故事",
     "storyP1": "tomdnow由韩国开发者朴监查（박감사）创建，旨在解决一个简单但持久的问题：将文件转换为Markdown不应需要注册、订阅或将数据委托给第三方。",
     "storyP2": "最初作为将韩国政府文件（HWP/HWPX）转换为AI处理用Markdown的个人工具，现已发展成支持20多种文件格式的全功能转换器。",
+    "storyP3": "如今，tomdnow每天以8种语言处理数千次转换，为需要在Obsidian、Notion、GitHub、ChatGPT、Claude等工具中使用Markdown的开发者、研究人员、学生和知识工作者提供服务。",
     "techTitle": "工作原理",
     "techP1": "tomdnow由Microsoft的开源MarkItDown引擎驱动，这意味着您的转换受益于企业级解析，无需企业价格。",
     "techP2": "每个文件完全在内存中处理。不写入磁盘，不存储在数据库中，关闭浏览器标签后什么都不会保留。",
+    "techP3": "该工具支持20多种文件格式，包括办公文档（PDF、DOCX、XLSX、PPTX）、韩文文档（HWP、HWPX）、数据格式（CSV、JSON、XML）、电子书（EPUB）、邮件存档（MSG）、图像OCR、YouTube字幕以及包含任何支持格式的ZIP存档。",
     "privacyTitle": "隐私设计",
     "privacyP1": "我们认为隐私不是功能——而是基础。tomdnow从第一天起就采用零存储架构构建。您的文件从不接触永久存储层。",
     "privacyP2": "所有传输均使用TLS 1.3加密，转换后端在定期回收的隔离容器中运行。",
+    "privacyP3": "我们特意选择不实现用户账户、分析Cookie或文件上传日志。我们收集的唯一数据是通过尊重隐私的分析工具获取的匿名使用指标。您的文档始终属于您。",
     "missionTitle": "我们的使命",
     "missionP1": "Markdown是文档、笔记和AI的通用语言。我们希望无论您是开发者、研究人员、学生还是上班族，都能轻松将任何文档转换为Markdown。",
     "missionP2": "tomdnow将始终提供免费层。我们相信基本的文档转换应该对所有人开放。",
     "founderTitle": "关于创始人",
     "founderName": "朴监查（박감사）",
-    "founderBio": "韩国软件开发者，专注于Web应用和文档处理工具。创建tomdnow旨在弥合专有文档格式与开放Markdown生态系统之间的差距。"
+    "founderBio": "韩国软件开发者，专注于Web应用、文档处理和开发者工具。在反复遇到将韩国政府文档（HWP格式）转换为现代工具使用的困扰后，创建了tomdnow。从一个周末项目开始，发展成为让每个人都能免费、安全、轻松地进行文档转换的使命——无论技术水平如何。"
   },
   "privacy": {
     "title": "隐私政策",
