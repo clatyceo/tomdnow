@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import { BACKEND_URL } from "@/lib/proxy";
 
-const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:8000";
 const BACKEND_TIMEOUT = 45000; // 45s (OCR can be slower than regular conversion)
 
 export async function POST(request: NextRequest) {

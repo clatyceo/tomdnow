@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import { BACKEND_URL } from "@/lib/proxy";
 
-const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:8000";
 const BACKEND_TIMEOUT = 60000; // 60s for batch (longer than single file)
 
 export async function POST(request: NextRequest) {

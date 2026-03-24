@@ -8,6 +8,19 @@ from errors import UnsupportedTypeError, FileTooLargeError, InvalidUrlError, Con
 
 logger = logging.getLogger(__name__)
 
+
+def _make_result(markdown: str, filename: str, file_type: str, content_size: int) -> dict:
+    """Build a standard conversion result dict."""
+    return {
+        "markdown": markdown,
+        "metadata": {
+            "title": os.path.splitext(filename)[0],
+            "type": file_type,
+            "size": content_size,
+        },
+    }
+
+
 SUPPORTED_FILE_TYPES = {
     "pdf", "docx", "pptx", "xlsx", "xls",
     "html", "htm",
@@ -34,39 +47,18 @@ def convert_file(content: bytes, filename: str, file_type: str) -> dict:
     if file_type == "hwpx":
         from hwp_converter import convert_hwpx_to_markdown
         markdown = convert_hwpx_to_markdown(content)
-        return {
-            "markdown": markdown,
-            "metadata": {
-                "title": os.path.splitext(filename)[0],
-                "type": file_type,
-                "size": len(content),
-            },
-        }
+        return _make_result(markdown, filename, file_type, len(content))
 
     if file_type == "hwp":
         from hwp_converter import convert_hwp_to_markdown
         markdown = convert_hwp_to_markdown(content)
-        return {
-            "markdown": markdown,
-            "metadata": {
-                "title": os.path.splitext(filename)[0],
-                "type": file_type,
-                "size": len(content),
-            },
-        }
+        return _make_result(markdown, filename, file_type, len(content))
 
     if file_type == "txt":
         markdown = content.decode("utf-8", errors="replace")
         if not markdown.strip():
             raise ConversionError("Empty file")
-        return {
-            "markdown": markdown,
-            "metadata": {
-                "title": os.path.splitext(filename)[0],
-                "type": file_type,
-                "size": len(content),
-            },
-        }
+        return _make_result(markdown, filename, file_type, len(content))
 
     if file_type == "rtf":
         from striprtf.striprtf import rtf_to_text
@@ -74,14 +66,7 @@ def convert_file(content: bytes, filename: str, file_type: str) -> dict:
         text = rtf_to_text(rtf_content)
         if not text.strip():
             raise ConversionError("Empty file")
-        return {
-            "markdown": text,
-            "metadata": {
-                "title": os.path.splitext(filename)[0],
-                "type": file_type,
-                "size": len(content),
-            },
-        }
+        return _make_result(text, filename, file_type, len(content))
 
     suffix = f".{file_type}"
     with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as tmp:
@@ -92,14 +77,7 @@ def convert_file(content: bytes, filename: str, file_type: str) -> dict:
         result = md_converter.convert(tmp_path)
         if not result.text_content or not result.text_content.strip():
             raise ConversionError("Conversion produced empty result")
-        return {
-            "markdown": result.text_content,
-            "metadata": {
-                "title": os.path.splitext(filename)[0],
-                "type": file_type,
-                "size": len(content),
-            },
-        }
+        return _make_result(result.text_content, filename, file_type, len(content))
     finally:
         try:
             os.unlink(tmp_path)

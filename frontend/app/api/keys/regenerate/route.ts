@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-
-const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:8000";
+import { proxySessionPost } from "@/lib/proxy";
 
 export async function POST(request: NextRequest) {
   try {
@@ -9,18 +8,12 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Missing session token" }, { status: 401 });
     }
 
-    const backendRes = await fetch(`${BACKEND_URL}/api/v1/keys/regenerate`, {
-      method: "POST",
-      headers: { "x-session-token": sessionToken },
-    });
-
-    const data = await backendRes.json();
-    return NextResponse.json(data, { status: backendRes.status });
+    return await proxySessionPost("/api/v1/keys/regenerate", request);
   } catch (err) {
     console.error("Key regenerate proxy error:", err);
-    return NextResponse.json(
-      { error: "Backend service unavailable" },
-      { status: 502 }
+    return new Response(
+      JSON.stringify({ error: "Backend service unavailable" }),
+      { status: 502, headers: { "Content-Type": "application/json" } }
     );
   }
 }

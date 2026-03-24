@@ -90,6 +90,20 @@ async def convert_file_endpoint(
     return await run_conversion(convert_file, content, file.filename or "unknown", type)
 
 
+async def _convert_one(file: UploadFile):
+    """Convert a single file, returning (result, None) or (None, error_dict)."""
+    try:
+        content = await file.read()
+        if not file.filename:
+            return None, {"filename": "unknown", "error": "No filename"}
+        file_type = file.filename.rsplit(".", 1)[-1].lower()
+        result = await run_conversion(convert_file, content, file.filename, file_type)
+        result["filename"] = file.filename
+        return result, None
+    except Exception as e:
+        return None, {"filename": file.filename or "unknown", "error": str(e)}
+
+
 @app.post("/convert/batch")
 async def convert_batch_endpoint(
     request: Request,
@@ -101,24 +115,9 @@ async def convert_batch_endpoint(
     if len(files) > 5:
         raise ConversionError("Maximum 5 files per batch", 400)
 
-    results = []
-    errors = []
-
-    for file in files:
-        try:
-            content = await file.read()
-            if not file.filename:
-                errors.append({"filename": "unknown", "error": "No filename"})
-                continue
-            file_type = file.filename.rsplit(".", 1)[-1].lower()
-            result = await run_conversion(convert_file, content, file.filename, file_type)
-            result["filename"] = file.filename
-            results.append(result)
-        except Exception as e:
-            errors.append({
-                "filename": file.filename or "unknown",
-                "error": str(e),
-            })
+    outcomes = await asyncio.gather(*[_convert_one(f) for f in files])
+    results = [r for r, _ in outcomes if r]
+    errors = [e for _, e in outcomes if e]
 
     return {"results": results, "errors": errors, "total": len(files)}
 

@@ -12,8 +12,51 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/api/v1")
 
+# --- Constants ---
+
+MAGIC_LINK_TTL = 900  # 15 minutes
+SESSION_TTL = 86400  # 24 hours
+SESSION_PREFIX = "session_"
+
 # In-memory token store (for simplicity; upgrade to DB later)
 _magic_tokens: dict[str, dict] = {}
+
+
+# --- Helpers ---
+
+
+def _validate_session(token: str) -> str:
+    """Validate a session token and return the associated email.
+
+    Raises HTTPException 401 if the session is invalid or expired.
+    """
+    session_key = f"{SESSION_PREFIX}{token}"
+    if session_key not in _magic_tokens:
+        raise HTTPException(401, "Invalid session")
+
+    session = _magic_tokens[session_key]
+    if time.time() - session["created"] > SESSION_TTL:
+        del _magic_tokens[session_key]
+        raise HTTPException(401, "Session expired")
+
+    return session["email"]
+
+
+def _cleanup_expired_tokens():
+    """Remove expired magic-link and session tokens to prevent unbounded growth."""
+    now = time.time()
+    expired_keys = [
+        key for key, data in _magic_tokens.items()
+        if (key.startswith(SESSION_PREFIX) and now - data["created"] > SESSION_TTL)
+        or (not key.startswith(SESSION_PREFIX) and now - data["created"] > MAGIC_LINK_TTL)
+    ]
+    for key in expired_keys:
+        del _magic_tokens[key]
+    if expired_keys:
+        logger.debug("Cleaned up %d expired tokens", len(expired_keys))
+
+
+# --- Endpoints ---
 
 
 @router.post("/convert")
@@ -80,6 +123,9 @@ async def send_magic_link(body: dict):
     if not email:
         raise HTTPException(400, "Email required")
 
+    # Periodic cleanup of expired tokens
+    _cleanup_expired_tokens()
+
     token = secrets.token_urlsafe(32)
     _magic_tokens[token] = {"email": email, "created": time.time()}
 
@@ -98,8 +144,8 @@ async def verify_magic_link(body: dict):
         raise HTTPException(401, "Invalid or expired token")
 
     token_data = _magic_tokens.pop(token)
-    # Token expires after 15 minutes
-    if time.time() - token_data["created"] > 900:
+    # Token expires after MAGIC_LINK_TTL
+    if time.time() - token_data["created"] > MAGIC_LINK_TTL:
         raise HTTPException(401, "Token expired")
 
     email = token_data["email"]
@@ -109,7 +155,7 @@ async def verify_magic_link(body: dict):
 
     # Generate a session token
     session_token = secrets.token_urlsafe(32)
-    _magic_tokens[f"session_{session_token}"] = {
+    _magic_tokens[f"{SESSION_PREFIX}{session_token}"] = {
         "email": email,
         "created": time.time(),
         "type": "session",
@@ -121,30 +167,14 @@ async def verify_magic_link(body: dict):
 @router.get("/auth/me")
 async def get_current_user(x_session_token: str = Header(...)):
     """Get current user info from session token."""
-    session_key = f"session_{x_session_token}"
-    if session_key not in _magic_tokens:
-        raise HTTPException(401, "Invalid session")
-
-    session = _magic_tokens[session_key]
-    # Sessions expire after 24 hours
-    if time.time() - session["created"] > 86400:
-        del _magic_tokens[session_key]
-        raise HTTPException(401, "Session expired")
-
-    email = session["email"]
+    email = _validate_session(x_session_token)
     user = get_user_by_email(email)
-
     return {"email": email, "user": user}
 
 
 @router.post("/keys/regenerate")
 async def regenerate_key(x_session_token: str = Header(...)):
     """Regenerate API key for authenticated user."""
-    session_key = f"session_{x_session_token}"
-    if session_key not in _magic_tokens:
-        raise HTTPException(401, "Invalid session")
-
-    email = _magic_tokens[session_key]["email"]
+    email = _validate_session(x_session_token)
     new_key = regenerate_api_key(email)
-
     return {"api_key": new_key}

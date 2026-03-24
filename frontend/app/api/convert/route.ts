@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import { BACKEND_URL } from "@/lib/proxy";
 
-const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:8000";
 const BACKEND_TIMEOUT = 35000; // 35s (slightly more than backend's 30s conversion timeout)
 
 export async function POST(request: NextRequest) {

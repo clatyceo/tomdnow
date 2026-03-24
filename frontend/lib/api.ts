@@ -11,16 +11,18 @@ const STATUS_MESSAGES: Record<number, string> = {
   504: "Conversion timed out. Please try a smaller file.",
 };
 
+async function handleErrorResponse(res: Response, fallbackPrefix = "Conversion"): Promise<never> {
+  if (STATUS_MESSAGES[res.status]) {
+    throw new Error(STATUS_MESSAGES[res.status]);
+  }
+  const body = await res.json().catch(() => null);
+  const message = body?.error || body?.detail || `${fallbackPrefix} failed (${res.status})`;
+  throw new Error(message);
+}
+
 async function handleResponse(res: Response): Promise<ConvertResult> {
   if (!res.ok) {
-    // Use status-specific message if available
-    if (STATUS_MESSAGES[res.status]) {
-      throw new Error(STATUS_MESSAGES[res.status]);
-    }
-    // Try to get error from response body
-    const body = await res.json().catch(() => null);
-    const message = body?.error || body?.detail || `Conversion failed (${res.status})`;
-    throw new Error(message);
+    await handleErrorResponse(res);
   }
   return res.json();
 }
@@ -70,12 +72,7 @@ export async function convertBatch(files: File[]): Promise<BatchResult> {
   });
 
   if (!res.ok) {
-    if (STATUS_MESSAGES[res.status]) {
-      throw new Error(STATUS_MESSAGES[res.status]);
-    }
-    const body = await res.json().catch(() => null);
-    const message = body?.error || body?.detail || `Batch conversion failed (${res.status})`;
-    throw new Error(message);
+    await handleErrorResponse(res, "Batch conversion");
   }
 
   return res.json();
