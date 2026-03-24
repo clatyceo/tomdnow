@@ -61,7 +61,7 @@ export default function OcrConverterPage({ tool }: { tool: ToolConfig }) {
           id="ocr-lang"
           value={lang}
           onChange={(e) => setLang(e.target.value)}
-          className="w-64 px-4 py-2 border border-gray-300 rounded-xl bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          className="w-64 px-4 py-2 border border-gray-300 rounded-xl bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#4281A4] focus:border-[#4281A4]"
         >
           {OCR_LANGUAGES.map((l) => (
             <option key={l.code} value={l.code}>

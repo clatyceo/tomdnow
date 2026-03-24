@@ -221,7 +221,7 @@ export default function DashboardPage() {
           <button
             type="submit"
             disabled={loading || !email.trim()}
-            className="w-full py-3 px-6 rounded-xl bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full py-3 px-6 rounded-xl bg-[#4281A4] text-white font-medium hover:bg-[#36698a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? "..." : t("sendMagicLink")}
           </button>
@@ -271,7 +271,7 @@ export default function DashboardPage() {
               user?.tier === "pro"
                 ? "bg-gray-900 text-white"
                 : user?.tier === "team"
-                  ? "bg-blue-600 text-white"
+                  ? "bg-[#4281A4] text-white"
                   : "bg-gray-100 text-gray-600"
             }`}
           >
@@ -345,7 +345,7 @@ export default function DashboardPage() {
         {user?.tier === "free" && (
           <Link
             href="/pricing"
-            className="inline-flex items-center px-6 py-3 rounded-xl bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors"
+            className="inline-flex items-center px-6 py-3 rounded-xl bg-[#4281A4] text-white font-medium hover:bg-[#36698a] transition-colors"
           >
             {t("upgradeToPro")}
           </Link>

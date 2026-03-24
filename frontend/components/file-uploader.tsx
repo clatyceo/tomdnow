@@ -130,7 +130,7 @@ export default function FileUploader({
       aria-label={t("uploadArea")}
       className={`relative flex flex-col items-center justify-center w-full h-52 rounded-2xl border-2 border-dashed transition-colors cursor-pointer ${
         isDragging
-          ? "border-blue-500 bg-blue-50"
+          ? "border-[#4281A4] bg-[#f0edea]"
           : "border-gray-300 bg-white hover:border-gray-400"
       } ${isLoading ? "pointer-events-none opacity-60" : ""}`}
     >
@@ -144,7 +144,7 @@ export default function FileUploader({
         multiple={multiple}
       />
       {isLoading ? (
-        <div className="w-8 h-8 border-3 border-gray-300 border-t-blue-500 rounded-full animate-spin" />
+        <div className="w-8 h-8 border-3 border-gray-300 border-t-[#4281A4] rounded-full animate-spin" />
       ) : (
         <>
           <p className="text-gray-600 font-medium">

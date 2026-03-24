@@ -25,8 +25,8 @@ export default async function Security() {
         {/* In-Memory Processing */}
         <div className="rounded-xl border border-gray-200 bg-white p-6">
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
-              <svg aria-hidden="true" className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#f0edea] flex items-center justify-center">
+              <svg aria-hidden="true" className="w-5 h-5 text-[#4281A4]" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25z" />
               </svg>
             </div>
@@ -63,8 +63,8 @@ export default async function Security() {
         {/* TLS Encryption */}
         <div className="rounded-xl border border-gray-200 bg-white p-6">
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center">
-              <svg aria-hidden="true" className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#e8f4f4] flex items-center justify-center">
+              <svg aria-hidden="true" className="w-5 h-5 text-[#48A9A6]" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
               </svg>
             </div>
@@ -131,7 +131,7 @@ export default async function Security() {
       <div className="overflow-x-auto rounded-xl border border-gray-200">
         <table className="w-full text-sm">
           <thead>
-            <tr className="bg-gray-50">
+            <tr className="bg-[#f0edea]">
               <th className="text-left px-6 py-4 font-semibold text-gray-900"></th>
               <th className="text-left px-6 py-4 font-semibold text-gray-900">
                 {t("comparisonUs")}
@@ -146,7 +146,7 @@ export default async function Security() {
               <td className="px-6 py-4 font-medium text-gray-900">
                 {t("comparisonStorage")}
               </td>
-              <td className="px-6 py-4 text-green-700">
+              <td className="px-6 py-4 text-[#48A9A6]">
                 {t("comparisonStorageUs")}
               </td>
               <td className="px-6 py-4 text-gray-500">
@@ -157,7 +157,7 @@ export default async function Security() {
               <td className="px-6 py-4 font-medium text-gray-900">
                 {t("comparisonDeletion")}
               </td>
-              <td className="px-6 py-4 text-green-700">
+              <td className="px-6 py-4 text-[#48A9A6]">
                 {t("comparisonDeletionUs")}
               </td>
               <td className="px-6 py-4 text-gray-500">
@@ -168,7 +168,7 @@ export default async function Security() {
               <td className="px-6 py-4 font-medium text-gray-900">
                 {t("comparisonAccount")}
               </td>
-              <td className="px-6 py-4 text-green-700">
+              <td className="px-6 py-4 text-[#48A9A6]">
                 {t("comparisonAccountUs")}
               </td>
               <td className="px-6 py-4 text-gray-500">

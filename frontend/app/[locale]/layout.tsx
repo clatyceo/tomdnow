@@ -28,7 +28,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#2563eb",
+  themeColor: "#4281A4",
 };
 
 export async function generateMetadata({
@@ -102,7 +102,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${sora.variable} ${instrumentSerif.variable} font-sans antialiased bg-[#f5f5fa] text-gray-900`}
+        className={`${sora.variable} ${instrumentSerif.variable} font-sans antialiased bg-[#E4DFDA] text-gray-900`}
       >
         <script
           type="application/ld+json"

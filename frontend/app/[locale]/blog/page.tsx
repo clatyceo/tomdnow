@@ -44,7 +44,7 @@ export default async function BlogIndex({
               className="group block rounded-xl border border-gray-200 bg-white p-6 hover:border-gray-300 hover:shadow-md transition-all"
             >
               <time className="text-xs text-gray-400">{post.date}</time>
-              <h2 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+              <h2 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#4281A4] transition-colors">
                 {post.title}
               </h2>
               <p className="mt-2 text-sm text-gray-500 line-clamp-2">
@@ -54,13 +54,13 @@ export default async function BlogIndex({
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500"
+                    className="text-xs px-2 py-0.5 rounded-full bg-[#f5efe6] text-[#9a7d52]"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-              <span className="mt-4 inline-block text-sm font-medium text-blue-600 group-hover:underline">
+              <span className="mt-4 inline-block text-sm font-medium text-[#4281A4] group-hover:underline">
                 {t("readMore")} &rarr;
               </span>
             </Link>

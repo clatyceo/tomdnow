@@ -37,7 +37,7 @@ export default function DownloadButton({ markdown, filename }: DownloadButtonPro
     <div className="flex gap-3">
       <button
         onClick={handleDownload}
-        className="px-5 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-xl hover:bg-blue-700 transition-colors"
+        className="px-5 py-2.5 bg-[#4281A4] text-white text-sm font-medium rounded-xl hover:bg-[#36698a] transition-colors"
       >
         {t("download")}
       </button>

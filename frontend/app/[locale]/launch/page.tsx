@@ -39,10 +39,10 @@ export default async function LaunchPage() {
   const t = await getTranslations("launch");
 
   const stats = [
-    { value: t("stat1"), color: "text-blue-600" },
-    { value: t("stat2"), color: "text-indigo-600" },
-    { value: t("stat3"), color: "text-emerald-600" },
-    { value: t("stat4"), color: "text-amber-600" },
+    { value: t("stat1"), color: "text-[#4281A4]" },
+    { value: t("stat2"), color: "text-[#48A9A6]" },
+    { value: t("stat3"), color: "text-[#D4B483]" },
+    { value: t("stat4"), color: "text-[#C1666B]" },
   ];
 
   const features = [
@@ -65,7 +65,7 @@ export default async function LaunchPage() {
           />
         </svg>
       ),
-      accent: "bg-emerald-50 text-emerald-600",
+      accent: "bg-[#e8f4f4] text-[#48A9A6]",
     },
     {
       title: t("formatsTitle"),
@@ -86,7 +86,7 @@ export default async function LaunchPage() {
           />
         </svg>
       ),
-      accent: "bg-blue-50 text-blue-600",
+      accent: "bg-[#f0edea] text-[#4281A4]",
     },
     {
       title: t("apiTitle"),
@@ -107,7 +107,7 @@ export default async function LaunchPage() {
           />
         </svg>
       ),
-      accent: "bg-purple-50 text-purple-600",
+      accent: "bg-[#f5efe6] text-[#D4B483]",
     },
     {
       title: t("freeTitle"),
@@ -128,7 +128,7 @@ export default async function LaunchPage() {
           />
         </svg>
       ),
-      accent: "bg-rose-50 text-rose-600",
+      accent: "bg-[#f5e0e1] text-[#C1666B]",
     },
   ];
 
@@ -136,7 +136,7 @@ export default async function LaunchPage() {
     <div className="max-w-6xl mx-auto px-4">
       {/* Hero Section */}
       <section className="text-center py-20 sm:py-28">
-        <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-700 mb-8">
+        <div className="inline-flex items-center gap-2 rounded-full bg-[#f0edea] px-4 py-1.5 text-sm font-medium text-[#4281A4] mb-8">
           <svg
             aria-hidden="true"
             className="w-4 h-4"
@@ -173,7 +173,7 @@ export default async function LaunchPage() {
         <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4">
           <Link
             href="/"
-            className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-gray-900 text-white font-semibold text-base hover:bg-gray-800 transition-colors shadow-lg shadow-gray-900/20"
+            className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-[#C1666B] text-white font-semibold text-base hover:bg-[#a8555a] transition-colors shadow-lg shadow-[#C1666B]/20"
           >
             {t("tryNow")}
           </Link>
@@ -223,7 +223,7 @@ export default async function LaunchPage() {
             ].map((fmt) => (
               <span
                 key={fmt}
-                className="inline-block rounded-lg bg-gray-50 border border-gray-100 px-3 py-1.5 text-sm font-medium text-gray-700"
+                className="inline-block rounded-lg bg-[#f0edea] border border-[#E4DFDA] px-3 py-1.5 text-sm font-medium text-gray-700"
               >
                 {fmt}
               </span>

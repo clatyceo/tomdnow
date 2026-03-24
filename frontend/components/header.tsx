@@ -91,7 +91,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-15 bg-white border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-4 h-full flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-gray-900" aria-label="tomdnow Home">
+        <Link href="/" className="text-xl font-bold text-[#4281A4]" aria-label="tomdnow Home">
           tomdnow
         </Link>
 
@@ -101,7 +101,7 @@ export default function Header() {
               <button
                 aria-haspopup="true"
                 aria-expanded={openDropdown === cat.name}
-                className="px-3 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                className="px-3 py-2 text-sm text-gray-600 hover:text-[#4281A4] transition-colors"
                 onClick={() => setOpenDropdown(openDropdown === cat.name ? null : cat.name)}
                 onKeyDown={(e) => {
                   if (e.key === "ArrowDown") {
@@ -128,7 +128,7 @@ export default function Header() {
                     <Link
                       key={tool.slug}
                       href={`/${tool.slug}`}
-                      className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+                      className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#4281A4] transition-colors"
                       role="menuitem"
                       onClick={() => setOpenDropdown(null)}
                     >
@@ -141,25 +141,25 @@ export default function Header() {
           ))}
           <Link
             href="/pricing"
-            className="px-3 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+            className="px-3 py-2 text-sm text-gray-600 hover:text-[#4281A4] transition-colors"
           >
             {t("pricing")}
           </Link>
           <Link
             href="/blog"
-            className="px-3 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+            className="px-3 py-2 text-sm text-gray-600 hover:text-[#4281A4] transition-colors"
           >
             {t("blog")}
           </Link>
           <Link
             href="/docs/api"
-            className="px-3 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+            className="px-3 py-2 text-sm text-gray-600 hover:text-[#4281A4] transition-colors"
           >
             {t("api")}
           </Link>
           <Link
             href="/dashboard"
-            className="px-3 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+            className="px-3 py-2 text-sm text-gray-600 hover:text-[#4281A4] transition-colors"
           >
             {t("dashboard")}
           </Link>

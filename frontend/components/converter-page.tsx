@@ -106,7 +106,7 @@ export default function ConverterPage({ tool }: { tool: ToolConfig }) {
             aria-checked={batchMode}
             onClick={toggleBatchMode}
             className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-              batchMode ? "bg-blue-600" : "bg-gray-300"
+              batchMode ? "bg-[#4281A4]" : "bg-gray-300"
             }`}
           >
             <span
@@ -180,7 +180,7 @@ export default function ConverterPage({ tool }: { tool: ToolConfig }) {
                 </h3>
                 <button
                   onClick={handleDownloadAll}
-                  className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-xl hover:bg-blue-700 transition-colors"
+                  className="px-4 py-2 bg-[#4281A4] text-white text-sm font-medium rounded-xl hover:bg-[#36698a] transition-colors"
                 >
                   {t("downloadAll")}
                 </button>

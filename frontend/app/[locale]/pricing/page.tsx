@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
 function CheckIcon() {
   return (
     <svg
-      className="w-5 h-5 text-green-500 flex-shrink-0"
+      className="w-5 h-5 text-[#48A9A6] flex-shrink-0"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -87,15 +87,15 @@ export default async function PricingPage() {
           </ul>
           <Link
             href="/"
-            className="mt-8 block w-full text-center py-3 px-6 rounded-xl border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors"
+            className="mt-8 block w-full text-center py-3 px-6 rounded-xl bg-[#4281A4] text-white font-medium hover:bg-[#36698a] transition-colors"
           >
             {t("getStarted")}
           </Link>
         </div>
 
         {/* Pro Tier */}
-        <div className="bg-white rounded-2xl border-2 border-gray-900 p-8 flex flex-col relative">
-          <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs font-semibold px-4 py-1 rounded-full">
+        <div className="bg-white rounded-2xl border-2 border-[#C1666B] p-8 flex flex-col relative">
+          <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#C1666B] text-white text-xs font-semibold px-4 py-1 rounded-full">
             {t("mostPopular")}
           </div>
           <h2 className="text-xl font-semibold text-gray-900">
@@ -116,7 +116,7 @@ export default async function PricingPage() {
           <CheckoutButton
             priceId={PRO_PRICE_ID}
             label={t("subscribePro")}
-            className="mt-8 w-full py-3 px-6 rounded-xl bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="mt-8 w-full py-3 px-6 rounded-xl bg-[#C1666B] text-white font-medium hover:bg-[#a8555a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           />
         </div>
 

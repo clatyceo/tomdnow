@@ -20,7 +20,7 @@ export default function Home() {
         <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
           {t.rich("title", {
             highlight: (chunks) => (
-              <span className="font-serif italic text-blue-600">{chunks}</span>
+              <span className="font-serif italic text-[#4281A4]">{chunks}</span>
             ),
           })}
         </h1>
@@ -66,11 +66,11 @@ export default function Home() {
 
       {/* Trust Badges */}
       <section className="pb-20">
-        <div className="rounded-2xl bg-gray-50 px-6 py-8">
+        <div className="rounded-2xl bg-[#f0edea] px-6 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {/* No File Storage */}
             <div className="flex flex-col items-center gap-2">
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#48A9A6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               </svg>
               <h3 className="text-sm font-semibold text-gray-900">{tTrust("noStorage")}</h3>
@@ -79,7 +79,7 @@ export default function Home() {
 
             {/* TLS Encrypted */}
             <div className="flex flex-col items-center gap-2">
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4281A4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
                 <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
               </svg>
@@ -89,7 +89,7 @@ export default function Home() {
 
             {/* Instant Deletion */}
             <div className="flex flex-col items-center gap-2">
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#48A9A6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="3 6 5 6 21 6"/>
                 <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
                 <line x1="10" y1="11" x2="10" y2="17"/>
@@ -101,7 +101,7 @@ export default function Home() {
 
             {/* No Sign-up */}
             <div className="flex flex-col items-center gap-2">
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4281A4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                 <circle cx="8.5" cy="7" r="4"/>
                 <line x1="18" y1="8" x2="23" y2="13"/>

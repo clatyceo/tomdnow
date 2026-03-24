@@ -13,14 +13,14 @@ export default function Footer() {
             {t("common.copyright", { year: new Date().getFullYear() })}
           </p>
           <div className="flex flex-wrap gap-6">
-            <Link href="/pricing" className="text-sm text-gray-600 hover:text-gray-700 hover:underline">{t("nav.pricing")}</Link>
-            <Link href="/blog" className="text-sm text-gray-600 hover:text-gray-700 hover:underline">{t("nav.blog")}</Link>
-            <Link href="/docs/api" className="text-sm text-gray-600 hover:text-gray-700 hover:underline">{t("nav.api")}</Link>
-            <Link href="/about" className="text-sm text-gray-600 hover:text-gray-700 hover:underline">{t("nav.about")}</Link>
-            <Link href="/security" className="text-sm text-gray-600 hover:text-gray-700 hover:underline">{t("nav.security")}</Link>
-            <Link href="/privacy" className="text-sm text-gray-600 hover:text-gray-700 hover:underline">{t("nav.privacy")}</Link>
-            <Link href="/terms" className="text-sm text-gray-600 hover:text-gray-700 hover:underline">{t("nav.terms")}</Link>
-            <Link href="/launch" className="text-sm text-gray-600 hover:text-gray-700 hover:underline">Product Hunt</Link>
+            <Link href="/pricing" className="text-sm text-gray-600 hover:text-[#4281A4] hover:underline">{t("nav.pricing")}</Link>
+            <Link href="/blog" className="text-sm text-gray-600 hover:text-[#4281A4] hover:underline">{t("nav.blog")}</Link>
+            <Link href="/docs/api" className="text-sm text-gray-600 hover:text-[#4281A4] hover:underline">{t("nav.api")}</Link>
+            <Link href="/about" className="text-sm text-gray-600 hover:text-[#4281A4] hover:underline">{t("nav.about")}</Link>
+            <Link href="/security" className="text-sm text-gray-600 hover:text-[#4281A4] hover:underline">{t("nav.security")}</Link>
+            <Link href="/privacy" className="text-sm text-gray-600 hover:text-[#4281A4] hover:underline">{t("nav.privacy")}</Link>
+            <Link href="/terms" className="text-sm text-gray-600 hover:text-[#4281A4] hover:underline">{t("nav.terms")}</Link>
+            <Link href="/launch" className="text-sm text-gray-600 hover:text-[#4281A4] hover:underline">Product Hunt</Link>
           </div>
         </div>
       </div>

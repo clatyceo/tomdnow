@@ -78,7 +78,7 @@ export const tools: Record<string, ToolConfig> = {
     accept: ".docx",
     category: "documents",
     icon: "DOC",
-    color: "#2563eb",
+    color: "#4281A4",
     seo: {
       description: "Free online Word to Markdown converter. Upload DOCX files and get clean Markdown instantly.",
       keywords: ["docx to markdown", "word to markdown", "convert word to md"],

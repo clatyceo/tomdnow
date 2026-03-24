@@ -6,6 +6,16 @@
   --font-serif: var(--font-instrument), serif;
 }
 
+:root {
+  --color-primary: #4281A4;
+  --color-secondary: #48A9A6;
+  --color-background: #E4DFDA;
+  --color-accent-warm: #D4B483;
+  --color-accent-cta: #C1666B;
+  --color-primary-dark: #36698a;
+  --color-primary-light: #5a9abf;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;

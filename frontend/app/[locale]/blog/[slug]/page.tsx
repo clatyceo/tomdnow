@@ -44,7 +44,7 @@ export default async function BlogPostPage({ params }: Props) {
     <div className="max-w-3xl mx-auto px-4 py-16">
       <Link
         href="/blog"
-        className="text-sm text-blue-600 hover:underline"
+        className="text-sm text-[#4281A4] hover:underline"
       >
         &larr; {t("backToBlog")}
       </Link>
@@ -60,7 +60,7 @@ export default async function BlogPostPage({ params }: Props) {
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500"
+                className="text-xs px-2 py-0.5 rounded-full bg-[#f5efe6] text-[#9a7d52]"
               >
                 {tag}
               </span>

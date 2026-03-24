@@ -27,7 +27,7 @@ export default async function SeoContent({ tool }: { tool: ToolConfig }) {
         <ol className="mt-4 space-y-3">
           {howToSteps.map((step, i) => (
             <li key={i} className="flex gap-3">
-              <span className="flex-shrink-0 w-7 h-7 rounded-full bg-blue-100 text-blue-700 text-sm font-bold flex items-center justify-center">{i + 1}</span>
+              <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#dce8ef] text-[#4281A4] text-sm font-bold flex items-center justify-center">{i + 1}</span>
               <div>
                 <p className="font-medium text-gray-900">{step.step}</p>
                 <p className="text-sm text-gray-500">{step.desc}</p>
@@ -42,7 +42,7 @@ export default async function SeoContent({ tool }: { tool: ToolConfig }) {
         <ul className="mt-4 space-y-2">
           {whyReasons.map((reason, i) => (
             <li key={i} className="flex gap-2 text-gray-600">
-              <span className="text-blue-500">-</span> {reason}
+              <span className="text-[#4281A4]">-</span> {reason}
             </li>
           ))}
         </ul>
