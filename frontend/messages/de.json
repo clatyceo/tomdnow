@@ -48,7 +48,13 @@
     "subtitle": "Tipps und Anleitungen rund um Markdown",
     "readMore": "Weiterlesen",
     "noPostsYet": "Noch keine Beiträge. Schauen Sie bald wieder vorbei!",
-    "backToBlog": "Zurück zum Blog"
+    "backToBlog": "Zurück zum Blog",
+    "faq1Q": "Wie oft wird der Blog aktualisiert?",
+    "faq1A": "Wir veröffentlichen regelmäßig neue Anleitungen und Tipps, wenn wir weitere Dateiformate und Funktionen hinzufügen.",
+    "faq2Q": "Kann ich ein Blog-Thema vorschlagen?",
+    "faq2A": "Ja! Kontaktieren Sie uns mit Ihren Ideen. Wir schreiben gerne über Markdown-Workflows und Tipps zur Dateikonvertierung.",
+    "faq3Q": "Sind die Anleitungen in mehreren Sprachen verfügbar?",
+    "faq3A": "Ja. Unsere Blog-Inhalte sind in 8 Sprachen verfügbar, darunter Deutsch, Englisch, Koreanisch und Japanisch."
   },
   "home": {
     "title": "Jede Datei in <highlight>Markdown</highlight> umwandeln",
@@ -691,7 +697,15 @@
     "comparisonDeletionOthers": "Geplant (Stunden später)",
     "comparisonAccount": "Konto erforderlich",
     "comparisonAccountUs": "Nein",
-    "comparisonAccountOthers": "Oft ja"
+    "comparisonAccountOthers": "Oft ja",
+    "faq1Q": "Wird meine Datei auf Ihren Servern gespeichert?",
+    "faq1A": "Nein. Alle Dateien werden vollständig im Arbeitsspeicher verarbeitet und nie auf die Festplatte geschrieben. Daten werden sofort nach der Konvertierung verworfen.",
+    "faq2Q": "Ist die Verbindung verschlüsselt?",
+    "faq2A": "Ja. Alle Datenübertragungen verwenden TLS 1.3-Verschlüsselung. Ihre Dateien sind während der Übertragung zwischen Ihrem Browser und unseren Servern geschützt.",
+    "faq3Q": "Können tomdnow-Mitarbeiter meine Dateien sehen?",
+    "faq3A": "Nein. Dateien existieren nur während des Konvertierungsprozesses im Arbeitsspeicher. Es gibt keinen dauerhaften Speicher, keine Protokollierung und keinen Zugriffsmechanismus für hochgeladene Inhalte.",
+    "faq4Q": "Ist tomdnow Open Source?",
+    "faq4A": "tomdnow wird von Microsofts Open-Source-Engine MarkItDown angetrieben. Unser Konvertierungs-Backend verwendet diese gut geprüfte Bibliothek für die Dokumentenverarbeitung."
   },
   "ocr": {
     "selectLanguage": "Dokumentsprache auswählen",
@@ -719,7 +733,13 @@
     "authHeader": "Authentifizierung",
     "authHeaderDesc": "Fugen Sie Ihren API-Schlussel in den X-Api-Key-Header jeder Anfrage ein.",
     "supportedFormats": "Unterstutzte Formate",
-    "supportedFormatsDesc": "PDF, DOCX, PPTX, XLSX, XLS, HTML, EPUB, CSV, JSON, XML, MSG, IPYNB, ZIP, HWP, HWPX, RTF, TXT, JPG, PNG, GIF, WebP"
+    "supportedFormatsDesc": "PDF, DOCX, PPTX, XLSX, XLS, HTML, EPUB, CSV, JSON, XML, MSG, IPYNB, ZIP, HWP, HWPX, RTF, TXT, JPG, PNG, GIF, WebP",
+    "faq1Q": "Ist die API kostenlos?",
+    "faq1A": "Ja. Der kostenlose Plan ermöglicht 50 Konvertierungen pro Tag ohne Kreditkarte.",
+    "faq2Q": "Welche Dateiformate unterstützt die API?",
+    "faq2A": "Die API unterstützt alle 20+ Formate des Web-Tools: PDF, DOCX, XLSX, PPTX, HTML, EPUB, CSV, JSON, XML, HWP, HWPX und mehr.",
+    "faq3Q": "Gibt es ein Ratenlimit?",
+    "faq3A": "Kostenloser Plan: 50 Anfragen pro Tag. Pro-Plan: 1.000 Anfragen pro Tag. Kontaktieren Sie uns für Unternehmensanforderungen."
   },
   "pricing": {
     "title": "Preise — tomdnow",

@@ -48,7 +48,13 @@
     "subtitle": "마크다운 활용 팁과 가이드",
     "readMore": "더 읽기",
     "noPostsYet": "아직 게시물이 없습니다. 곧 다시 확인해 주세요!",
-    "backToBlog": "블로그로 돌아가기"
+    "backToBlog": "블로그로 돌아가기",
+    "faq1Q": "블로그는 얼마나 자주 업데이트되나요?",
+    "faq1A": "새로운 파일 포맷 지원과 기능을 추가할 때마다 정기적으로 새 가이드와 팁을 게시합니다.",
+    "faq2Q": "블로그 주제를 제안할 수 있나요?",
+    "faq2A": "네! 아이디어를 보내주세요. 마크다운 워크플로우와 파일 변환 팁에 대해 글을 쓰는 것을 좋아합니다.",
+    "faq3Q": "가이드는 여러 언어로 제공되나요?",
+    "faq3A": "네. 블로그 콘텐츠는 한국어, 영어, 일본어, 중국어 등 8개 언어로 제공됩니다."
   },
   "home": {
     "title": "모든 파일을 <highlight>마크다운</highlight>으로 변환",
@@ -691,7 +697,15 @@
     "comparisonDeletionOthers": "예약 삭제 (수시간 후)",
     "comparisonAccount": "계정 필요 여부",
     "comparisonAccountUs": "아니오",
-    "comparisonAccountOthers": "대부분 필요"
+    "comparisonAccountOthers": "대부분 필요",
+    "faq1Q": "파일이 서버에 저장되나요?",
+    "faq1A": "아니요. 모든 파일은 전적으로 메모리에서 처리되며 디스크에 기록되지 않습니다. 변환 후 즉시 데이터가 삭제됩니다.",
+    "faq2Q": "연결은 암호화되나요?",
+    "faq2A": "네. 모든 데이터 전송은 TLS 1.3 암호화를 사용합니다. 브라우저와 서버 사이에서 파일이 보호됩니다.",
+    "faq3Q": "tomdnow 직원이 제 파일을 볼 수 있나요?",
+    "faq3A": "아니요. 파일은 변환 과정에서만 메모리에 존재합니다. 업로드된 콘텐츠에 대한 영구 저장, 로깅 또는 접근 메커니즘이 없습니다.",
+    "faq4Q": "tomdnow는 오픈소스인가요?",
+    "faq4A": "tomdnow는 Microsoft의 오픈소스 MarkItDown 엔진으로 구동됩니다. 변환 백엔드는 이 검증된 라이브러리를 문서 처리에 사용합니다."
   },
   "ocr": {
     "selectLanguage": "문서 언어 선택",
@@ -719,7 +733,13 @@
     "authHeader": "인증",
     "authHeaderDesc": "모든 요청에 X-Api-Key 헤더에 API 키를 포함하세요.",
     "supportedFormats": "지원 형식",
-    "supportedFormatsDesc": "PDF, DOCX, PPTX, XLSX, XLS, HTML, EPUB, CSV, JSON, XML, MSG, IPYNB, ZIP, HWP, HWPX, RTF, TXT, JPG, PNG, GIF, WebP"
+    "supportedFormatsDesc": "PDF, DOCX, PPTX, XLSX, XLS, HTML, EPUB, CSV, JSON, XML, MSG, IPYNB, ZIP, HWP, HWPX, RTF, TXT, JPG, PNG, GIF, WebP",
+    "faq1Q": "API는 무료인가요?",
+    "faq1A": "네. 무료 티어는 신용카드 없이 하루 50회 변환을 허용합니다.",
+    "faq2Q": "API는 어떤 파일 포맷을 지원하나요?",
+    "faq2A": "API는 웹 도구에서 사용 가능한 모든 20가지 이상의 포맷을 지원합니다: PDF, DOCX, XLSX, PPTX, HTML, EPUB, CSV, JSON, XML, HWP, HWPX 등.",
+    "faq3Q": "속도 제한이 있나요?",
+    "faq3A": "무료 티어: 하루 50회 요청. 프로 티어: 하루 1,000회 요청. 엔터프라이즈 요구사항은 문의해 주세요."
   },
   "pricing": {
     "title": "요금제 — tomdnow",

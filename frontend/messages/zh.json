@@ -48,7 +48,13 @@
     "subtitle": "Markdown 使用技巧与指南",
     "readMore": "阅读更多",
     "noPostsYet": "暂无文章，请稍后再来！",
-    "backToBlog": "返回博客"
+    "backToBlog": "返回博客",
+    "faq1Q": "博客多久更新一次？",
+    "faq1A": "我们在添加更多文件格式支持和功能时会定期发布新指南和技巧。",
+    "faq2Q": "我可以建议博客主题吗？",
+    "faq2A": "当然！请联系我们分享您的想法。我们喜欢撰写关于Markdown工作流和文件转换技巧的文章。",
+    "faq3Q": "指南支持多种语言吗？",
+    "faq3A": "是的。我们的博客内容提供8种语言版本，包括中文、英语、韩语和日语。"
   },
   "home": {
     "title": "将任意文件转换为 <highlight>Markdown</highlight>",
@@ -691,7 +697,15 @@
     "comparisonDeletionOthers": "定时删除（数小时后）",
     "comparisonAccount": "是否需要账户",
     "comparisonAccountUs": "否",
-    "comparisonAccountOthers": "通常需要"
+    "comparisonAccountOthers": "通常需要",
+    "faq1Q": "我的文件会存储在服务器上吗？",
+    "faq1A": "不会。所有文件完全在内存中处理，从不写入磁盘。转换后数据立即被丢弃。",
+    "faq2Q": "连接是加密的吗？",
+    "faq2A": "是的。所有数据传输使用TLS 1.3加密。您的文件在浏览器和服务器之间传输时受到保护。",
+    "faq3Q": "tomdnow员工能看到我的文件吗？",
+    "faq3A": "不能。文件仅在转换过程中存在于内存中。没有持久存储、日志记录或上传内容的访问机制。",
+    "faq4Q": "tomdnow是开源的吗？",
+    "faq4A": "tomdnow由Microsoft的开源MarkItDown引擎驱动。我们的转换后端使用这个经过充分审计的库进行文档处理。"
   },
   "ocr": {
     "selectLanguage": "选择文档语言",
@@ -719,7 +733,13 @@
     "authHeader": "认证",
     "authHeaderDesc": "在每个请求的 X-Api-Key 标头中包含您的 API 密钥。",
     "supportedFormats": "支持的格式",
-    "supportedFormatsDesc": "PDF, DOCX, PPTX, XLSX, XLS, HTML, EPUB, CSV, JSON, XML, MSG, IPYNB, ZIP, HWP, HWPX, RTF, TXT, JPG, PNG, GIF, WebP"
+    "supportedFormatsDesc": "PDF, DOCX, PPTX, XLSX, XLS, HTML, EPUB, CSV, JSON, XML, MSG, IPYNB, ZIP, HWP, HWPX, RTF, TXT, JPG, PNG, GIF, WebP",
+    "faq1Q": "API是免费的吗？",
+    "faq1A": "是的。免费层每天允许50次转换，无需信用卡。",
+    "faq2Q": "API支持哪些文件格式？",
+    "faq2A": "API支持Web工具上所有20多种格式：PDF、DOCX、XLSX、PPTX、HTML、EPUB、CSV、JSON、XML、HWP、HWPX等。",
+    "faq3Q": "有速率限制吗？",
+    "faq3A": "免费层：每天50个请求。专业层：每天1,000个请求。企业需求请联系我们。"
   },
   "pricing": {
     "title": "定价 — tomdnow",

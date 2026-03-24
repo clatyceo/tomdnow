@@ -48,7 +48,13 @@
     "subtitle": "マークダウン活用のヒントとガイド",
     "readMore": "続きを読む",
     "noPostsYet": "まだ投稿がありません。近日公開予定です！",
-    "backToBlog": "ブログに戻る"
+    "backToBlog": "ブログに戻る",
+    "faq1Q": "ブログはどのくらいの頻度で更新されますか？",
+    "faq1A": "新しいファイル形式のサポートや機能を追加するたびに、定期的にガイドやヒントを公開しています。",
+    "faq2Q": "ブログのトピックを提案できますか？",
+    "faq2A": "はい！アイデアをお送りください。Markdownのワークフローやファイル変換のヒントについて書くのが大好きです。",
+    "faq3Q": "ガイドは複数の言語で利用できますか？",
+    "faq3A": "はい。ブログコンテンツは日本語、英語、韓国語、中国語を含む8言語で利用できます。"
   },
   "home": {
     "title": "あらゆるファイルを <highlight>マークダウン</highlight> に変換",
@@ -691,7 +697,15 @@
     "comparisonDeletionOthers": "予約削除（数時間後）",
     "comparisonAccount": "アカウント要否",
     "comparisonAccountUs": "不要",
-    "comparisonAccountOthers": "多くの場合必要"
+    "comparisonAccountOthers": "多くの場合必要",
+    "faq1Q": "ファイルはサーバーに保存されますか？",
+    "faq1A": "いいえ。すべてのファイルは完全にメモリ内で処理され、ディスクには書き込まれません。変換後すぐにデータは破棄されます。",
+    "faq2Q": "接続は暗号化されていますか？",
+    "faq2A": "はい。すべてのデータ転送はTLS 1.3暗号化を使用しています。ブラウザとサーバー間でファイルが保護されます。",
+    "faq3Q": "tomdnowの社員がファイルを見ることはできますか？",
+    "faq3A": "いいえ。ファイルは変換プロセス中のみメモリに存在します。アップロードされたコンテンツに対する永続的なストレージ、ログ記録、アクセスメカニズムはありません。",
+    "faq4Q": "tomdnowはオープンソースですか？",
+    "faq4A": "tomdnowはMicrosoftのオープンソースMarkItDownエンジンで動作しています。変換バックエンドはこの実績あるライブラリを文書処理に使用しています。"
   },
   "ocr": {
     "selectLanguage": "文書の言語を選択",
@@ -719,7 +733,13 @@
     "authHeader": "認証",
     "authHeaderDesc": "すべてのリクエストにX-Api-Keyヘッダーを含めてください。",
     "supportedFormats": "対応フォーマット",
-    "supportedFormatsDesc": "PDF, DOCX, PPTX, XLSX, XLS, HTML, EPUB, CSV, JSON, XML, MSG, IPYNB, ZIP, HWP, HWPX, RTF, TXT, JPG, PNG, GIF, WebP"
+    "supportedFormatsDesc": "PDF, DOCX, PPTX, XLSX, XLS, HTML, EPUB, CSV, JSON, XML, MSG, IPYNB, ZIP, HWP, HWPX, RTF, TXT, JPG, PNG, GIF, WebP",
+    "faq1Q": "APIは無料ですか？",
+    "faq1A": "はい。無料プランではクレジットカード不要で1日50回の変換が可能です。",
+    "faq2Q": "APIはどのファイル形式をサポートしていますか？",
+    "faq2A": "APIはWebツールで利用可能なすべての20以上のフォーマットをサポートしています：PDF、DOCX、XLSX、PPTX、HTML、EPUB、CSV、JSON、XML、HWP、HWPXなど。",
+    "faq3Q": "レート制限はありますか？",
+    "faq3A": "無料プラン：1日50リクエスト。プロプラン：1日1,000リクエスト。エンタープライズについてはお問い合わせください。"
   },
   "pricing": {
     "title": "料金プラン — tomdnow",

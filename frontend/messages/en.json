@@ -48,7 +48,13 @@
     "subtitle": "Tips and guides for working with Markdown",
     "readMore": "Read more",
     "noPostsYet": "No posts yet. Check back soon!",
-    "backToBlog": "Back to Blog"
+    "backToBlog": "Back to Blog",
+    "faq1Q": "How often is the blog updated?",
+    "faq1A": "We publish new guides and tips regularly as we add more file format support and features.",
+    "faq2Q": "Can I suggest a blog topic?",
+    "faq2A": "Yes! Contact us with your ideas. We love writing about Markdown workflows and file conversion tips.",
+    "faq3Q": "Are the guides available in multiple languages?",
+    "faq3A": "Yes. Our blog content is available in 8 languages including English, Korean, Japanese, and Chinese."
   },
   "home": {
     "title": "Convert Any File to <highlight>Markdown</highlight>",
@@ -691,7 +697,15 @@
     "comparisonDeletionOthers": "Scheduled (hours later)",
     "comparisonAccount": "Account Required",
     "comparisonAccountUs": "No",
-    "comparisonAccountOthers": "Often yes"
+    "comparisonAccountOthers": "Often yes",
+    "faq1Q": "Is my file stored on your servers?",
+    "faq1A": "No. All files are processed entirely in memory and never written to disk. Data is discarded immediately after conversion.",
+    "faq2Q": "Is the connection encrypted?",
+    "faq2A": "Yes. All data transfers use TLS 1.3 encryption. Your files are protected in transit between your browser and our servers.",
+    "faq3Q": "Can tomdnow employees see my files?",
+    "faq3A": "No. Files exist only in memory during the conversion process. There is no persistent storage, logging, or access mechanism for uploaded content.",
+    "faq4Q": "Is tomdnow open source?",
+    "faq4A": "tomdnow is powered by Microsoft's open-source MarkItDown engine. Our conversion backend uses this well-audited library for document processing."
   },
   "ocr": {
     "selectLanguage": "Select document language",
@@ -719,7 +733,13 @@
     "authHeader": "Authentication",
     "authHeaderDesc": "Include your API key in the X-Api-Key header with every request.",
     "supportedFormats": "Supported Formats",
-    "supportedFormatsDesc": "PDF, DOCX, PPTX, XLSX, XLS, HTML, EPUB, CSV, JSON, XML, MSG, IPYNB, ZIP, HWP, HWPX, RTF, TXT, JPG, PNG, GIF, WebP"
+    "supportedFormatsDesc": "PDF, DOCX, PPTX, XLSX, XLS, HTML, EPUB, CSV, JSON, XML, MSG, IPYNB, ZIP, HWP, HWPX, RTF, TXT, JPG, PNG, GIF, WebP",
+    "faq1Q": "Is the API free?",
+    "faq1A": "Yes. The free tier allows 50 conversions per day with no credit card required.",
+    "faq2Q": "What file formats does the API support?",
+    "faq2A": "The API supports all 20+ formats available on the web tool: PDF, DOCX, XLSX, PPTX, HTML, EPUB, CSV, JSON, XML, HWP, HWPX, and more.",
+    "faq3Q": "Is there a rate limit?",
+    "faq3A": "Free tier: 50 requests per day. Pro tier: 1,000 requests per day. Contact us for enterprise needs."
   },
   "pricing": {
     "title": "Pricing — tomdnow",
