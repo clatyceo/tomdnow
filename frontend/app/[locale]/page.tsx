@@ -29,6 +29,26 @@ export default function Home() {
         </p>
       </section>
 
+      {/* Definition — AI-citable content */}
+      <section className="pb-12">
+        <h2 className="text-2xl font-bold text-gray-900 text-center">{t("definitionTitle")}</h2>
+        <p className="mt-4 text-gray-600 text-center max-w-3xl mx-auto leading-relaxed">
+          {t("definition")}
+        </p>
+        <div className="mt-8 grid grid-cols-3 gap-4 max-w-lg mx-auto">
+          {[
+            { value: t("statsFormats"), label: t("statsFormatsLabel") },
+            { value: t("statsLanguages"), label: t("statsLanguagesLabel") },
+            { value: t("statsPrice"), label: t("statsPriceLabel") },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <div className="text-2xl font-bold text-[#4281A4]">{stat.value}</div>
+              <div className="text-xs text-gray-500 mt-1">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {toolsByCategory.map((cat) => (
         <section key={cat.name} className="mb-12">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
@@ -48,6 +68,54 @@ export default function Home() {
           </div>
         </section>
       ))}
+
+      {/* Comparison Table */}
+      <section className="pb-12">
+        <h2 className="text-2xl font-bold text-gray-900 text-center mb-6">{t("comparisonTitle")}</h2>
+        <div className="overflow-x-auto rounded-xl border border-gray-200">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="bg-[#f0edea]">
+                <th className="text-left px-4 py-3 font-semibold text-gray-900">{t("comparisonFeature")}</th>
+                <th className="text-left px-4 py-3 font-semibold text-[#4281A4]">{t("comparisonTomdnow")}</th>
+                <th className="text-left px-4 py-3 font-semibold text-gray-500">Pandoc</th>
+                <th className="text-left px-4 py-3 font-semibold text-gray-500">CloudConvert</th>
+                <th className="text-left px-4 py-3 font-semibold text-gray-500">Marker</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-200">
+              <tr>
+                <td className="px-4 py-3 font-medium text-gray-900">{t("comparisonFormats")}</td>
+                <td className="px-4 py-3 text-[#48A9A6]">{t("comparisonFormatsTomdnow")}</td>
+                <td className="px-4 py-3 text-gray-500">{t("comparisonFormatsPandoc")}</td>
+                <td className="px-4 py-3 text-gray-500">{t("comparisonFormatsCloudConvert")}</td>
+                <td className="px-4 py-3 text-gray-500">{t("comparisonFormatsMarker")}</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-medium text-gray-900">{t("comparisonPrivacy")}</td>
+                <td className="px-4 py-3 text-[#48A9A6]">{t("comparisonPrivacyTomdnow")}</td>
+                <td className="px-4 py-3 text-gray-500">{t("comparisonPrivacyPandoc")}</td>
+                <td className="px-4 py-3 text-gray-500">{t("comparisonPrivacyCloudConvert")}</td>
+                <td className="px-4 py-3 text-gray-500">{t("comparisonPrivacyMarker")}</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-medium text-gray-900">{t("comparisonCost")}</td>
+                <td className="px-4 py-3 text-[#48A9A6]">{t("comparisonCostTomdnow")}</td>
+                <td className="px-4 py-3 text-gray-500">{t("comparisonCostPandoc")}</td>
+                <td className="px-4 py-3 text-gray-500">{t("comparisonCostCloudConvert")}</td>
+                <td className="px-4 py-3 text-gray-500">{t("comparisonCostMarker")}</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-medium text-gray-900">{t("comparisonSignup")}</td>
+                <td className="px-4 py-3 text-[#48A9A6]">{t("comparisonSignupTomdnow")}</td>
+                <td className="px-4 py-3 text-gray-500">{t("comparisonSignupPandoc")}</td>
+                <td className="px-4 py-3 text-gray-500">{t("comparisonSignupCloudConvert")}</td>
+                <td className="px-4 py-3 text-gray-500">{t("comparisonSignupMarker")}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
       <section className="py-20">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
