@@ -133,6 +133,13 @@ export default async function LocaleLayout({
               url: SITE_URL,
               description:
                 "Free online tool to convert any file to Markdown",
+              logo: `${SITE_URL}/icon.svg`,
+              founder: {
+                "@type": "Person",
+                name: "박감사",
+                alternateName: "Park Gamsa",
+              },
+              sameAs: [],
             }),
           }}
         />
@@ -144,6 +151,15 @@ export default async function LocaleLayout({
               "@type": "WebSite",
               name: SITE_NAME,
               url: SITE_URL,
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: `${SITE_URL}/en?q={search_term_string}`,
+                },
+                "query-input":
+                  "required name=search_term_string",
+              },
             }),
           }}
         />
