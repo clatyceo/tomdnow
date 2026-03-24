@@ -1,48 +1,56 @@
 "use client";
 
-import { useState } from "react";
+import { initializePaddle, Paddle } from "@paddle/paddle-js";
+import { useEffect, useState } from "react";
 
-export function CheckoutButton({
-  priceId,
-  label,
-  className,
-}: {
+interface PaddleCheckoutButtonProps {
   priceId: string;
   label: string;
   className?: string;
-}) {
+}
+
+export function CheckoutButton({ priceId, label, className }: PaddleCheckoutButtonProps) {
+  const [paddle, setPaddle] = useState<Paddle>();
   const [loading, setLoading] = useState(false);
 
-  const handleClick = async () => {
+  useEffect(() => {
+    const token = process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN;
+    if (!token) return;
+
+    initializePaddle({
+      environment: (process.env.NEXT_PUBLIC_PADDLE_ENV as "sandbox" | "production") || "sandbox",
+      token,
+    }).then((instance) => {
+      if (instance) setPaddle(instance);
+    });
+  }, []);
+
+  const handleClick = () => {
+    if (!paddle) return;
     setLoading(true);
-    try {
-      const email = prompt("Enter your email for the subscription:");
-      if (!email) {
-        setLoading(false);
-        return;
-      }
 
-      const res = await fetch("/api/stripe/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ priceId, email }),
-      });
+    paddle.Checkout.open({
+      items: [{ priceId, quantity: 1 }],
+      settings: {
+        displayMode: "overlay",
+        theme: "light",
+        successUrl: `${window.location.origin}/pricing?success=true`,
+      },
+    });
 
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        alert(data.error || "Something went wrong. Please try again.");
-        setLoading(false);
-      }
-    } catch {
-      alert("Something went wrong. Please try again.");
-      setLoading(false);
-    }
+    setLoading(false);
   };
 
+  if (!process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN) {
+    return (
+      <button disabled className={className}>
+        {label}
+      </button>
+    );
+  }
+
   return (
-    <button onClick={handleClick} disabled={loading} className={className}>
+    <button onClick={handleClick} disabled={loading || !paddle} className={className}>
       {loading ? "..." : label}
     </button>
   );

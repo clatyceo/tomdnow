@@ -4,8 +4,7 @@ import { SITE_URL } from "@/lib/config";
 import { CheckoutButton } from "@/components/checkout-button";
 import { Link } from "@/i18n/navigation";
 
-const PRO_PRICE_ID = process.env.NEXT_PUBLIC_STRIPE_PRO_PRICE_ID || "price_pro_monthly";
-const TEAM_PRICE_ID = process.env.NEXT_PUBLIC_STRIPE_TEAM_PRICE_ID || "price_team_monthly";
+const PRO_PRICE_ID = process.env.NEXT_PUBLIC_PADDLE_PRO_PRICE_ID || "pri_pro_monthly";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("pricing");
@@ -140,11 +139,12 @@ export default async function PricingPage() {
               </li>
             ))}
           </ul>
-          <CheckoutButton
-            priceId={TEAM_PRICE_ID}
-            label={t("contactUs")}
-            className="mt-8 w-full py-3 px-6 rounded-xl border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          />
+          <a
+            href="mailto:support@tomdnow.com"
+            className="mt-8 block w-full text-center py-3 px-6 rounded-xl border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors"
+          >
+            {t("contactUs")}
+          </a>
         </div>
       </div>
 
