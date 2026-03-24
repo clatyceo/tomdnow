@@ -1,18 +1,30 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("security");
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "security" });
   return {
     title: t("title"),
     description: t("subtitle"),
   };
 }
 
-export default async function Security() {
-  const t = await getTranslations("security");
+export default async function Security({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "security" });
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
+      <BreadcrumbSchema items={[{ name: "Security" }]} locale={locale} />
       <div className="text-center mb-12">
         <h1 className="text-3xl font-bold text-gray-900">{t("h1")}</h1>
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">

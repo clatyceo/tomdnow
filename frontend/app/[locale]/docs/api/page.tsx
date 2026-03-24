@@ -1,8 +1,14 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("api");
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "api" });
   return {
     title: t("title"),
     description: t("subtitle"),
@@ -25,13 +31,19 @@ function ResponseBlock({ children }: { children: string }) {
   );
 }
 
-export default async function ApiDocs() {
-  const t = await getTranslations("api");
+export default async function ApiDocs({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "api" });
 
   const BASE_URL = "https://api.tomdnow.com";
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
+      <BreadcrumbSchema items={[{ name: "API" }]} locale={locale} />
       {/* Header */}
       <div className="mb-12">
         <h1 className="text-3xl font-bold text-gray-900">{t("h1")}</h1>

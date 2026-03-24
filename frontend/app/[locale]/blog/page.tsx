@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { getLocalizedBlogPosts } from "@/lib/blog";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export async function generateMetadata({
   params,
@@ -28,6 +29,7 @@ export default async function BlogIndex({
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
+      <BreadcrumbSchema items={[{ name: "Blog" }]} locale={locale} />
       <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
         {t("h1")}
       </h1>

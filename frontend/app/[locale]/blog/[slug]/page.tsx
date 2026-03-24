@@ -5,8 +5,9 @@ import { getTranslations } from "next-intl/server";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Link } from "@/i18n/navigation";
 import { getLocalizedBlogPost, getAllBlogSlugs } from "@/lib/blog";
-import { SITE_NAME } from "@/lib/config";
+import { SITE_NAME, SITE_URL } from "@/lib/config";
 import { AdUnit } from "@/components/ad-unit";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 import { locales } from "@/i18n/config";
 
 type Props = {
@@ -42,6 +43,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
+      <BreadcrumbSchema items={[{ name: "Blog", href: "/blog" }, { name: post.title }]} locale={locale} />
       <Link
         href="/blog"
         className="text-sm text-[#4281A4] hover:underline"

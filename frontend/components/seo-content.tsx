@@ -1,10 +1,12 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { ToolConfig } from "@/lib/tools";
 import { SITE_URL } from "@/lib/config";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export default async function SeoContent({ tool }: { tool: ToolConfig }) {
   const t = await getTranslations("seo");
   const tTool = await getTranslations(`tools.${tool.key}`);
+  const locale = await getLocale();
 
   const h1 = tTool("h1");
 
@@ -22,6 +24,7 @@ export default async function SeoContent({ tool }: { tool: ToolConfig }) {
 
   return (
     <div className="max-w-3xl mx-auto px-4 pb-20 space-y-12">
+      <BreadcrumbSchema items={[{ name: tool.displayName }]} locale={locale} />
       <section>
         <h2 className="text-2xl font-bold text-gray-900">{t("howToTitle", { action: h1 })}</h2>
         <ol className="mt-4 space-y-3">
