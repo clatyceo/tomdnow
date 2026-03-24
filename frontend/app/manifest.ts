@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
+import { SITE_NAME } from "@/lib/config";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "tomdnow — Convert Any File to Markdown",
-    short_name: "tomdnow",
+    name: `${SITE_NAME} — Convert Any File to Markdown`,
+    short_name: SITE_NAME,
     description: "Free online tool to convert any file to Markdown",
     start_url: "/",
     display: "standalone",

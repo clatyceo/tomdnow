@@ -1,7 +1,7 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function OfflinePage() {
-  const t = useTranslations("offline");
+export default async function OfflinePage() {
+  const t = await getTranslations("offline");
 
   return (
     <section className="flex min-h-[60vh] flex-col items-center justify-center px-4 text-center">

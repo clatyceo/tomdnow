@@ -1,16 +1,14 @@
 const CACHE_NAME = "tomdnow-v1";
 
-// Cache core assets on install
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(["/", "/offline"]);
-    })
+    caches.open(CACHE_NAME).then((cache) =>
+      cache.addAll(["/"])
+        .then(() => self.skipWaiting())
+    )
   );
-  self.skipWaiting();
 });
 
-// Clean old caches on activate
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches
@@ -20,17 +18,14 @@ self.addEventListener("activate", (event) => {
           keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k))
         )
       )
+      .then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
-// Network-first strategy with offline fallback (navigation requests only)
 self.addEventListener("fetch", (event) => {
   if (event.request.mode !== "navigate") return;
 
   event.respondWith(
-    fetch(event.request).catch(() => {
-      return caches.match("/offline") || caches.match("/");
-    })
+    fetch(event.request).catch(() => caches.match("/").then((r) => r || new Response("Offline", { status: 503 })))
   );
 });
