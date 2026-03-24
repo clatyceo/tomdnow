@@ -1,0 +1,27 @@
+# tomdnow
+
+> Free online tool to convert 20+ file formats to clean Markdown
+
+tomdnow converts PDF, Word (DOCX), Excel (XLSX/XLS), PowerPoint (PPTX), HTML, EPUB, CSV, JSON, XML, Jupyter notebooks, Outlook emails (MSG), images (OCR), YouTube transcripts, HWP/HWPX (Korean documents), RTF, TXT, and ZIP archives into clean, readable Markdown files.
+
+## Key Features
+- 20+ supported file formats
+- In-memory processing — files are never stored on servers
+- No sign-up required, 100% free
+- 8-language support (English, Korean, Japanese, Chinese, Spanish, Portuguese, German, French)
+- REST API available for programmatic access
+- Powered by Microsoft's open-source MarkItDown engine
+
+## Links
+
+- Homepage: https://tomdnow.com/en
+- PDF to Markdown: https://tomdnow.com/en/pdf-to-markdown
+- Word to Markdown: https://tomdnow.com/en/docx-to-markdown
+- Excel to Markdown: https://tomdnow.com/en/xlsx-to-markdown
+- YouTube to Markdown: https://tomdnow.com/en/youtube-to-markdown
+- HWP to Markdown: https://tomdnow.com/en/hwp-to-markdown
+- Image OCR to Markdown: https://tomdnow.com/en/image-ocr-to-markdown
+- API Documentation: https://tomdnow.com/en/docs/api
+- Security: https://tomdnow.com/en/security
+- Blog: https://tomdnow.com/en/blog
+- About: https://tomdnow.com/en/about
