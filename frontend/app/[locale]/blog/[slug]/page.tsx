@@ -94,6 +94,9 @@ export default async function BlogPostPage({ params }: Props) {
             description: post.description,
             datePublished: post.date,
             dateModified: post.date,
+            wordCount: post.content.split(/\s+/).length,
+            articleSection: post.tags[0] || "Markdown",
+            inLanguage: locale,
             author: {
               "@type": "Person",
               name: post.author,
@@ -106,6 +109,8 @@ export default async function BlogPostPage({ params }: Props) {
               logo: {
                 "@type": "ImageObject",
                 url: `${SITE_URL}/icon.svg`,
+                width: 512,
+                height: 512,
               },
             },
             image: `${SITE_URL}/og-image.png`,

@@ -66,47 +66,47 @@ export default async function SeoContent({ tool }: { tool: ToolConfig }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            {
-              "@context": "https://schema.org",
-              "@type": "HowTo",
-              name: h1,
-              step: howToSteps.map((s, i) => ({
-                "@type": "HowToStep",
-                position: i + 1,
-                name: s.step,
-                text: s.desc,
-              })),
-            },
-            {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: faqItems.map((f) => ({
-                "@type": "Question",
-                name: f.q,
-                acceptedAnswer: { "@type": "Answer", text: f.a },
-              })),
-            },
-            {
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              name: h1,
-              url: `${SITE_URL}/${tool.slug}`,
-              applicationCategory: "UtilityApplication",
-              operatingSystem: "Any",
-              offers: {
-                "@type": "Offer",
-                price: "0",
-                priceCurrency: "USD",
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "HowTo",
+                name: h1,
+                step: howToSteps.map((s, i) => ({
+                  "@type": "HowToStep",
+                  position: i + 1,
+                  name: s.step,
+                  text: s.desc,
+                })),
               },
-              featureList: [
-                `Convert ${tool.type.toUpperCase()} to Markdown`,
-                "Free online converter",
-                "No sign-up required",
-                "Instant file processing",
-              ],
-            },
-          ]),
+              {
+                "@type": "FAQPage",
+                mainEntity: faqItems.map((f) => ({
+                  "@type": "Question",
+                  name: f.q,
+                  acceptedAnswer: { "@type": "Answer", text: f.a },
+                })),
+              },
+              {
+                "@type": "SoftwareApplication",
+                name: h1,
+                url: `${SITE_URL}/${locale}/${tool.slug}`,
+                applicationCategory: "UtilityApplication",
+                operatingSystem: "Any",
+                offers: {
+                  "@type": "Offer",
+                  price: "0",
+                  priceCurrency: "USD",
+                },
+                featureList: [
+                  `Convert ${tool.type.toUpperCase()} to Markdown`,
+                  "Free online converter",
+                  "No sign-up required",
+                  "Instant file processing",
+                ],
+              },
+            ],
+          }),
         }}
       />
     </div>

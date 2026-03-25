@@ -67,24 +67,6 @@ export default async function BlogIndex({
           ))}
         </div>
       )}
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [1, 2, 3].map((i) => ({
-              "@type": "Question",
-              name: t(`faq${i}Q`),
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: t(`faq${i}A`),
-              },
-            })),
-          }),
-        }}
-      />
     </div>
   );
 }
