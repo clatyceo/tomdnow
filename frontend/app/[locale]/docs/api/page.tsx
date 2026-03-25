@@ -123,33 +123,10 @@ export default async function ApiDocs({
             {t("rateLimits")}
           </h2>
           <p className="text-gray-600 mb-4">{t("rateLimitsDesc")}</p>
-          <div className="overflow-hidden rounded-lg border border-gray-200">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="bg-gray-50">
-                  <th className="text-left px-4 py-3 font-semibold text-gray-900">
-                    Tier
-                  </th>
-                  <th className="text-left px-4 py-3 font-semibold text-gray-900">
-                    Daily Limit
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr>
-                  <td className="px-4 py-3 text-gray-700">Free</td>
-                  <td className="px-4 py-3 text-gray-700">
-                    {t("freeTier")}
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 text-gray-700">Pro</td>
-                  <td className="px-4 py-3 text-gray-700">
-                    {t("proTier")}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3">
+            <p className="text-sm font-medium text-gray-700">
+              {t("freeTier")}
+            </p>
           </div>
         </section>
 

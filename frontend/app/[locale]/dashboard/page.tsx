@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 
 export default function DashboardPage() {
   const t = useTranslations("dashboard");
@@ -267,15 +266,9 @@ export default function DashboardPage() {
             </p>
           </div>
           <span
-            className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide ${
-              user?.tier === "pro"
-                ? "bg-gray-900 text-white"
-                : user?.tier === "team"
-                  ? "bg-[#4281A4] text-white"
-                  : "bg-gray-100 text-gray-600"
-            }`}
+            className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide bg-[#48A9A6] text-white"
           >
-            {user?.tier || "free"}
+            Free
           </span>
         </div>
       </div>
@@ -339,17 +332,9 @@ export default function DashboardPage() {
       {/* Plan */}
       <div className="bg-white rounded-2xl border border-gray-200 p-6">
         <p className="text-sm text-gray-500 mb-2">{t("tier")}</p>
-        <p className="text-lg font-medium text-gray-900 capitalize mb-4">
-          {user?.tier || "free"}
+        <p className="text-lg font-medium text-gray-900 capitalize">
+          {t("freePlan")}
         </p>
-        {user?.tier === "free" && (
-          <Link
-            href="/pricing"
-            className="inline-flex items-center px-6 py-3 rounded-xl bg-[#4281A4] text-white font-medium hover:bg-[#36698a] transition-colors"
-          >
-            {t("upgradeToPro")}
-          </Link>
-        )}
       </div>
     </div>
   );
