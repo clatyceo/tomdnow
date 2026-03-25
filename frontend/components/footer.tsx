@@ -21,6 +21,7 @@ export default function Footer() {
             <Link href="/privacy" className="text-sm text-gray-600 hover:text-[#4281A4] hover:underline">{t("nav.privacy")}</Link>
             <Link href="/terms" className="text-sm text-gray-600 hover:text-[#4281A4] hover:underline">{t("nav.terms")}</Link>
             <Link href="/launch" className="text-sm text-gray-600 hover:text-[#4281A4] hover:underline">Product Hunt</Link>
+            <a href="https://github.com/clatyceo/tomdnow/issues" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-[#4281A4] hover:underline">Feedback</a>
             <a
               href="https://github.com/clatyceo/tomdnow"
               target="_blank"
