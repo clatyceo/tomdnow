@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { tools } from "@/lib/tools";
+import { generatePageMetadata } from "@/lib/seo";
 import ToolPage from "@/components/tool-page";
 
 const tool = tools.xlsx;
@@ -12,11 +13,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: `tools.${tool.key}` });
-  return {
+  return generatePageMetadata({
+    locale,
+    path: tool.slug,
     title: t("title"),
     description: t("seoDescription"),
     keywords: t("seoKeywords"),
-  };
+  });
 }
 
 export default function XlsxToMarkdown() {
