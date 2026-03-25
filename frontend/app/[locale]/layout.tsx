@@ -51,38 +51,12 @@ export async function generateMetadata({
     icons: {
       apple: "/icon.svg",
     },
-    openGraph: {
-      title: t("title"),
-      description: t("description"),
-      url: SITE_URL,
-      siteName: SITE_NAME,
-      images: [
-        {
-          url: `${SITE_URL}/og-image.png`,
-          width: 1200,
-          height: 630,
-          alt: SITE_NAME,
-        },
-      ],
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
-      images: [`${SITE_URL}/og-image.png`],
-    },
     robots: {
       index: true,
       follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
       "max-video-preview": -1,
-    },
-    alternates: {
-      languages: Object.fromEntries(
-        routing.locales.map((l) => [l, `${SITE_URL}/${l}`])
-      ),
     },
     verification: {
       google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "cAFel1q5yzf4Knl40SDWzJpyi2HdqSHFwPSGT41vHSk",
@@ -133,11 +107,17 @@ export default async function LocaleLayout({
               url: SITE_URL,
               description:
                 "Free online tool to convert any file to Markdown",
-              logo: `${SITE_URL}/icon.svg`,
+              logo: {
+                "@type": "ImageObject",
+                url: `${SITE_URL}/icon.svg`,
+                width: 512,
+                height: 512,
+              },
               founder: {
                 "@type": "Person",
                 name: "박감사",
                 alternateName: "Park Gamsa",
+                url: `${SITE_URL}/${locale}/about`,
               },
               sameAs: [
                 "https://github.com/clatyceo/tomarkdown",
@@ -161,7 +141,7 @@ export default async function LocaleLayout({
                 "@type": "SearchAction",
                 target: {
                   "@type": "EntryPoint",
-                  urlTemplate: `${SITE_URL}/en?q={search_term_string}`,
+                  urlTemplate: `${SITE_URL}/${locale}?q={search_term_string}`,
                 },
                 "query-input":
                   "required name=search_term_string",
