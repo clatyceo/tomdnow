@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { SITE_URL } from "@/lib/config";
 import { generatePageMetadata } from "@/lib/seo";
 import { Link } from "@/i18n/navigation";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export async function generateMetadata({
   params,
@@ -33,7 +34,12 @@ function CheckIcon() {
   );
 }
 
-export default async function PricingPage() {
+export default async function PricingPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const t = await getTranslations("pricing");
 
   const features = [
@@ -90,6 +96,8 @@ export default async function PricingPage() {
         </h2>
         <p className="text-gray-600 leading-relaxed">{t("whyFreeDesc")}</p>
       </div>
+
+      <BreadcrumbSchema locale={locale} items={[{ name: "Pricing" }]} />
 
       <script
         type="application/ld+json"

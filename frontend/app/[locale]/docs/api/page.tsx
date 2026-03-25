@@ -41,7 +41,7 @@ export default async function ApiDocs({
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
-      <BreadcrumbSchema items={[{ name: "API" }]} locale={locale} />
+      <BreadcrumbSchema items={[{ name: "Docs", href: "/docs" }, { name: "API" }]} locale={locale} />
       {/* Header */}
       <div className="mb-12">
         <h1 className="text-3xl font-bold text-gray-900">{t("h1")}</h1>

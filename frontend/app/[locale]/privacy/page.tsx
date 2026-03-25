@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { generatePageMetadata } from "@/lib/seo";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export async function generateMetadata({
   params,
@@ -17,10 +18,16 @@ export async function generateMetadata({
   });
 }
 
-export default async function Privacy() {
+export default async function Privacy({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const t = await getTranslations("privacy");
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
+      <BreadcrumbSchema locale={locale} items={[{ name: "Privacy Policy" }]} />
       <h1 className="text-3xl font-bold text-gray-900">{t("title")}</h1>
       <div className="mt-6 space-y-4 text-gray-600 leading-relaxed text-sm">
         <p>{t("lastUpdated")}</p>

@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { generatePageMetadata } from "@/lib/seo";
 import ToolCard from "@/components/tool-card";
@@ -22,6 +22,7 @@ const categoryKeys: Record<string, string> = {
 };
 
 export default function Home() {
+  const locale = useLocale();
   const t = useTranslations("home");
   const tNav = useTranslations("nav");
   const tTools = useTranslations("tools");
@@ -207,6 +208,23 @@ export default function Home() {
             operatingSystem: "Any",
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
             featureList: Object.values(tools).map((tool) => tool.displayName),
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "File to Markdown Converters",
+            numberOfItems: Object.keys(tools).length,
+            itemListElement: Object.values(tools).map((tool, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: tool.displayName,
+              url: `https://tomdnow.com/${locale}/${tool.slug}`,
+            })),
           }),
         }}
       />

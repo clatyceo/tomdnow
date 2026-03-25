@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { generatePageMetadata } from "@/lib/seo";
+import { SITE_URL } from "@/lib/config";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export async function generateMetadata({
@@ -23,6 +24,25 @@ export default async function About({
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
       <BreadcrumbSchema items={[{ name: "About" }]} locale={locale} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            name: t("title"),
+            description: t("metaDescription"),
+            mainEntity: {
+              "@type": "Person",
+              name: "\uBC15\uAC10\uC0AC",
+              alternateName: "Park Gamsa",
+              url: `${SITE_URL}/${locale}/about`,
+              jobTitle: "Software Developer",
+              knowsAbout: ["Markdown", "Document Conversion", "Web Development"],
+            },
+          }),
+        }}
+      />
 
       {/* Hero */}
       <div className="text-center mb-12">
