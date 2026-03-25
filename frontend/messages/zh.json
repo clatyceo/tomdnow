@@ -223,7 +223,9 @@
       "faq3Q": "演讲者备注呢？",
       "faq3A": "如果有演讲者备注，也会包含在 Markdown 输出中。",
       "faq4Q": "我的文件会被存储吗？",
-      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
+      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。",
+      "definitionParagraph": "tomdnow的PowerPoint to Markdown转换器从PPTX演示文件中提取文本内容，并将其组织为整洁的Markdown。幻灯片标题转换为Markdown标题，项目符号保留为列表。",
+      "detailParagraph": "转换器按顺序处理每张幻灯片，从标题占位符、正文内容和演讲者备注中提取文本。非常适合将演示内容重新用于博客文章、文档页面或供AI分析和总结的可读文本。"
     },
     "xlsx": {
       "title": "XLSX转Markdown — tomdnow",
@@ -275,7 +277,9 @@
       "faq2Q": "和 XLSX 有什么区别？",
       "faq2A": "XLS 是旧版 Excel 格式（2007 年之前）。两种格式我们都支持。",
       "faq3Q": "我的文件会被存储吗？",
-      "faq3A": "不会。文件在内存中处理，处理完毕后立即删除。"
+      "faq3A": "不会。文件在内存中处理，处理完毕后立即删除。",
+      "definitionParagraph": "tomdnow的XLS to Markdown转换器处理旧版Excel文件（2007年之前的.xls格式），将电子表格数据转换为整洁的Markdown表格。XLS和较新的XLSX格式均完全支持。",
+      "detailParagraph": "旧版XLS文件常见于政府档案、财务记录以及尚未迁移到新格式的企业系统中。转换器能计算公式、保留多工作表结构，并输出兼容所有现代文档平台的GitHub Flavored Markdown表格。"
     },
     "msg": {
       "title": "MSG转Markdown — tomdnow",
@@ -299,7 +303,9 @@
       "faq2Q": "会包含附件吗？",
       "faq2A": "邮件正文和元数据会被提取。附件会列出但不会被转换。",
       "faq3Q": "我的文件会被存储吗？",
-      "faq3A": "不会。文件在内存中处理，处理完毕后立即删除。"
+      "faq3A": "不会。文件在内存中处理，处理完毕后立即删除。",
+      "definitionParagraph": "tomdnow的Outlook邮件 to Markdown转换器从Microsoft Outlook MSG文件中提取内容，并格式化为结构化的Markdown。邮件元数据、正文文本和附件列表均被保留。",
+      "detailParagraph": "MSG文件是保存Outlook邮件的原生格式，广泛用于企业邮件归档和法律证据收集。转换器将发件人、收件人、主题、日期和正文内容提取为整洁的Markdown文档，适合文档化或AI处理。"
     },
     "html": {
       "title": "HTML转Markdown — tomdnow",
@@ -325,7 +331,9 @@
       "faq3Q": "可以直接转换网址吗？",
       "faq3A": "目前仅支持文件上传。请先将网页保存为 HTML 文件。",
       "faq4Q": "我的文件会被存储吗？",
-      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
+      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。",
+      "definitionParagraph": "tomdnow的HTML to Markdown转换器将网页HTML转换为整洁、易读的Markdown。它将语义HTML元素——标题、段落、列表、表格、链接和强调——转换为对应的Markdown语法。",
+      "detailParagraph": "脚本、样式和非内容元素在转换过程中自动去除。转换器处理嵌套结构、复杂表格和行内格式，生成与任何Markdown编辑器或文档系统兼容的输出。"
     },
     "epub": {
       "title": "EPUB转Markdown — tomdnow",
@@ -351,7 +359,9 @@
       "faq3Q": "图片会包含吗？",
       "faq3A": "图片会被引用但不会嵌入。文本内容会完整保留。",
       "faq4Q": "我的文件会被存储吗？",
-      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
+      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。",
+      "definitionParagraph": "tomdnow的EPUB to Markdown转换器将电子书文件转换为保留章节结构的整洁Markdown。章节标题和文本层次被保留，使内容可直接用于笔记应用和AI工具。",
+      "detailParagraph": "EPUB是数字图书和出版物的标准格式。转换器解析EPUB的XML结构，按阅读顺序提取章节内容，生成在Obsidian、Notion或任何知识管理系统中完美运行的Markdown。"
     },
     "image": {
       "title": "图片转Markdown — tomdnow",
@@ -377,7 +387,9 @@
       "faq3Q": "会提取哪些元数据？",
       "faq3A": "包括相机型号、拍摄日期、GPS 坐标、分辨率等可用的 EXIF 字段。",
       "faq4Q": "我的文件会被存储吗？",
-      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
+      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。",
+      "definitionParagraph": "tomdnow的Image to Markdown转换器从图片文件（JPG、PNG、GIF、WebP）中提取EXIF元数据，并格式化为结构化的Markdown文档。相机设置、GPS坐标、时间戳和技术详情均包含在内。",
+      "detailParagraph": "此工具专为摄影师、档案管理员以及需要以文本格式整理图片元数据的用户设计。提取的元数据包括相机型号、镜头、曝光设置、ISO、GPS位置和创建日期。"
     },
     "csv": {
       "title": "CSV转Markdown — tomdnow",
@@ -403,7 +415,9 @@
       "faq3Q": "支持哪些分隔符？",
       "faq3A": "支持标准的逗号分隔格式。如使用其他分隔符，请先转换为 CSV。",
       "faq4Q": "我的文件会被存储吗？",
-      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
+      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。",
+      "definitionParagraph": "tomdnow的CSV to Markdown转换器将逗号分隔的数据文件转换为格式正确的Markdown表格。自动检测表头并保留列对齐方式。",
+      "detailParagraph": "转换器处理标准CSV格式，包括引号字段、转义逗号和多行值。输出表格使用GitHub Flavored Markdown语法，可在GitHub、GitLab、Obsidian及所有支持GFM表格的平台上正确渲染。"
     },
     "json": {
       "title": "JSON转Markdown — tomdnow",
@@ -427,7 +441,9 @@
       "faq2Q": "能处理嵌套的 JSON 吗？",
       "faq2A": "是的，嵌套结构会以适当的缩进格式化显示。",
       "faq3Q": "我的文件会被存储吗？",
-      "faq3A": "不会。文件在内存中处理，处理完毕后立即删除。"
+      "faq3A": "不会。文件在内存中处理，处理完毕后立即删除。",
+      "definitionParagraph": "tomdnow的JSON to Markdown转换器将结构化JSON数据转换为人类易读的Markdown。嵌套对象和数组以适当的缩进和层次结构进行格式化。",
+      "detailParagraph": "此工具特别适用于记录API响应、配置文件和数据结构。转换器处理深度嵌套的JSON、对象数组和混合类型值，生成易于阅读且便于纳入技术文档的Markdown。"
     },
     "xml": {
       "title": "XML转Markdown — tomdnow",
@@ -451,7 +467,9 @@
       "faq2Q": "能处理命名空间吗？",
       "faq2A": "XML 命名空间会在输出中保留。",
       "faq3Q": "我的文件会被存储吗？",
-      "faq3A": "不会。文件在内存中处理，处理完毕后立即删除。"
+      "faq3A": "不会。文件在内存中处理，处理完毕后立即删除。",
+      "definitionParagraph": "tomdnow的XML to Markdown转换器解析XML文档并将其转换为易读的Markdown。元素层次结构、属性和文本内容以结构化格式保留。",
+      "detailParagraph": "XML广泛用于配置文件、数据源（RSS/Atom）、SOAP API和旧版数据交换。转换器处理命名空间、嵌套元素和混合内容，生成适合文档编写或数据分析的整洁Markdown。"
     },
     "ipynb": {
       "title": "Jupyter转Markdown — tomdnow",
@@ -477,7 +495,9 @@
       "faq3Q": "图片会保留吗？",
       "faq3A": "图表输出会被引用但不会作为图片嵌入。",
       "faq4Q": "我的文件会被存储吗？",
-      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
+      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。",
+      "definitionParagraph": "tomdnow的Jupyter Notebook to Markdown转换器将.ipynb文件转换为整洁的Markdown，同时保留代码单元格及其输出。Markdown单元格直接传递，代码单元格则被包装在围栏代码块中。",
+      "detailParagraph": "Jupyter notebook是数据科学、机器学习和研究工作流的标准格式。转换器保留单元格执行顺序、代码语法高亮提示和文本输出，方便在GitHub、博客或文档网站上分享notebook内容。"
     },
     "zip": {
       "title": "ZIP转Markdown — tomdnow",
@@ -503,7 +523,9 @@
       "faq3Q": "有大小限制吗？",
       "faq3A": "ZIP 文件总大小不超过 10MB。",
       "faq4Q": "我的文件会被存储吗？",
-      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
+      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。",
+      "definitionParagraph": "tomdnow的ZIP to Markdown转换器一步完成ZIP归档内所有支持文件的提取和转换。每个文件单独转换，结果合并为一个Markdown文档。",
+      "detailParagraph": "非常适合批量转换工作流——将多个PDF、Word文档或混合文件类型压缩成ZIP，上传一次即可获得单个Markdown输出。归档内20多种支持格式均自动检测并转换。"
     },
     "hwp": {
       "title": "HWP转Markdown — tomdnow",
@@ -557,7 +579,9 @@
       "faq3Q": "与图片转Markdown有什么区别？",
       "faq3A": "图片转Markdown提取EXIF元数据。OCR提取图片中的实际文字内容。",
       "faq4Q": "文件会被存储吗？",
-      "faq4A": "不会。文件在内存中处理后立即删除。"
+      "faq4A": "不会。文件在内存中处理后立即删除。",
+      "definitionParagraph": "tomdnow的Image OCR to Markdown转换器使用AI驱动的光学字符识别从图片和扫描文档中提取文本。提取的文本以整洁、可编辑的Markdown输出。",
+      "detailParagraph": "OCR引擎支持8种语言：英语、韩语、日语、中文、德语、法语、西班牙语和葡萄牙语。可处理照片中的印刷文字、扫描文档、截图和白板拍摄内容，将视觉文本转换为可搜索、可编辑的Markdown内容。"
     },
     "hwpx": {
       "title": "HWPX转Markdown — tomdnow",
@@ -583,7 +607,9 @@
       "faq3Q": "HWP 和 HWPX 有什么区别？",
       "faq3A": "HWPX 是更新的 XML 格式（类似于 DOCX 和 DOC 的关系）。我们同时支持两种格式。",
       "faq4Q": "我的文件会被存储吗？",
-      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
+      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。",
+      "definitionParagraph": "tomdnow的HWPX to Markdown转换器处理韩国Hangul文字处理器的现代XML格式。HWPX是HWP的后继格式，提供更好的互操作性，同时仍是韩国官方文档的标准。",
+      "detailParagraph": "与HWP一样，HWPX很少被国际转换工具支持。tomdnow是少数能将HWPX转换为Markdown的在线工具之一，保留韩文文本、文档结构和格式，使其可在GitHub、Obsidian和AI系统等全球平台上使用。"
     },
     "txt": {
       "title": "TXT转Markdown — tomdnow",
@@ -607,7 +633,9 @@
       "faq2Q": "支持什么编码？",
       "faq2A": "完全支持 UTF-8 编码的文本文件。",
       "faq3Q": "我的文件会被存储吗？",
-      "faq3A": "不会。文件在内存中处理，处理完毕后立即删除。"
+      "faq3A": "不会。文件在内存中处理，处理完毕后立即删除。",
+      "definitionParagraph": "tomdnow的TXT to Markdown转换器将纯文本文件包装为规范的Markdown格式。虽然文本文件本身已可阅读，但转换器通过检测潜在的标题、列表和段落来添加结构。",
+      "detailParagraph": "此工具适用于将旧版文本文件、README文件和纯文本笔记导入Obsidian或Notion等基于Markdown的系统。转换器保留原始文本内容，同时添加Markdown语法以获得更好的结构和可读性。"
     },
     "rtf": {
       "title": "RTF转Markdown — tomdnow",
@@ -633,7 +661,9 @@
       "faq3Q": "什么是 RTF？",
       "faq3A": "RTF（富文本格式）是 Microsoft 开发的文档格式，大多数文字处理器都支持。",
       "faq4Q": "我的文件会被存储吗？",
-      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。"
+      "faq4A": "不会。文件在内存中处理，处理完毕后立即删除。",
+      "definitionParagraph": "tomdnow的RTF to Markdown转换器将Rich Text Format文档转换为整洁的Markdown。粗体、斜体、标题和列表格式被保留，RTF特定样式被去除。",
+      "detailParagraph": "RTF是几乎所有文字处理器都支持的旧版文档格式。转换器适用于将旧文档、TextEdit文件和WordPad输出迁移到现代基于Markdown的工作流。文本内容和基本格式被保留，专有RTF命令被移除。"
     }
   },
   "about": {

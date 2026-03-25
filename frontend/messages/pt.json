@@ -223,7 +223,9 @@
       "faq3Q": "E as notas do apresentador?",
       "faq3A": "As notas do apresentador são incluídas na saída Markdown quando disponíveis.",
       "faq4Q": "Meu arquivo é armazenado?",
-      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor PowerPoint to Markdown do tomdnow extrai conteúdo de texto de arquivos de apresentação PPTX e o estrutura como Markdown limpo. Títulos de slides se tornam cabeçalhos Markdown e marcadores são preservados como listas.",
+      "detailParagraph": "O conversor processa cada slide sequencialmente, extraindo texto de marcadores de título, conteúdo do corpo e notas do apresentador. É ideal para reutilizar conteúdo de apresentações em posts de blog, páginas de documentação ou texto legível por IA para análise e resumo."
     },
     "xlsx": {
       "title": "XLSX para Markdown — tomdnow",
@@ -275,7 +277,9 @@
       "faq2Q": "Qual a diferença do XLSX?",
       "faq2A": "XLS é o formato antigo do Excel (anterior a 2007). Suportamos ambos.",
       "faq3Q": "Meu arquivo é armazenado?",
-      "faq3A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq3A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor XLS to Markdown do tomdnow processa arquivos Excel legados (formato .xls anterior a 2007) e transforma dados de planilhas em tabelas Markdown limpas. Tanto o formato XLS quanto o mais recente XLSX são totalmente suportados.",
+      "detailParagraph": "Arquivos XLS legados são comuns em arquivos governamentais, registros financeiros e sistemas corporativos que não migraram para formatos modernos. O conversor avalia fórmulas, preserva a estrutura multi-planilha e gera tabelas GitHub Flavored Markdown compatíveis com qualquer plataforma de documentação moderna."
     },
     "msg": {
       "title": "MSG para Markdown — tomdnow",
@@ -299,7 +303,9 @@
       "faq2Q": "Inclui anexos?",
       "faq2A": "O corpo e os metadados do e-mail são extraídos. Os anexos são listados, mas não convertidos.",
       "faq3Q": "Meu arquivo é armazenado?",
-      "faq3A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq3A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor de e-mail Outlook to Markdown do tomdnow extrai conteúdo de arquivos MSG do Microsoft Outlook e o formata como Markdown estruturado. Metadados do e-mail, texto do corpo e listas de anexos são preservados.",
+      "detailParagraph": "Arquivos MSG são o formato nativo para e-mails salvos do Outlook, comumente usado em arquivamento de e-mail corporativo e descoberta legal. O conversor extrai remetente, destinatário, assunto, data e conteúdo do corpo em um documento Markdown limpo adequado para documentação ou processamento com IA."
     },
     "html": {
       "title": "HTML para Markdown — tomdnow",
@@ -325,7 +331,9 @@
       "faq3Q": "Posso converter uma URL em vez de um arquivo?",
       "faq3A": "Atualmente suportamos apenas envio de arquivo. Salve a página como HTML primeiro.",
       "faq4Q": "Meu arquivo é armazenado?",
-      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor HTML to Markdown do tomdnow transforma HTML de páginas web em Markdown limpo e legível. Ele converte elementos HTML semânticos — títulos, parágrafos, listas, tabelas, links e ênfase — em seus equivalentes Markdown.",
+      "detailParagraph": "Scripts, estilos e elementos não relacionados ao conteúdo são automaticamente removidos durante a conversão. O conversor lida com estruturas aninhadas, tabelas complexas e formatação inline, produzindo saída compatível com qualquer editor Markdown ou sistema de documentação."
     },
     "epub": {
       "title": "EPUB para Markdown — tomdnow",
@@ -351,7 +359,9 @@
       "faq3Q": "As imagens são incluídas?",
       "faq3A": "As imagens são referenciadas, mas não incorporadas. O conteúdo de texto é totalmente preservado.",
       "faq4Q": "Meu arquivo é armazenado?",
-      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor EPUB to Markdown do tomdnow transforma arquivos de e-books em Markdown limpo com estrutura de capítulos. Títulos de capítulos e hierarquia de texto são preservados, deixando o conteúdo pronto para apps de anotações e ferramentas de IA.",
+      "detailParagraph": "EPUB é o formato padrão para livros e publicações digitais. O conversor analisa a estrutura XML do EPUB, extrai conteúdo dos capítulos na ordem de leitura e produz Markdown que funciona perfeitamente no Obsidian, Notion ou qualquer sistema de gestão do conhecimento."
     },
     "image": {
       "title": "Imagem para Markdown — tomdnow",
@@ -377,7 +387,9 @@
       "faq3Q": "Quais metadados são extraídos?",
       "faq3A": "Modelo da câmera, data, coordenadas GPS, resolução e outros campos EXIF quando disponíveis.",
       "faq4Q": "Meu arquivo é armazenado?",
-      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor Image to Markdown do tomdnow extrai metadados EXIF de arquivos de imagem (JPG, PNG, GIF, WebP) e os formata como um documento Markdown estruturado. Configurações de câmera, coordenadas GPS, timestamps e detalhes técnicos são incluídos.",
+      "detailParagraph": "Esta ferramenta é projetada para fotógrafos, arquivistas e qualquer pessoa que precise catalogar metadados de imagens em formato de texto. Os metadados extraídos incluem modelo da câmera, lente, configurações de exposição, ISO, localização GPS e data de criação quando disponíveis."
     },
     "csv": {
       "title": "CSV para Markdown — tomdnow",
@@ -403,7 +415,9 @@
       "faq3Q": "Quais delimitadores são suportados?",
       "faq3A": "Valores separados por vírgula padrão. Para outros delimitadores, converta para CSV primeiro.",
       "faq4Q": "Meu arquivo é armazenado?",
-      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor CSV to Markdown do tomdnow transforma arquivos de dados separados por vírgula em tabelas Markdown corretamente formatadas. Cabeçalhos são detectados automaticamente e o alinhamento das colunas é preservado.",
+      "detailParagraph": "O conversor lida com formatação CSV padrão incluindo campos entre aspas, vírgulas escapadas e valores multilinha. As tabelas de saída usam sintaxe GitHub Flavored Markdown, renderizando corretamente no GitHub, GitLab, Obsidian e qualquer plataforma que suporte tabelas GFM."
     },
     "json": {
       "title": "JSON para Markdown — tomdnow",
@@ -427,7 +441,9 @@
       "faq2Q": "Suporta JSON aninhado?",
       "faq2A": "Sim, estruturas aninhadas são formatadas com indentação adequada.",
       "faq3Q": "Meu arquivo é armazenado?",
-      "faq3A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq3A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor JSON to Markdown do tomdnow transforma dados JSON estruturados em Markdown legível por humanos. Objetos e arrays aninhados são formatados com indentação e hierarquia adequadas.",
+      "detailParagraph": "É particularmente útil para documentar respostas de API, arquivos de configuração e estruturas de dados. O conversor lida com JSON profundamente aninhado, arrays de objetos e valores de tipo misto, produzindo Markdown fácil de ler e incluir em documentação técnica."
     },
     "xml": {
       "title": "XML para Markdown — tomdnow",
@@ -451,7 +467,9 @@
       "faq2Q": "Suporta namespaces?",
       "faq2A": "Os namespaces XML são preservados na saída.",
       "faq3Q": "Meu arquivo é armazenado?",
-      "faq3A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq3A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor XML to Markdown do tomdnow analisa documentos XML e os transforma em Markdown legível. A hierarquia de elementos, atributos e conteúdo de texto são preservados em um formato estruturado.",
+      "detailParagraph": "XML é amplamente usado em arquivos de configuração, feeds de dados (RSS/Atom), APIs SOAP e intercâmbio de dados legado. O conversor lida com namespaces, elementos aninhados e conteúdo misto, produzindo Markdown limpo adequado para documentação ou análise de dados."
     },
     "ipynb": {
       "title": "Jupyter para Markdown — tomdnow",
@@ -477,7 +495,9 @@
       "faq3Q": "As imagens são preservadas?",
       "faq3A": "Saídas de gráficos são referenciadas, mas não incorporadas como imagens.",
       "faq4Q": "Meu arquivo é armazenado?",
-      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor Jupyter Notebook to Markdown do tomdnow transforma arquivos .ipynb em Markdown limpo, preservando tanto células de código quanto suas saídas. Células Markdown passam diretamente enquanto células de código são envolvidas em blocos de código delimitados.",
+      "detailParagraph": "Jupyter notebooks são o formato padrão para fluxos de trabalho de ciência de dados, aprendizado de máquina e pesquisa. O conversor preserva a ordem de execução das células, dicas de destaque de sintaxe de código e saídas de texto, facilitando o compartilhamento de conteúdo de notebooks no GitHub, blogs ou sites de documentação."
     },
     "zip": {
       "title": "ZIP para Markdown — tomdnow",
@@ -503,7 +523,9 @@
       "faq3Q": "Há limite de tamanho?",
       "faq3A": "O arquivo ZIP deve ter no máximo 10MB no total.",
       "faq4Q": "Meu arquivo é armazenado?",
-      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor ZIP to Markdown do tomdnow extrai e converte todos os arquivos suportados dentro de um arquivo ZIP em uma única etapa. Cada arquivo é convertido individualmente e os resultados são combinados em um único documento Markdown.",
+      "detailParagraph": "Ideal para fluxos de trabalho de conversão em lote — comprima múltiplos PDFs, documentos Word ou tipos de arquivo mistos em um ZIP, faça upload uma vez e obtenha uma única saída Markdown. Todos os mais de 20 formatos suportados dentro do arquivo são automaticamente detectados e convertidos."
     },
     "hwp": {
       "title": "HWP para Markdown — tomdnow",
@@ -557,7 +579,9 @@
       "faq3Q": "Qual a diferença para Imagem para Markdown?",
       "faq3A": "Imagem para Markdown extrai metadados EXIF. OCR extrai o conteúdo textual real da imagem.",
       "faq4Q": "Meu arquivo é armazenado?",
-      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor Image OCR to Markdown do tomdnow usa reconhecimento óptico de caracteres alimentado por IA para extrair texto de imagens e documentos digitalizados. O texto extraído é gerado como Markdown limpo e editável.",
+      "detailParagraph": "O motor OCR suporta 8 idiomas: inglês, coreano, japonês, chinês, alemão, francês, espanhol e português. Processa texto impresso em fotos, documentos digitalizados, capturas de tela e fotos de quadros brancos, convertendo texto visual em conteúdo Markdown pesquisável e editável."
     },
     "hwpx": {
       "title": "HWPX para Markdown — tomdnow",
@@ -583,7 +607,9 @@
       "faq3Q": "Qual a diferença entre HWP e HWPX?",
       "faq3A": "HWPX é o formato mais novo baseado em XML (como DOCX vs DOC). Suportamos ambos.",
       "faq4Q": "Meu arquivo é armazenado?",
-      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor HWPX to Markdown do tomdnow lida com o formato moderno baseado em XML do processador de texto Hangul da Coreia. HWPX é o sucessor do HWP, oferecendo melhor interoperabilidade enquanto permanece o padrão para documentos oficiais coreanos.",
+      "detailParagraph": "Assim como o HWP, o HWPX raramente é suportado por ferramentas de conversão internacionais. O tomdnow é uma das poucas ferramentas online que pode converter HWPX para Markdown, preservando texto coreano, estrutura do documento e formatação para uso em plataformas globais como GitHub, Obsidian e sistemas de IA."
     },
     "txt": {
       "title": "TXT para Markdown — tomdnow",
@@ -607,7 +633,9 @@
       "faq2Q": "Qual codificação é suportada?",
       "faq2A": "Arquivos de texto codificados em UTF-8 são totalmente suportados.",
       "faq3Q": "Meu arquivo é armazenado?",
-      "faq3A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq3A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor TXT to Markdown do tomdnow envolve arquivos de texto simples em formatação Markdown adequada. Embora arquivos de texto já sejam legíveis, o conversor adiciona estrutura detectando possíveis títulos, listas e parágrafos.",
+      "detailParagraph": "Esta ferramenta é útil para importar arquivos de texto legados, arquivos README e notas de texto simples para sistemas baseados em Markdown como Obsidian ou Notion. O conversor preserva o conteúdo de texto original enquanto adiciona sintaxe Markdown para melhor estrutura e legibilidade."
     },
     "rtf": {
       "title": "RTF para Markdown — tomdnow",
@@ -633,7 +661,9 @@
       "faq3Q": "O que é RTF?",
       "faq3A": "RTF (Rich Text Format) é um formato de documento desenvolvido pela Microsoft, suportado pela maioria dos processadores de texto.",
       "faq4Q": "Meu arquivo é armazenado?",
-      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente."
+      "faq4A": "Não. Os arquivos são processados em memória e excluídos imediatamente.",
+      "definitionParagraph": "O conversor RTF to Markdown do tomdnow transforma documentos Rich Text Format em Markdown limpo. Negrito, itálico, títulos e formatação de listas são preservados enquanto o estilo específico do RTF é removido.",
+      "detailParagraph": "RTF é um formato de documento legado suportado por praticamente todos os processadores de texto. O conversor é útil para migrar documentos antigos, arquivos do TextEdit e saídas do WordPad para fluxos de trabalho modernos baseados em Markdown. O conteúdo de texto e a formatação básica são preservados enquanto comandos RTF proprietários são removidos."
     }
   },
   "about": {

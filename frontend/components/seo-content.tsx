@@ -3,26 +3,14 @@ import { ToolConfig } from "@/lib/tools";
 import { SITE_URL } from "@/lib/config";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-const TOOLS_WITH_EXPANDED_CONTENT = new Set(["pdf", "docx", "xlsx", "youtube", "hwp"]);
-
 export default async function SeoContent({ tool }: { tool: ToolConfig }) {
   const t = await getTranslations("seo");
   const tTool = await getTranslations(`tools.${tool.key}`);
   const locale = await getLocale();
 
   const h1 = tTool("h1");
-
-  const hasExpandedContent = TOOLS_WITH_EXPANDED_CONTENT.has(tool.key);
-  let definitionParagraph: string | null = null;
-  let detailParagraph: string | null = null;
-  if (hasExpandedContent) {
-    try {
-      definitionParagraph = tTool("definitionParagraph");
-      detailParagraph = tTool("detailParagraph");
-    } catch {
-      /* keys not yet available for this tool */
-    }
-  }
+  const definitionParagraph = tTool("definitionParagraph");
+  const detailParagraph = tTool("detailParagraph");
 
   const howToSteps = tool.howTo.map((_, i) => ({
     step: tTool(`howTo${i + 1}Step`),
@@ -40,12 +28,10 @@ export default async function SeoContent({ tool }: { tool: ToolConfig }) {
     <div className="max-w-3xl mx-auto px-4 pb-20 space-y-12">
       <BreadcrumbSchema items={[{ name: tool.displayName }]} locale={locale} />
 
-      {definitionParagraph && detailParagraph && (
-        <section>
-          <p className="text-gray-600 leading-relaxed">{definitionParagraph}</p>
-          <p className="mt-3 text-gray-600 leading-relaxed">{detailParagraph}</p>
-        </section>
-      )}
+      <section>
+        <p className="text-gray-600 leading-relaxed">{definitionParagraph}</p>
+        <p className="mt-3 text-gray-600 leading-relaxed">{detailParagraph}</p>
+      </section>
 
       <section>
         <h2 className="text-2xl font-bold text-gray-900">{t("howToTitle", { action: h1 })}</h2>
