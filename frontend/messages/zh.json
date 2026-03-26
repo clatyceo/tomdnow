@@ -163,7 +163,7 @@
       "faq1Q": "这个工具免费吗？",
       "faq1A": "是的，完全免费，无需注册。没有隐藏费用、使用限制或高级付费计划。tomdnow由Microsoft的开源MarkItDown引擎驱动，对所有用户100%免费。",
       "faq2Q": "支持 .doc 格式吗？",
-      "faq2A": "目前支持 .docx 格式。请先将 .doc 文件另存为 .docx。在Microsoft Word或LibreOffice中选择"另存为"并指定.docx格式即可轻松转换。",
+      "faq2A": "目前支持 .docx 格式。请先将 .doc 文件另存为 .docx。在Microsoft Word或LibreOffice中选择「另存为」并指定.docx格式即可轻松转换。",
       "faq3Q": "图片会保留吗？",
       "faq3A": "Markdown输出中会引用图片但不会作为二进制数据嵌入。包括标题、粗体、斜体、列表和表格在内的文本内容会完整保留。Markdown输出可与GitHub、Obsidian和Notion无缝兼容。",
       "faq4Q": "我的文件会被存储在服务器上吗？",
@@ -799,7 +799,16 @@
     "feature8": "文件从不存储在服务器上",
     "getStarted": "开始免费转换",
     "whyFree": "为什么免费？",
-    "whyFreeDesc": "tomdnow由Microsoft的开源MarkItDown引擎驱动。我们相信基本的文档转换应该对所有人开放。这个工具将始终免费。"
+    "whyFreeDesc": "tomdnow由Microsoft的开源MarkItDown引擎驱动。我们相信基本的文档转换应该对所有人开放。这个工具将始终免费。",
+    "faqTitle": "常见问题",
+    "faq1Q": "tomdnow真的免费吗？",
+    "faq1A": "是的，100%免费，没有隐藏费用。没有高级付费计划，不需要信用卡，网页转换没有使用限制。API也是免费的，每天允许50次请求。",
+    "faq2Q": "为什么免费？",
+    "faq2A": "tomdnow由Microsoft的开源MarkItDown引擎驱动，这使我们的运营成本保持在较低水平。我们相信基本的文档转换应该对所有人开放。",
+    "faq3Q": "会一直免费吗？",
+    "faq3A": "是的。tomdnow将始终保持免费层。未来我们可能会添加可选的高级功能，但核心转换工具将永远免费。",
+    "faq4Q": "有文件大小限制吗？",
+    "faq4A": "每个文件最大为10MB。批量转换时，一次最多可转换5个文件。免费API每天允许50次请求。"
   },
   "dashboard": {
     "title": "控制台 — tomdnow",

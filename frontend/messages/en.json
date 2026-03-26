@@ -799,7 +799,16 @@
     "feature8": "Files never stored on servers",
     "getStarted": "Start Converting — Free",
     "whyFree": "Why is it free?",
-    "whyFreeDesc": "tomdnow is powered by Microsoft's open-source MarkItDown engine. We believe essential document conversion should be accessible to everyone. The tool will always remain free."
+    "whyFreeDesc": "tomdnow is powered by Microsoft's open-source MarkItDown engine. We believe essential document conversion should be accessible to everyone. The tool will always remain free.",
+    "faqTitle": "FAQ",
+    "faq1Q": "Is tomdnow really free?",
+    "faq1A": "Yes, 100% free with no hidden costs. There are no premium tiers, no credit card required, and no usage limits on web conversions. The API is also free with 50 requests per day.",
+    "faq2Q": "Why is it free?",
+    "faq2A": "tomdnow is powered by Microsoft's open-source MarkItDown engine, which keeps our costs low. We believe essential document conversion should be accessible to everyone.",
+    "faq3Q": "Will it always be free?",
+    "faq3A": "Yes. tomdnow will always have a free tier. We may add optional premium features in the future, but the core conversion tool will remain free forever.",
+    "faq4Q": "Is there a file size limit?",
+    "faq4A": "The maximum file size is 10MB per file. For batch conversion, you can convert up to 5 files at once. The free API allows 50 requests per day."
   },
   "dashboard": {
     "title": "Dashboard — tomdnow",

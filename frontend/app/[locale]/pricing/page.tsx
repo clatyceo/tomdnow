@@ -97,6 +97,19 @@ export default async function PricingPage({
         <p className="text-gray-600 leading-relaxed">{t("whyFreeDesc")}</p>
       </div>
 
+      {/* FAQ Section */}
+      <div className="mt-16 max-w-2xl mx-auto">
+        <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">{t("faqTitle")}</h2>
+        <dl className="space-y-4">
+          {[1, 2, 3, 4].map((i) => (
+            <div key={i}>
+              <dt className="font-medium text-gray-900">{t(`faq${i}Q`)}</dt>
+              <dd className="mt-1 text-sm text-gray-500">{t(`faq${i}A`)}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
       <BreadcrumbSchema locale={locale} items={[{ name: "Pricing" }]} />
 
       <script
@@ -108,6 +121,21 @@ export default async function PricingPage({
             name: "Pricing - tomdnow",
             description: "tomdnow is 100% free. Convert any file to Markdown with no limits.",
             url: `${SITE_URL}/pricing`,
+          }),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [1, 2, 3, 4].map((i) => ({
+              "@type": "Question",
+              name: t(`faq${i}Q`),
+              acceptedAnswer: { "@type": "Answer", text: t(`faq${i}A`) },
+            })),
           }),
         }}
       />
